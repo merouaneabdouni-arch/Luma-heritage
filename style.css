@@ -1,130 +1,161 @@
-@import "tailwindcss";
-
-/* 
-  LUMA Heritage - Ultra Luxury Design
-  Direction: Modern Arabian Opulence meets Minimalist Sophistication
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Pro:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
-
-@theme {
-  /* Typographie Luxueuse */
-  --font-display: "Cinzel", serif;
-  --font-serif: "Crimson Pro", serif;
-  --font-sans: "Montserrat", sans-serif;
-  
-  /* Palette Enrichie */
-  --color-brand-cream: #fdfcfa;
-  --color-brand-sand: #f5f0e8;
-  --color-brand-stone: #e8e2d9;
-  --color-brand-amber: #c9a961;
-  --color-brand-gold: #d4af37;
-  --color-brand-bronze: #b8860b;
-  --color-brand-copper: #9d6e3a;
-  --color-brand-dark: #2d2520;
-  --color-brand-darker: #1a1512;
+:root {
+  --bg-main: #f4efe9;
+  --text-main: #5a4a3f;
+  --accent-gold: #c7a36a;
 }
 
-@layer base {
-  * {
-    @apply antialiased;
-  }
-
-  body {
-    @apply bg-brand-cream text-brand-dark font-sans;
-    overflow-x: hidden;
-  }
-  
-  h1 {
-    @apply font-display;
-    letter-spacing: 0.02em;
-  }
-  
-  h2, h3 {
-    @apply font-display;
-  }
-  
-  h4, h5, h6 {
-    @apply font-serif;
-  }
+* {
+  box-sizing: border-box;
 }
 
-/* Sélection dorée */
-::selection {
-  background: #d4af37;
-  color: #fdfcfa;
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.75;
 }
 
-/* Scrollbar élégante */
-::-webkit-scrollbar {
-  width: 10px;
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-top: 0;
 }
 
-::-webkit-scrollbar-track {
-  background: #fdfcfa;
+/* ================= HEADER ================= */
+
+.site-header {
+  padding: 28px 8%;
 }
 
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #d4af37, #b8860b);
-  border-radius: 5px;
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.header-logo img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
-@keyframes shimmer {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
+.header-nav {
+  display: flex;
+  gap: 48px;
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+.header-nav a {
+  font-size: 0.9rem;
+  color: var(--text-main);
+  text-decoration: none;
+  letter-spacing: 0.04em;
 }
 
-/* Utilitaires personnalisés */
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
+.header-nav a:hover {
+  opacity: 0.6;
 }
 
-.gradient-gold {
-  background: linear-gradient(135deg, #d4af37 0%, #c9a961 50%, #b8860b 100%);
+/* ================= HERO ================= */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  padding: 80px 8% 120px;
+  align-items: center;
 }
 
-.text-gradient-gold {
-  background: linear-gradient(135deg, #d4af37 0%, #c9a961 50%, #b8860b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.hero-content {
+  max-width: 520px;
 }
 
-.glass-effect {
-  background: rgba(253, 252, 250, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+.hero-content p {
+  margin: 28px 0;
 }
 
-.shadow-luxury {
-  box-shadow: 0 20px 60px rgba(45, 37, 32, 0.15);
+.hero-link {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 
-.shadow-luxury-lg {
-  box-shadow: 0 30px 80px rgba(45, 37, 32, 0.2);
+.hero-image img {
+  height: 520px;
+  max-height: 60vh;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+  padding: 120px 8%;
+}
+
+.section.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.image-frame img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+}
+
+/* ================= PARTNERS ================= */
+
+.partner-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.partner-list li {
+  margin-bottom: 12px;
+}
+
+/* ================= PRODUCTS ================= */
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+  margin-top: 80px;
+}
+
+.product-image {
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-info {
+  margin-top: 40px;
+}
+
+.contact-info a {
+  color: var(--accent-gold);
+  text-decoration: none;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  padding: 60px 8%;
+  font-size: 0.8rem;
+  text-align: center;
 }
