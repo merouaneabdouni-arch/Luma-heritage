@@ -1,100 +1,130 @@
 @import "tailwindcss";
 
 /* 
-  LUMA Heritage - Palette de Couleurs
-  
-  - Sand: Fond principal beige clair
-  - Stone: Bordures et sections beige foncé
-  - Amber: Accents dorés foncés (CTA, liens)
-  - Gold: Dorés clairs (hover, selection)
-  - Dark: Texte principal marron foncé
+  LUMA Heritage - Ultra Luxury Design
+  Direction: Modern Arabian Opulence meets Minimalist Sophistication
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Pro:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+
 @theme {
-  /* Polices */
-  --font-serif: "Cormorant Garamond", serif;
-  --font-sans: "Inter", sans-serif;
+  /* Typographie Luxueuse */
+  --font-display: "Cinzel", serif;
+  --font-serif: "Crimson Pro", serif;
+  --font-sans: "Montserrat", sans-serif;
   
-  /* Couleurs principales */
+  /* Palette Enrichie */
+  --color-brand-cream: #fdfcfa;
   --color-brand-sand: #f5f0e8;
   --color-brand-stone: #e8e2d9;
-  --color-brand-amber: #b8860b;
+  --color-brand-amber: #c9a961;
   --color-brand-gold: #d4af37;
-  --color-brand-dark: #4a443f;
+  --color-brand-bronze: #b8860b;
+  --color-brand-copper: #9d6e3a;
+  --color-brand-dark: #2d2520;
+  --color-brand-darker: #1a1512;
 }
 
 @layer base {
-  /* Styles de base pour le body */
+  * {
+    @apply antialiased;
+  }
+
   body {
-    @apply bg-brand-sand text-brand-dark font-sans;
-    color: #4a443f;
+    @apply bg-brand-cream text-brand-dark font-sans;
+    overflow-x: hidden;
   }
   
-  /* Tous les titres utilisent la police serif */
-  h1, h2, h3, h4, h5, h6 {
+  h1 {
+    @apply font-display;
+    letter-spacing: 0.02em;
+  }
+  
+  h2, h3 {
+    @apply font-display;
+  }
+  
+  h4, h5, h6 {
     @apply font-serif;
   }
-  
-  /* Liens par défaut */
-  a {
-    @apply transition-colors duration-300;
-  }
 }
 
-/* Sélection de texte personnalisée */
+/* Sélection dorée */
 ::selection {
   background: #d4af37;
-  color: #f5f0e8;
+  color: #fdfcfa;
 }
 
-::-moz-selection {
-  background: #d4af37;
-  color: #f5f0e8;
-}
-
-/* Scrollbar personnalisée (optionnel) */
+/* Scrollbar élégante */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f5f0e8;
+  background: #fdfcfa;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #b8860b;
+  background: linear-gradient(180deg, #d4af37, #b8860b);
   border-radius: 5px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #d4af37;
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* 
-  PERSONNALISATION:
-  
-  Pour changer les couleurs, modifiez les valeurs hexadécimales ci-dessus.
-  
-  Exemples de palettes alternatives:
-  
-  1. Palette Moderne (Bleu):
-     --color-brand-sand: #f8f9fa;
-     --color-brand-stone: #e9ecef;
-     --color-brand-amber: #1a365d;
-     --color-brand-gold: #2c5282;
-     --color-brand-dark: #1a202c;
-  
-  2. Palette Rose Gold:
-     --color-brand-sand: #faf9f7;
-     --color-brand-stone: #f0ebe5;
-     --color-brand-amber: #b76e79;
-     --color-brand-gold: #d4a5a5;
-     --color-brand-dark: #3d3d3d;
-  
-  3. Palette Naturelle (Vert):
-     --color-brand-sand: #f5f5f0;
-     --color-brand-stone: #e8e8dc;
-     --color-brand-amber: #697565;
-     --color-brand-gold: #8b9476;
-     --color-brand-dark: #3c3d37;
-*/
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Utilitaires personnalisés */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, #d4af37 0%, #c9a961 50%, #b8860b 100%);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #d4af37 0%, #c9a961 50%, #b8860b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  background: rgba(253, 252, 250, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.shadow-luxury {
+  box-shadow: 0 20px 60px rgba(45, 37, 32, 0.15);
+}
+
+.shadow-luxury-lg {
+  box-shadow: 0 30px 80px rgba(45, 37, 32, 0.2);
+}
