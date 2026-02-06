@@ -1,161 +1,76 @@
-:root {
-  --bg-main: #f4efe9;
-  --text-main: #5a4a3f;
-  --accent-gold: #c7a36a;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: var(--bg-main);
-  color: var(--text-main);
-  line-height: 1.75;
+  font-family: Inter, sans-serif;
+  color: #4a443f;
+  background: #ffffff;
+  line-height: 1.7;
 }
 
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  margin-top: 0;
+  font-family: "Cormorant Garamond", serif;
 }
 
-/* ================= HEADER ================= */
-
 .site-header {
-  padding: 28px 8%;
+  padding: 30px 8%;
 }
 
 .header-inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
-.header-logo img {
+.logo {
   height: 40px;
-  width: auto;
-  display: block;
 }
 
-.header-nav {
-  display: flex;
-  gap: 48px;
-}
-
-.header-nav a {
-  font-size: 0.9rem;
-  color: var(--text-main);
+.nav a {
+  margin-left: 40px;
   text-decoration: none;
-  letter-spacing: 0.04em;
+  color: #4a443f;
+  font-size: 0.9rem;
 }
-
-.header-nav a:hover {
-  opacity: 0.6;
-}
-
-/* ================= HERO ================= */
 
 .hero {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 60px;
-  padding: 80px 8% 120px;
+  padding: 100px 8%;
   align-items: center;
 }
 
-.hero-content {
-  max-width: 520px;
-}
-
-.hero-content p {
-  margin: 28px 0;
-}
-
-.hero-link {
-  color: var(--accent-gold);
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.hero-image img {
-  height: 520px;
-  max-height: 60vh;
+.hero-image {
+  max-height: 520px;
   width: auto;
-  object-fit: contain;
 }
-
-/* ================= SECTIONS ================= */
 
 .section {
   padding: 120px 8%;
 }
 
-.section.split {
+.split {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
 }
 
-.image-frame img {
-  width: 100%;
+.section-image {
   max-height: 420px;
-  object-fit: cover;
 }
-
-/* ================= PARTNERS ================= */
-
-.partner-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 40px;
-}
-
-.partner-list li {
-  margin-bottom: 12px;
-}
-
-/* ================= PRODUCTS ================= */
 
 .products {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 100px;
-  margin-top: 80px;
+  gap: 80px;
 }
 
-.product-image {
-  height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.product-image img {
-  max-height: 100%;
-  max-width: 100%;
+.product img {
+  height: 280px;
   object-fit: contain;
 }
 
-/* ================= CONTACT ================= */
-
-.contact-info {
-  margin-top: 40px;
-}
-
-.contact-info a {
-  color: var(--accent-gold);
-  text-decoration: none;
-}
-
-/* ================= FOOTER ================= */
-
-footer {
+.footer {
   padding: 60px 8%;
   font-size: 0.8rem;
-  text-align: center;
 }
