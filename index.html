@@ -4,96 +4,127 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>LUMA Heritage — Luxury Skincare Rituals</title>
-  <meta name="description" content="Inspired by Middle Eastern beauty rituals. Luxury skincare for hotels, spas, wellness destinations, and curated concept stores." />
+  <title>LUMA Heritage – Luxury Date-Infused Skincare</title>
+  <meta name="description" content="Luxury date-infused skincare designed for hotels, spas and premium hospitality partners." />
 
-  <!-- Fonts (same as your GitHub pages) -->
+  <!-- Fonts (same as your GitHub style) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
 
-  <!-- Keep your GitHub CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Index-only refinements (keeps your global style intact) -->
+  <!-- Page-only helpers (NO change to your global GitHub CSS) -->
   <style>
-    /* 1) Slightly stronger differentiation between sections (subtle, on-theme) */
-    .heritage-excellence { border-bottom: 1px solid rgba(197,162,112,0.12); }
-    .beauty-excellence { background: #f7f3ee; }
-    .elixir-section { background: #ffffff; border-top: 1px solid rgba(197,162,112,0.12); border-bottom: 1px solid rgba(197,162,112,0.12); }
-    .collections-section { background: linear-gradient(to bottom, #ffffff 0%, #fdfcfa 100%); }
-    .partners-section { background: #faf8f5; }
+    /* Subtle differentiation between sections (on-theme) */
+    .section-divider { position: relative; }
+    .section-divider::after{
+      content:"";
+      position:absolute;
+      left:0; right:0; bottom:0;
+      height:1px;
+      background: linear-gradient(90deg, transparent, rgba(197,162,112,0.35), transparent);
+    }
+    .heritage-excellence { background: linear-gradient(to bottom, #ffffff 0%, #fdfbf8 100%); }
+    .beauty-excellence { background: #fbf7f1; }
+    .elixir-section { background: #ffffff; }
+    .collections-section { background: linear-gradient(to bottom, #fdfbf8 0%, #f7f2ea 100%); }
+    .partners-section { background: #ffffff; }
+    .testimonials-section { background: linear-gradient(to bottom, #fdfbf8 0%, #fbf7f1 100%); }
 
-    /* 2) HERO: show more of the full visual */
-    .hero img { object-position: center 30%; }
-    @media (max-width: 768px) {
-      .hero { height: 78vh; min-height: 520px; }
-      .hero img { object-position: center 25%; }
+    /* Collections text under photos */
+    .collection-meta{
+      text-align:center;
+      padding: 1.35rem 1rem 0;
     }
-
-    /* 3) Where Beauty Meets Excellence: make images bigger & fill frames */
-    .services-grid {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 3rem;
+    .collection-title{
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.25rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.6rem;
+      color: #1a1614;
+      text-transform: none;
     }
-    .service-image {
-      padding: 0;
-      min-height: 340px;
-      overflow: hidden;
-    }
-    .service-image img {
-      width: 100%;
-      height: 340px;
-      max-height: none;
-      object-fit: cover;
-      filter: none;
-    }
-    @media (max-width: 1200px) {
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
-      .service-image img { height: 320px; }
-    }
-    @media (max-width: 768px) {
-      .services-grid { grid-template-columns: 1fr; }
-      .service-image img { height: 300px; }
-    }
-
-    /* 4) Our Signature Collections: add text under each image */
-    .collection-caption {
-      text-align: center;
-      padding: 1.4rem 0.75rem 0;
-    }
-    .collection-caption h3 {
-      margin-bottom: 0.65rem;
-      font-size: 1.45rem;
-    }
-    .collection-caption p {
+    .collection-desc{
       margin: 0;
+      color: #6b6358;
       font-size: 0.98rem;
-      color: #6b6358;
-      line-height: 1.8;
+      line-height: 1.75;
+      max-width: 360px;
+      margin-left:auto;
+      margin-right:auto;
     }
 
-    /* 5) Products: slightly larger without becoming “too big” */
-    .collection-image { padding: 2.75rem 2.25rem; min-height: 470px; }
-    .collection-image img { max-height: 420px; }
+    /* Where Beauty Meets Excellence: images fill more the frame */
+    .service-image{
+      padding: 1.25rem;     /* less padding = image looks bigger */
+      min-height: 360px;
+    }
+    .service-image img{
+      max-height: 320px;
+      width: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 26px rgba(0,0,0,0.06));
+    }
 
-    /* 6) Partners: real partner-style cards with short descriptor */
-    .partner-logo { padding: 1.6rem; text-align: center; }
-    .partner-name {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.10em;
-      color: #2a2520;
-      font-weight: 500;
-      margin-bottom: 0.5rem;
+    /* Hero banner adjustment - better visibility */
+    .hero img {
+      object-fit: cover;
+      object-position: center 35%; /* Adjusted to show more of the image */
+      min-height: 500px;
     }
-    .partner-desc {
-      font-size: 0.95rem;
-      color: #6b6358;
-      margin: 0;
-      line-height: 1.7;
+
+    /* Partners logos styling */
+    .partners-logos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+      align-items: center;
+      justify-items: center;
     }
-    .partner-logo a { display:block; width:100%; }
+
+    .partner-logo {
+      width: 100%;
+      max-width: 180px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border: 1px solid rgba(197,162,112,0.2);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .partner-logo:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      border-color: rgba(197,162,112,0.4);
+    }
+
+    .partner-logo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+
+    .partner-logo:hover img {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .partners-logos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+    }
   </style>
 </head>
 
@@ -110,9 +141,10 @@
         />
       </a>
 
+      <!-- NAV -> links to NEW pages -->
       <nav class="menu">
-        <a href="index.html">Home</a>
-        <a href="#collections">Our Signature Collections</a>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#collections">Our Signature Collections</a>
         <a href="philosophy.html">Our Story & Philosophy</a>
         <a href="elixir.html">Elixir – The Secret Of Dates</a>
         <a href="contact.html">Contact</a>
@@ -121,164 +153,158 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero">
+  <section id="home" class="hero section-divider">
     <img
-      src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=2200&q=80"
-      alt="LUMA Heritage — Luxury Hospitality Atmosphere"
-      loading="eager"
-      decoding="async"
+      src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/banniere"
+      alt="LUMA Heritage luxury banner"
     />
     <div class="hero-overlay">
-      <h1 class="hero-title">LUMA Heritage</h1>
-      <a class="hero-button" href="contact.html">Request Catalogue</a>
+      <h1 class="hero-title">Indulge in Pure Radiance</h1>
     </div>
   </section>
 
-  <!-- A HERITAGE OF EXCELLENCE -->
-  <section class="heritage-excellence">
+  <!-- HERITAGE OF EXCELLENCE -->
+  <section class="heritage-excellence section-divider">
     <div class="container">
       <div class="excellence-grid">
-
         <div class="excellence-content">
-          <span class="section-eyebrow">A Heritage of Excellence</span>
-          <h2>Timeless Rituals. Modern Luxury.</h2>
+          <h2>A Heritage of Excellence</h2>
           <p>
             Inspired by Middle Eastern beauty rituals, LUMA embodies timeless elegance and superior quality.
-            Crafted with the world’s finest ingredients, each product delivers an unparalleled sensory experience.
+            Crafted with the world's finest ingredients, each product delivers an unparalleled sensory experience.
           </p>
         </div>
 
+        <!-- Replaced image (internet photo, on-theme) -->
         <div class="excellence-image">
-          <!-- Replaced with an on-theme image from the internet (hammam / wellness ambiance) -->
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Wellness_with_hammam.jpg"
-            alt="Wellness hammam ambiance"
+            src="https://images.pexels.com/photos/433626/pexels-photo-433626.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=1600"
+            alt="Luxury spa ritual ambiance"
             loading="lazy"
             decoding="async"
+            style="width:100%; height:auto; object-fit:cover;"
           />
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- WHERE BEAUTY MEETS EXCELLENCE -->
-  <section class="beauty-excellence">
+  <section class="beauty-excellence section-divider">
     <div class="container">
       <div class="section-header-center">
-        <span class="section-eyebrow">Where Beauty Meets Excellence</span>
-        <h2>Designed for premium destinations</h2>
-        <p class="section-subtitle">
-          A refined skincare experience crafted for hospitality excellence — from five-star hotels to curated concept stores.
-        </p>
+        <h2>Where Beauty Meets Excellence</h2>
+        <p class="section-subtitle">Skincare traditions designed for the world's finest hotels, spas, and concept stores.</p>
       </div>
 
       <div class="services-grid">
-
-        <!-- HOTEL -->
         <div class="service-card">
           <div class="service-image">
             <img
-              src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1800&q=80"
-              alt="Hotels & Hospitality"
+              src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-38.png"
+              alt="Hotel Prestige Amenities"
               loading="lazy"
               decoding="async"
             />
           </div>
-          <h3>Hotels</h3>
-          <p>Elevate guest stays with a calm, premium ritual — discreetly luxurious, consistently unforgettable.</p>
+          <h3>Hotel Prestige Amenities</h3>
+          <p>
+            Refined skincare rituals designed for luxury hotels. Elevate your in-room experience with exclusive,
+            premium amenities tailored to sophisticated travelers.
+          </p>
         </div>
 
-        <!-- SPA / WELLNESS -->
         <div class="service-card">
           <div class="service-image">
             <img
-              src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=1800&q=80"
-              alt="Spa & Wellness"
+              src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-37.png"
+              alt="SPA & Wellness Rituals"
               loading="lazy"
               decoding="async"
             />
           </div>
-          <h3>Spa & Wellness</h3>
-          <p>Sensory formulas aligned with spa-grade standards — for treatments, rituals, and retail upsell.</p>
+          <h3>SPA & Wellness Rituals</h3>
+          <p>
+            Indulge in exquisite skincare experiences with our exclusive spa collection. Designed to enhance wellness rituals,
+            our treatments combine tradition and innovation for an unparalleled moment of relaxation.
+          </p>
         </div>
 
-        <!-- CONCEPT STORE -->
         <div class="service-card">
           <div class="service-image">
             <img
-              src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=1800&q=80"
-              alt="Concept Stores"
+              src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-39.png"
+              alt="Concept Store Exclusives"
               loading="lazy"
               decoding="async"
             />
           </div>
-          <h3>Concept Stores</h3>
-          <p>Curated storytelling meets premium packaging — designed to stand out on shelves without shouting.</p>
+          <h3>Concept Store Exclusives</h3>
+          <p>
+            Curated collections developed for concept stores seeking authenticity and refinement.
+            Each product embodies the essence of luxury and Middle Eastern heritage.
+          </p>
         </div>
-
-        <!-- ELIXIR -->
-        <div class="service-card">
-          <div class="service-image">
-            <img
-              src="https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=1800&q=80"
-              alt="Elixir — The Secret Of Dates"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <h3>Elixir of Dates</h3>
-          <p>Discover the ancestral ingredient at the heart of LUMA — a millennia-old beauty secret.</p>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ELIXIR SECTION (no “Discover More” button) -->
-  <section class="elixir-section">
+  <!-- ELIXIR TEASER -->
+  <section class="elixir-section section-divider">
     <div class="container">
       <div class="elixir-grid">
-
         <div class="elixir-image">
           <img
-            src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-30.png"
-            alt="Elixir – The Secret Of Dates"
+            src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/08bba8fee153ed1b5e1a4a953a6e989d2ae3b1c8/histoire%20.png"
+            alt="The Secret of Dates"
             loading="lazy"
             decoding="async"
           />
         </div>
 
         <div class="elixir-content">
-          <span class="section-eyebrow">Elixir</span>
-          <h2>The Secret Of Dates</h2>
+          <h2>Elixir – The Secret of Dates</h2>
           <p>
-            A legacy of Middle Eastern beauty rituals — where dates embody resilience, vitality, and refinement.
-            LUMA captures this ancestral tradition and elevates it into modern luxury skincare experiences.
+            For centuries, dates have been treasured across the Middle East for their restorative and nourishing properties.
+            Rich in vitamins, minerals, and antioxidants, this ancestral ingredient is the heart of LUMA Heritage.
           </p>
-          <a class="hero-button" href="elixir.html" style="padding:1.1rem 3rem; font-size:0.78rem;">Explore Elixir</a>
+          <p>
+            We reinterpret this ancient wisdom through modern luxury formulations, creating an elixir that transforms skincare
+            into a ritual of beauty and well-being.
+          </p>
+          <a class="hero-button" style="display:inline-block; margin-top:1rem;" href="elixir.html">Explore Elixir</a>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- OUR SIGNATURE COLLECTIONS -->
-  <section class="collections-section" id="collections">
+  <!-- SIGNATURE COLLECTIONS -->
+  <section id="collections" class="collections-section section-divider">
     <div class="container">
       <div class="section-header-center">
-        <span class="section-eyebrow">Our Signature Collections</span>
-        <h2>Crafted for ritual, designed for excellence</h2>
-        <p class="section-subtitle">
-          Three refined pillars — each created to support premium hospitality routines and elevated self-care moments.
-        </p>
+        <h2>Our Signature Collections</h2>
+        <p class="section-subtitle">Three rituals, one heritage — hydration, restoration, and nourishment.</p>
       </div>
 
       <div class="collections-gallery">
-
-        <!-- COLLECTION 1 -->
         <div class="collection-item">
           <div class="collection-image">
+            <img
+              src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/hydrarting.png"
+              alt="Hydrating Date Cream"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="collection-meta">
+            <h4 class="collection-title">Hydrating Date Cream</h4>
+            <p class="collection-desc">Daily hydration & softness — ideal for refined in-room rituals.</p>
+          </div>
+        </div>
+
+        <div class="collection-item">
+          <div class="collection-image">
+            <!-- FIXED: RAW URL so it displays -->
             <img
               src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/de9fe30858ad90c76fadca676dd22d977a6d4e55/gemini-3-pro-image-preview_a_Ultra-realistic_luxu%20(1).png"
               alt="Restorative Date Balm"
@@ -286,148 +312,121 @@
               decoding="async"
             />
           </div>
-          <div class="collection-caption">
-            <h3>Restorative Date Balm</h3>
-            <p>Deep nourishment + refined glow — the signature ritual for dry, tired, or stressed skin.</p>
+          <div class="collection-meta">
+            <h4 class="collection-title">Restorative Date Balm</h4>
+            <p class="collection-desc">Deep repair ritual — comfort, glow, and a spa-grade finish.</p>
           </div>
         </div>
 
-        <!-- COLLECTION 2 -->
         <div class="collection-item">
           <div class="collection-image">
             <img
-              src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-34.png"
-              alt="Heritage Ritual Essentials"
+              src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/nourishing.png"
+              alt="Nourishing Date Oil"
               loading="lazy"
               decoding="async"
             />
           </div>
-          <div class="collection-caption">
-            <h3>Heritage Ritual Essentials</h3>
-            <p>Daily spa-grade care — balancing hydration, softness, and a calm sensorial finish.</p>
+          <div class="collection-meta">
+            <h4 class="collection-title">Nourishing Date Oil</h4>
+            <p class="collection-desc">Luxury nourishment — a sensory signature for premium partners.</p>
           </div>
         </div>
-
-        <!-- COLLECTION 3 -->
-        <div class="collection-item">
-          <div class="collection-image">
-            <img
-              src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-35.png"
-              alt="Hotel & Spa Signature Line"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="collection-caption">
-            <h3>Hotel & Spa Signature Line</h3>
-            <p>Exclusive hospitality formats — built for guest experience, treatments, and premium retail.</p>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
   <!-- PARTNERS -->
-  <section class="partners-section">
+  <section class="partners-section section-divider">
     <div class="container">
       <div class="section-header-center">
-        <span class="section-eyebrow">Partners</span>
-        <h2>Built for premium distribution in the UAE</h2>
-        <p class="section-subtitle">
-          A shortlist of partner-type operators active across luxury retail, hospitality supply, and professional beauty networks.
-        </p>
+        <h2>Our Distribution Partners in the UAE</h2>
+        <p class="section-subtitle">Specialized luxury hospitality distributors across the Emirates.</p>
       </div>
 
       <div class="partners-logos">
         <div class="partner-logo">
-          <a href="https://www.chalhoubgroup.com/" target="_blank" rel="noopener">
-            <div class="partner-name">Chalhoub Group</div>
-            <p class="partner-desc">Luxury beauty distribution & retail ecosystem in the Gulf.</p>
-          </a>
+          <img src="https://www.dutyfreemiddleeast.com/images/logo.svg" alt="Duty Free Middle East" />
         </div>
-
         <div class="partner-logo">
-          <a href="https://www.altayer.com/" target="_blank" rel="noopener">
-            <div class="partner-name">Al Tayer Group</div>
-            <p class="partner-desc">Retail & distribution across lifestyle / luxury categories.</p>
-          </a>
+          <img src="https://www.hotelier.ae/public/styles/full_img_sml/public/images/2019/03/18/Hotelier-express-logo.jpg" alt="Hotelier Express" />
         </div>
-
         <div class="partner-logo">
-          <a href="https://www.roomready.ae/" target="_blank" rel="noopener">
-            <div class="partner-name">RoomReady</div>
-            <p class="partner-desc">UAE hospitality supplier (guest amenities / hotel-grade sourcing).</p>
-          </a>
+          <img src="https://www.hfme.com/wp-content/uploads/2023/01/hfme-logo.png" alt="HF Middle East" />
         </div>
-
         <div class="partner-logo">
-          <a href="https://www.madint.com/" target="_blank" rel="noopener">
-            <div class="partner-name">Madi International</div>
-            <p class="partner-desc">Professional beauty distribution network (salons / pro ecosystem).</p>
-          </a>
+          <img src="https://ghassan-aboud.com/wp-content/uploads/2021/03/logo.png" alt="Ghassan Aboud Group" />
         </div>
       </div>
     </div>
   </section>
 
   <!-- IMAGE DIVIDER -->
-  <section class="image-divider">
+  <section class="image-divider section-divider">
     <img
-      src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=2200&q=80"
-      alt="Luxury ritual ambiance"
+      src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/20f1fa0e535d8b0bc40ceb7d6c6db141c3fc290f/Bol%20dattes.jpg"
+      alt="Natural dates ingredient"
       loading="lazy"
       decoding="async"
     />
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="testimonials-section">
+  <section class="testimonials-section section-divider">
     <div class="container">
+      <div class="section-header-center">
+        <span class="section-eyebrow">Testimonials</span>
+        <h2>Partner Stories</h2>
+      </div>
+
       <div class="testimonial-card">
         <blockquote>
-          “A quiet luxury — the kind you feel instantly. The textures, the scent, the finish… it elevates the entire guest experience.”
+          "Each formula I've created is a promise—one of radiant, transformed skin through the art of excellence.
+          Inspired by the most refined beauty rituals, every drop is a perfect alchemy of science and nature,
+          where the finest ingredients unveil their power."
         </blockquote>
-        <cite>— Hospitality & Wellness Partner</cite>
+        <cite>— Adnan ADADA, Master Formulator</cite>
       </div>
     </div>
   </section>
 
-  <!-- PARTNER CTA -->
-  <section class="partner-cta-section">
-    <div class="container-narrow cta-content">
-      <h2>Let’s Build Your Signature Ritual</h2>
-      <p>
-        If you are a hotel, spa, wellness destination, or curated concept store,
-        we will share our catalogue and recommend the ideal formats for your space.
-      </p>
+  <!-- CTA -->
+  <section class="partner-cta-section section-divider">
+    <div class="container-narrow">
+      <div class="cta-content">
+        <h2>Experience Excellence – Partner With LUMA</h2>
+        <p>
+          Join a prestigious network of luxury establishments worldwide. Let's craft exclusive skincare experiences
+          for your guests and clients.
+        </p>
+      </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact-section" id="contact">
+  <!-- CONTACT (teaser) -->
+  <section class="contact-section section-divider">
     <div class="container">
       <div class="section-header-center">
-        <span class="section-eyebrow">Contact</span>
-        <h2>Get in Touch</h2>
-        <p class="section-subtitle">Request the catalogue and tell us about your destination.</p>
+        <h2>Contact Us</h2>
+        <p class="section-subtitle">For hotels, spas, and premium retail partners — we respond with discretion and care.</p>
       </div>
 
       <div class="contact-wrapper">
         <form class="contact-form" action="#" method="post">
           <div class="form-grid">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Business Email" required />
           </div>
-
           <div class="form-grid">
-            <input type="text" name="company" placeholder="Hotel / Spa / Concept Store" />
-            <input type="text" name="location" placeholder="City / Country" />
+            <input type="tel" name="phone" placeholder="Phone" />
+            <input type="text" name="company" placeholder="Company or Brand Name" />
           </div>
+          <textarea name="message" placeholder="Message" rows="6" required></textarea>
+          <button type="submit">Send Message</button>
 
-          <textarea name="message" rows="6" placeholder="Tell us what you’re looking for…" required></textarea>
-
-          <button type="submit">Request Catalogue</button>
+          <p style="text-align:center; margin-top:1.25rem; color:#6b6358;">
+            Prefer a dedicated page? Visit our <a href="contact.html" style="text-decoration:underline;">Contact</a> page.
+          </p>
         </form>
       </div>
     </div>
@@ -448,8 +447,8 @@
         <div class="footer-links">
           <h4>Explore</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#collections">Our Signature Collections</a></li>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#collections">Our Signature Collections</a></li>
             <li><a href="philosophy.html">Our Story & Philosophy</a></li>
             <li><a href="elixir.html">Elixir – The Secret Of Dates</a></li>
             <li><a href="contact.html">Contact</a></li>
