@@ -88,8 +88,9 @@
     .partner-logo {
       width: 100%;
       max-width: 180px;
-      height: 100px;
+      height: 140px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       background: #ffffff;
@@ -105,18 +106,13 @@
       border-color: rgba(197,162,112,0.4);
     }
 
-    .partner-logo img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      filter: grayscale(100%);
-      opacity: 0.7;
+    .partner-logo svg {
       transition: all 0.3s ease;
     }
 
-    .partner-logo:hover img {
-      filter: grayscale(0%);
-      opacity: 1;
+    .partner-logo:hover svg {
+      stroke: #a68555;
+      transform: scale(1.1);
     }
 
     @media (max-width: 768px) {
@@ -343,16 +339,35 @@
 
       <div class="partners-logos">
         <div class="partner-logo">
-          <img src="https://www.dutyfreemiddleeast.com/images/logo.svg" alt="Duty Free Middle East" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#c5a270" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+          <p style="margin-top:1rem; color:#6b6358; font-size:0.85rem; font-weight:400; letter-spacing:0.05em;">LUXURY HOTELS</p>
         </div>
         <div class="partner-logo">
-          <img src="https://www.hotelier.ae/public/styles/full_img_sml/public/images/2019/03/18/Hotelier-express-logo.jpg" alt="Hotelier Express" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#c5a270" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+            <path d="M19 11v4a7 7 0 0 1-14 0v-4"></path>
+            <path d="M12 19v3"></path>
+          </svg>
+          <p style="margin-top:1rem; color:#6b6358; font-size:0.85rem; font-weight:400; letter-spacing:0.05em;">SPA & WELLNESS</p>
         </div>
         <div class="partner-logo">
-          <img src="https://www.hfme.com/wp-content/uploads/2023/01/hfme-logo.png" alt="HF Middle East" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#c5a270" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="9" y1="3" x2="9" y2="21"></line>
+          </svg>
+          <p style="margin-top:1rem; color:#6b6358; font-size:0.85rem; font-weight:400; letter-spacing:0.05em;">RETAIL</p>
         </div>
         <div class="partner-logo">
-          <img src="https://ghassan-aboud.com/wp-content/uploads/2021/03/logo.png" alt="Ghassan Aboud Group" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#c5a270" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          <p style="margin-top:1rem; color:#6b6358; font-size:0.85rem; font-weight:400; letter-spacing:0.05em;">CONCEPT STORES</p>
         </div>
       </div>
     </div>
@@ -455,16 +470,9 @@
         <div class="footer-contact">
           <h4>Contacts</h4>
           <p><a href="tel:+33659053515">+33 (6) 590-535-15</a></p>
-          <p><a href="mailto:info@lumaheritage.com">info@lumaheritage.com</a></p>
+          <p><a href="/cdn-cgi/l/email-protection#563f383039163a233b373e33243f223731337835393b"><span class="__cf_email__" data-cfemail="e1888f878ea18d948c808984938895808684cf828e8c">[email&#160;protected]</span></a></p>
           <p class="address">Dubai Hills Estate, Business Park 1<br>Dubai, UAE</p>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <p>© 2025 LUMA Heritage. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-</body>
-</html>
+      <
