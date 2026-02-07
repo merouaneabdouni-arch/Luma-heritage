@@ -26,18 +26,18 @@
       position:absolute;
       left:0; right:0; bottom:0;
       height:1px;
-      background: linear-gradient(90deg, transparent, rgba(197,162,112,0.35), transparent);
+      background: linear-gradient(90deg, transparent, rgba(197,162,112,0.4), transparent);
     }
     
-    /* Introduction Section */
-    .intro-section {
-      background: #ffffff;
-      padding: 5rem 0;
+    /* WHO WE ARE Section - Combined with stats */
+    .who-we-are-section {
+      background: linear-gradient(to bottom, #f5efe6 0%, #ede4d8 100%);
+      padding: 6rem 0;
     }
     
     .intro-content {
       max-width: 750px;
-      margin: 0 auto;
+      margin: 0 auto 4rem;
       text-align: center;
       padding: 0 2rem;
     }
@@ -46,7 +46,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.75rem;
       font-weight: 400;
-      color: #1a1614;
+      color: #2a2318;
       margin-bottom: 1.75rem;
       letter-spacing: 0.02em;
       line-height: 1.25;
@@ -54,17 +54,17 @@
     
     .intro-content .subtitle {
       font-size: 0.95rem;
-      color: #c5a270;
-      font-weight: 500;
+      color: #a68555;
+      font-weight: 600;
       margin-bottom: 2rem;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
     
     .intro-content p {
-      font-size: 1.1rem;
-      line-height: 1.85;
-      color: #6b6358;
+      font-size: 1.15rem;
+      line-height: 1.9;
+      color: #4a4037;
       margin-bottom: 1.5rem;
     }
     
@@ -72,12 +72,8 @@
       margin-bottom: 0;
     }
     
-    .heritage-excellence { 
-      background: linear-gradient(to bottom, #fdfcfa 0%, #f9f6f0 100%);
-      padding: 5rem 0;
-    }
     .beauty-excellence { 
-      background: linear-gradient(135deg, #faf7f2 0%, #f5f0e8 100%);
+      background: linear-gradient(135deg, #f2ebe0 0%, #e8dfd1 100%);
       position: relative;
       padding: 6rem 0;
     }
@@ -88,15 +84,15 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(197,162,112,0.15), transparent);
+      background: linear-gradient(90deg, transparent, rgba(197,162,112,0.3), transparent);
     }
     .elixir-section { 
-      background: #ffffff;
-      box-shadow: inset 0 1px 0 rgba(197,162,112,0.1);
+      background: #faf7f2;
+      box-shadow: inset 0 1px 0 rgba(197,162,112,0.15);
       padding: 6rem 0;
     }
     .collections-section { 
-      background: linear-gradient(to bottom, #f9f6f0 0%, #f3ede3 100%);
+      background: linear-gradient(to bottom, #ede4d8 0%, #e3d8c9 100%);
       position: relative;
       padding: 6rem 0;
     }
@@ -107,15 +103,15 @@
       left: 0;
       right: 0;
       height: 100px;
-      background: linear-gradient(to bottom, rgba(249,246,240,0) 0%, rgba(249,246,240,1) 100%);
+      background: linear-gradient(to bottom, rgba(237,228,216,0) 0%, rgba(237,228,216,1) 100%);
       pointer-events: none;
     }
     .partners-section { 
-      background: linear-gradient(to bottom, #ffffff 0%, #fdfbf8 100%);
+      background: linear-gradient(to bottom, #f7f2ea 0%, #ede4d8 100%);
       padding: 5.5rem 0;
     }
     .testimonials-section { 
-      background: linear-gradient(135deg, #f9f5ef 0%, #f4ede2 100%);
+      background: linear-gradient(135deg, #f0e7db 0%, #e6dcc8 100%);
       position: relative;
       padding: 5.5rem 0;
     }
@@ -126,20 +122,20 @@
       left: 0;
       right: 0;
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(197,162,112,0.2), transparent);
+      background: linear-gradient(90deg, transparent, rgba(197,162,112,0.3), transparent);
     }
     .partner-cta-section {
-      background: linear-gradient(to right, #fdfcfa 0%, #f9f6f0 50%, #fdfcfa 100%);
-      border-top: 1px solid rgba(197,162,112,0.15);
-      border-bottom: 1px solid rgba(197,162,112,0.15);
+      background: linear-gradient(to right, #f5efe6 0%, #ede4d8 50%, #f5efe6 100%);
+      border-top: 1px solid rgba(197,162,112,0.25);
+      border-bottom: 1px solid rgba(197,162,112,0.25);
       padding: 5rem 0;
     }
     .contact-section {
-      background: #ffffff;
+      background: #faf7f2;
       padding: 6rem 0;
     }
     .image-divider {
-      background: #f8f5f0;
+      background: #e8dfd1;
       padding: 0;
       margin: 4rem 0;
     }
@@ -151,31 +147,32 @@
       object-fit: cover;
     }
 
-    /* Collections text under photos */
+    /* Collections - Larger photos and text */
     .collection-meta{
       text-align:center;
-      padding: 1.75rem 1.25rem 0;
+      padding: 2rem 1.5rem 1rem;
     }
     .collection-title{
       font-family: 'Cormorant Garamond', serif;
-      font-weight: 400;
-      font-size: 1.35rem;
+      font-weight: 500;
+      font-size: 1.65rem;
       letter-spacing: 0.02em;
-      margin-bottom: 0.8rem;
-      color: #1a1614;
+      margin-bottom: 1rem;
+      color: #2a2318;
       text-transform: none;
     }
     .collection-desc{
       margin: 0;
-      color: #6b6358;
-      font-size: 1rem;
-      line-height: 1.75;
-      max-width: 380px;
+      color: #4a4037;
+      font-size: 1.15rem;
+      line-height: 1.8;
+      max-width: 420px;
       margin-left:auto;
       margin-right:auto;
+      font-weight: 400;
     }
     
-    /* Collections Gallery - Improved sizing */
+    /* Collections Gallery - Bigger photos */
     .collections-gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -184,45 +181,45 @@
     }
     
     .collection-item {
-      background: rgba(255,255,255,0.5);
-      border-radius: 12px;
+      background: rgba(255,255,255,0.85);
+      border-radius: 14px;
       overflow: hidden;
       transition: all 0.4s ease;
-      border: 1px solid rgba(197,162,112,0.1);
+      border: 1px solid rgba(166,133,85,0.25);
     }
     
     .collection-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(197,162,112,0.15);
-      border-color: rgba(197,162,112,0.25);
+      transform: translateY(-12px);
+      box-shadow: 0 24px 48px rgba(166,133,85,0.22);
+      border-color: rgba(166,133,85,0.4);
     }
     
     .collection-image {
-      padding: 2.5rem 2rem 1.5rem;
+      padding: 3rem 2.5rem 2rem;
       background: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 320px;
+      min-height: 380px;
     }
     
     .collection-image img {
       max-width: 100%;
       height: auto;
-      max-height: 280px;
+      max-height: 340px;
       object-fit: contain;
-      filter: drop-shadow(0 8px 20px rgba(0,0,0,0.08));
+      filter: drop-shadow(0 10px 24px rgba(0,0,0,0.1));
     }
 
-    /* Where Beauty Meets Excellence: images fill more the frame */
+    /* Services cards */
     .service-image{
       padding: 2rem 1.5rem;
       min-height: 340px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(255,255,255,0.4);
-      border-radius: 8px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 10px;
       margin-bottom: 1.5rem;
     }
     .service-image img{
@@ -234,33 +231,34 @@
     }
     
     .service-card {
-      background: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.75);
       padding: 2rem;
-      border-radius: 12px;
+      border-radius: 14px;
       transition: all 0.4s ease;
-      border: 1px solid rgba(197,162,112,0.12);
+      border: 1px solid rgba(166,133,85,0.22);
     }
     
     .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 16px 36px rgba(197,162,112,0.12);
-      background: rgba(255,255,255,0.85);
+      transform: translateY(-10px);
+      box-shadow: 0 20px 42px rgba(166,133,85,0.18);
+      background: rgba(255,255,255,0.95);
     }
     
     .service-card h3 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       margin-bottom: 1rem;
-      color: #1a1614;
+      color: #2a2318;
+      font-weight: 500;
     }
     
     .service-card p {
-      color: #6b6358;
-      line-height: 1.75;
-      font-size: 1.02rem;
+      color: #4a4037;
+      line-height: 1.8;
+      font-size: 1.05rem;
     }
 
-    /* Statistics Grid */
+    /* Statistics Grid - Better contrast */
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -272,45 +270,47 @@
 
     .stat-item {
       text-align: center;
-      padding: 2.5rem 1.75rem;
-      background: rgba(255,255,255,0.7);
-      border: 1px solid rgba(197,162,112,0.18);
-      border-radius: 10px;
+      padding: 2.75rem 2rem;
+      background: rgba(255,255,255,0.85);
+      border: 1.5px solid rgba(166,133,85,0.35);
+      border-radius: 12px;
       transition: all 0.4s ease;
     }
 
     .stat-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 16px 40px rgba(197,162,112,0.18);
-      border-color: rgba(197,162,112,0.35);
-      background: rgba(255,255,255,0.95);
+      transform: translateY(-12px);
+      box-shadow: 0 20px 48px rgba(166,133,85,0.25);
+      border-color: rgba(166,133,85,0.55);
+      background: rgba(255,255,255,0.98);
     }
 
     .stat-item svg {
       margin-bottom: 1.75rem;
       transition: all 0.3s ease;
+      stroke: #a68555;
+      stroke-width: 1.5;
     }
 
     .stat-item:hover svg {
-      transform: scale(1.15);
-      stroke: #a68555;
+      transform: scale(1.18);
+      stroke: #8d6e42;
     }
 
     .stat-item h3 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.25rem;
-      font-weight: 400;
-      color: #c5a270;
-      margin-bottom: 0.85rem;
+      font-size: 2.5rem;
+      font-weight: 500;
+      color: #a68555;
+      margin-bottom: 1rem;
       letter-spacing: 0.02em;
     }
 
     .stat-item p {
-      font-size: 0.95rem;
-      color: #6b6358;
-      line-height: 1.65;
+      font-size: 1.05rem;
+      color: #3a3028;
+      line-height: 1.7;
       margin: 0;
-      font-weight: 400;
+      font-weight: 500;
     }
     
     /* Section Headers */
@@ -324,17 +324,81 @@
     
     .section-header-center h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.75rem;
-      font-weight: 400;
-      color: #1a1614;
+      font-size: 2.85rem;
+      font-weight: 500;
+      color: #2a2318;
       margin-bottom: 1.25rem;
       letter-spacing: 0.02em;
     }
     
     .section-subtitle {
-      font-size: 1.1rem;
-      color: #6b6358;
+      font-size: 1.15rem;
+      color: #4a4037;
       line-height: 1.7;
+    }
+
+    /* Hero banner */
+    .hero img {
+      object-fit: cover;
+      object-position: center 35%;
+      min-height: 560px;
+      width: 100%;
+      display: block;
+    }
+    
+    .hero {
+      padding: 0;
+      margin-bottom: 0;
+    }
+
+    /* Partners - Single row layout with better contrast */
+    .partners-logos-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      margin-top: 3.5rem;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .partner-logo {
+      width: 200px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.9);
+      border: 1.5px solid rgba(166,133,85,0.4);
+      border-radius: 12px;
+      padding: 2.25rem;
+      transition: all 0.4s ease;
+    }
+
+    .partner-logo:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 16px 40px rgba(166,133,85,0.22);
+      border-color: rgba(166,133,85,0.6);
+      background: rgba(255,255,255,1);
+    }
+
+    .partner-logo svg {
+      transition: all 0.3s ease;
+      stroke: #a68555;
+      stroke-width: 1.5;
+    }
+
+    .partner-logo:hover svg {
+      stroke: #8d6e42;
+      transform: scale(1.15);
+    }
+    
+    .partner-logo p {
+      color: #3a3028;
+      font-weight: 600;
     }
 
     @media (max-width: 968px) {
@@ -352,11 +416,15 @@
         padding: 4rem 0;
       }
       
-      .intro-section,
+      .who-we-are-section,
       .beauty-excellence,
       .elixir-section,
       .collections-section {
         padding: 4rem 0;
+      }
+      
+      .partners-logos-row {
+        gap: 2.5rem;
       }
     }
 
@@ -382,74 +450,27 @@
       .section-divider {
         padding: 3rem 0;
       }
-    }
-
-    /* Hero banner adjustment - better visibility */
-    .hero img {
-      object-fit: cover;
-      object-position: center 35%;
-      min-height: 550px;
-      width: 100%;
-      display: block;
-    }
-    
-    .hero {
-      padding: 0;
-      margin-bottom: 0;
-    }
-
-    /* Partners logos styling */
-    .partners-logos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 3.5rem;
-      margin-top: 3.5rem;
-      align-items: center;
-      justify-items: center;
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .partner-logo {
-      width: 100%;
-      max-width: 200px;
-      height: 160px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255,255,255,0.8);
-      border: 1px solid rgba(197,162,112,0.25);
-      border-radius: 10px;
-      padding: 2rem;
-      transition: all 0.4s ease;
-    }
-
-    .partner-logo:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 32px rgba(197,162,112,0.15);
-      border-color: rgba(197,162,112,0.45);
-      background: rgba(255,255,255,1);
-    }
-
-    .partner-logo svg {
-      transition: all 0.3s ease;
-    }
-
-    .partner-logo:hover svg {
-      stroke: #a68555;
-      transform: scale(1.12);
-    }
-
-    @media (max-width: 768px) {
-      .partners-logos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2.5rem;
-      }
       
       .hero img {
         min-height: 400px;
+      }
+      
+      .collection-title {
+        font-size: 1.4rem;
+      }
+      
+      .collection-desc {
+        font-size: 1.05rem;
+      }
+      
+      .partners-logos-row {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      
+      .partner-logo {
+        width: 180px;
+        height: 160px;
       }
     }
   </style>
@@ -487,8 +508,8 @@
     />
   </section>
 
-  <!-- INTRODUCTION -->
-  <section class="intro-section section-divider">
+  <!-- WHO WE ARE + STATS -->
+  <section class="who-we-are-section section-divider">
     <div class="container">
       <div class="intro-content">
         <p class="subtitle">Who We Are</p>
@@ -503,12 +524,7 @@
           sensory experience that elevates your guest journey and enhances your brand's prestige.
         </p>
       </div>
-    </div>
-  </section>
-
-  <!-- KEY STATISTICS -->
-  <section class="heritage-excellence section-divider">
-    <div class="container">
+      
       <div class="stats-grid">
         <div class="stat-item">
           <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c5a270" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
@@ -759,7 +775,7 @@
         <p class="section-subtitle">Specialized luxury hospitality distributors across the Emirates.</p>
       </div>
 
-      <div class="partners-logos">
+      <div class="partners-logos-row">
         <div class="partner-logo">
           <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#c5a270" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
