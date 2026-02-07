@@ -5,89 +5,489 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Our Story & Philosophy – LUMA Heritage</title>
-  <meta name="description" content="Discover the story and philosophy behind LUMA Heritage—where Middle Eastern rituals meet modern luxury." />
+  <meta name="description" content="Discover the heritage behind LUMA: ancestral beauty rituals from the Arabian Peninsula, reimagined into luxury skincare." />
 
+  <!-- Fonts (same as index) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Page-only layout helpers (keeps your GitHub style intact) -->
+  <style>
+    .page-hero {
+      padding: 6.5rem 0 4rem;
+      background: linear-gradient(to bottom, #ffffff 0%, #fdfcfa 100%);
+      border-bottom: 1px solid rgba(197, 162, 112, 0.15);
+    }
+    .page-hero h1 {
+      font-size: 3.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .page-hero p {
+      text-align: center;
+      max-width: 900px;
+      margin: 0.75rem auto 0;
+      color: #6b6358;
+    }
+
+    .story-section {
+      padding: 7rem 0;
+      background: #ffffff;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .story-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .story-images img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border: 1px solid rgba(197, 162, 112, 0.18);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.05);
+      background: #faf8f5;
+    }
+
+    .story-content h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .cta-inline {
+      display: inline-block;
+      margin-top: 1.25rem;
+      padding: 1rem 2.75rem;
+      background: rgba(255, 255, 255, 0.95);
+      border: 2px solid rgba(197, 162, 112, 0.30);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 400;
+      transition: all 0.4s ease;
+    }
+    .cta-inline:hover {
+      background: rgba(197, 162, 112, 0.95);
+      color: #ffffff;
+      border-color: #c5a270;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(197, 162, 112, 0.25);
+    }
+
+    .triple-blocks {
+      padding: 7rem 0;
+      background: #faf8f5;
+      border-top: 1px solid rgba(197, 162, 112, 0.15);
+      border-bottom: 1px solid rgba(197, 162, 112, 0.15);
+    }
+
+    .blocks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .block-card {
+      background: #ffffff;
+      border: 1px solid rgba(197, 162, 112, 0.18);
+      padding: 3rem 2.5rem;
+      transition: all 0.45s ease;
+      position: relative;
+    }
+    .block-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+      border-color: #c5a270;
+    }
+    .block-card h2 {
+      font-size: 2.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .icon-stats {
+      padding: 7rem 0;
+      background: #ffffff;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .stat-item {
+      background: #faf8f5;
+      border: 1px solid rgba(197, 162, 112, 0.15);
+      padding: 2.25rem 1.75rem;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+    .stat-item:hover {
+      background: #ffffff;
+      border-color: #c5a270;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+      transform: translateY(-4px);
+    }
+    .stat-item img {
+      width: 72px;
+      height: 72px;
+      object-fit: cover;
+      border-radius: 999px;
+      margin: 0 auto 1rem;
+      border: 1px solid rgba(197, 162, 112, 0.20);
+    }
+    .stat-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      color: #1a1614;
+      margin-bottom: 0.4rem;
+    }
+    .stat-label {
+      color: #6b6358;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .final-cta {
+      padding: 7rem 0;
+      background: linear-gradient(135deg, #1a1614 0%, #2a2520 100%);
+      text-align: center;
+      color: #ffffff;
+    }
+    .final-cta h2 {
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+      font-size: 2.8rem;
+    }
+    .final-cta p {
+      color: rgba(255,255,255,0.9);
+      max-width: 850px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+      line-height: 2;
+    }
+    .final-cta a {
+      display: inline-block;
+      padding: 1.2rem 3.25rem;
+      background: rgba(255,255,255,0.95);
+      color: #1a1614;
+      border: 2px solid rgba(197, 162, 112, 0.30);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      transition: all 0.4s ease;
+    }
+    .final-cta a:hover {
+      background: rgba(197, 162, 112, 0.95);
+      color: #ffffff;
+      border-color: #c5a270;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(197, 162, 112, 0.25);
+    }
+
+    @media (max-width: 1100px) {
+      .story-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .blocks-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .page-hero h1 { font-size: 2.8rem; }
+    }
+
+    @media (max-width: 600px) {
+      .story-images { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .final-cta h2 { font-size: 2.2rem; }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="header">
-  <div class="header-inner">
-    <a href="index.html" class="logo-link">
-      <img
-        src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/6310032a798a6b2dd025432c07b18a623e1b1bde/42155f28-add0-4004-8e15-68b36e31fa07.png"
-        alt="LUMA Heritage"
-        class="logo"
-      />
-    </a>
+  <!-- HEADER (same structure as your index, but links to pages) -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link">
+        <img
+          src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/6310032a798a6b2dd025432c07b18a623e1b1bde/42155f28-add0-4004-8e15-68b36e31fa07.png"
+          alt="LUMA Heritage"
+          class="logo"
+        />
+      </a>
 
-    <nav class="menu">
-      <a href="index.html#home">Home</a>
-      <a href="index.html#collections">Our Signature Collections</a>
-      <a href="philosophy.html">Our Story & Philosophy</a>
-      <a href="elixir.html">Elixir – The Secret Of Dates</a>
-      <a href="contact.html">Contact & Partnerships</a>
-    </nav>
-  </div>
-</header>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="index.html#collections">Our Signature Collections</a>
+        <a href="philosophy.html">Our Story & Philosophy</a>
+        <a href="elixir.html">Elixir – The Secret Of Dates</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="heritage-excellence" style="padding-top: 110px;">
-  <div class="container">
-    <div class="section-header-center">
-      <h2>Our Story & Philosophy</h2>
-      <p class="section-subtitle">
-        A luxury skincare house inspired by Middle Eastern heritage, crafted for premium hospitality and refined retail.
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container-narrow">
+      <h1>Our Story & Philosophy</h1>
+      <p>
+        A heritage of Middle Eastern beauty rituals — transformed into modern luxury skincare,
+        designed for the world’s finest hotels, spas, and concept stores.
       </p>
     </div>
+  </section>
 
-    <div class="excellence-grid" style="margin-top: 26px;">
-      <div class="excellence-content">
-        <h2>Born From Ritual, Designed For Excellence</h2>
-        <p>
-          LUMA Heritage is rooted in the elegance of ancestral beauty rituals—where care is a ceremony, and ingredients are revered.
-          We translate this heritage into modern luxury formulas designed to meet the standards of high-end hotels, spas, and concept stores.
-        </p>
+  <!-- STORY INTRO + 2 IMAGES (exact WP images) -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-grid">
 
-        <h2>Our Philosophy</h2>
-        <p>
-          We believe skincare should feel like a refined ritual: sensorial, precise, and quietly powerful.
-          Every texture, every note, every finish is designed to elevate the experience—without excess, without noise.
-        </p>
+        <div class="story-images">
+          <a href="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-29.png" aria-label="Our Story Image 1">
+            <img
+              src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-29.png"
+              alt="LUMA Heritage - Our Story"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
 
-        <h2>Made For Premium Partners</h2>
-        <p>
-          LUMA is developed to integrate seamlessly into premium environments: in-room amenities, spa treatments, and curated retail selections.
-          If you’re building a luxury guest experience, LUMA becomes part of your signature.
-        </p>
+          <img
+            src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-33.png"
+            alt="LUMA Heritage - Philosophy"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
 
-        <p style="margin-top: 18px;">
-          Explore the ingredient story on <a href="elixir.html" style="text-decoration: underline;">Elixir – The Secret of Dates</a>,
-          or reach our partnerships team via <a href="contact.html" style="text-decoration: underline;">Contact</a>.
-        </p>
-      </div>
+        <div class="story-content">
+          <h2>An Ancestral Beauty Secret</h2>
+          <p>
+            In the heart of the golden dunes of the Arabian Peninsula, where time seems to stand still,
+            a beauty ritual has been passed down from mother to daughter for centuries.
+          </p>
+          <p>
+            In the homes of Al Ain, in the United Arab Emirates, women carefully prepare skincare treatments
+            inspired by the generous nature of the desert. Sweet dates, purifying cloves, and regenerating aloe vera
+            are blended into precious formulas, applied with gestures that have been transmitted through generations.
+          </p>
+          <p>
+            These recipes, whispered during evening gatherings and perfected over time, are more than just skincare —
+            they are an invisible bond between the women of yesterday and those of today.
+          </p>
 
-      <div class="excellence-image">
-        <img
-          src="https://lumaheritage.com/wp-content/uploads/2025/04/1000017838.png"
-          alt="LUMA Heritage story image"
-        />
+          <a class="cta-inline" href="contact.html">Embrace Elegance</a>
+        </div>
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="footer">
-  <div class="footer-content">
-    <div class="footer-bottom">
-      <p>© 2025 LUMA Heritage. All rights reserved.</p>
+  <!-- BIRTH OF LUMA -->
+  <section class="story-section" style="background:#faf8f5; border-top:1px solid rgba(197,162,112,0.15);">
+    <div class="container">
+      <div class="story-grid">
+
+        <div class="story-content">
+          <h2>The Birth of LUMA</h2>
+          <p>
+            The Emirates have always held a deep fascination for me. During my travels to Al Ain,
+            between lush oases and fragrant souks, I immersed myself in the beauty traditions that my grandmother
+            herself knew so well.
+          </p>
+          <p>
+            I remember her skilled hands preparing balms where the sweetness of dates blended with the strength of cloves
+            and the freshness of aloe vera. These memories became an undeniable truth: these ancestral rituals needed to be
+            revived and adapted to the needs of modern women.
+          </p>
+          <p>
+            Thus, LUMA was born — a brand where every treatment carries the imprint of these traditions while offering a
+            luxurious and sensorial experience, faithful to the heritage it celebrates.
+          </p>
+
+          <a class="cta-inline" href="contact.html">Embrace Elegance</a>
+        </div>
+
+        <div class="story-images" style="grid-template-columns:1fr;">
+          <img
+            src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-34.png"
+            alt="The Birth of LUMA"
+            loading="lazy"
+            decoding="async"
+            style="aspect-ratio:1/1;"
+          />
+        </div>
+
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
+
+  <!-- RITUAL CARRIED FORWARD -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-grid">
+
+        <div class="story-images" style="grid-template-columns:1fr;">
+          <img
+            src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-35.png"
+            alt="A Ritual Carried Forward"
+            loading="lazy"
+            decoding="async"
+            style="aspect-ratio:1/1;"
+          />
+        </div>
+
+        <div class="story-content">
+          <h2>A Ritual Carried Forward</h2>
+          <p>
+            Even today, these gestures and formulas remain a living testament to the ancestral expertise of the women of Al Ain.
+            Each application is an invitation to slow down, reconnect with oneself, and embrace a beauty legacy that transcends generations.
+          </p>
+          <p>
+            LUMA does not simply create skincare products. It preserves a way of life where nature and tradition unite to reveal each woman’s unique radiance.
+          </p>
+          <p>
+            A secret to be shared, a tradition to be honored, a heritage to be continued.
+          </p>
+
+          <a class="cta-inline" href="contact.html">Embrace Elegance</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 BLOCKS (exact headings + copy style GitHub) -->
+  <section class="triple-blocks">
+    <div class="container">
+      <div class="section-header-center">
+        <h2>Experience LUMA Through Ritual</h2>
+        <p class="section-subtitle">Three expressions of heritage — crafted for luxury hospitality and refined self-care.</p>
+      </div>
+
+      <div class="blocks-grid">
+
+        <div class="block-card">
+          <h2>Rituals of Ancestral Beauty</h2>
+          <p>
+            Indulge in luxurious skincare rituals inspired by centuries-old traditions. Each formula is crafted with the finest
+            natural ingredients, infused with the nourishing power of dates, aloe vera, and clove — preserving the essence of Middle Eastern beauty.
+          </p>
+          <a class="cta-inline" href="contact.html">Get In Touch</a>
+        </div>
+
+        <div class="block-card">
+          <h2>Elegance in Every Stay</h2>
+          <p>
+            Enhance your guests’ experience with skincare rituals rooted in tradition. Our exclusive hotel collections blend
+            modern luxury with ancestral wisdom, ensuring every stay feels serene, indulgent, and rejuvenating.
+          </p>
+          <a class="cta-inline" href="contact.html">Get In Touch</a>
+        </div>
+
+        <div class="block-card">
+          <h2>The Art of Everyday Luxury</h2>
+          <p>
+            Transform your daily routine with beauty rituals designed to nourish and protect your skin. Inspired by Middle Eastern
+            traditions, our products bring centuries of expertise into modern self-care.
+          </p>
+          <a class="cta-inline" href="contact.html">Get In Touch</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ICON STATS (exact 4 icons from your snippet) -->
+  <section class="icon-stats">
+    <div class="container">
+      <div class="section-header-center">
+        <h2>Heritage Meets Modern Excellence</h2>
+        <p class="section-subtitle">A premium standard crafted for discerning hospitality partners.</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-item">
+          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/Design-sans-titre-29-r1hn1p025gwx6xzv81iav1qad3gnoxv489yom6du00.png" alt="5 Stars" loading="lazy">
+          <div class="stat-number">5 Stars</div>
+          <p class="stat-label">Pure Ingredients</p>
+        </div>
+
+        <div class="stat-item">
+          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/gettyimages-1401671537-612x612-3-r1edw8t9o3jkss2s60xscb1m0uqh30vqdu78xjn02o.jpg" alt="100%" loading="lazy">
+          <div class="stat-number">100%</div>
+          <p class="stat-label">Luxury Experience</p>
+        </div>
+
+        <div class="stat-item">
+          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/Design-sans-titre-34-r1i2tcp7ijzup7fvhwy96aupb7jp8gff9xa3aypmao.png" alt="3 Years" loading="lazy">
+          <div class="stat-number">3 Years</div>
+          <p class="stat-label">Always Available</p>
+        </div>
+
+        <div class="stat-item">
+          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/gettyimages-1401473272-612x612-1-r1edhlht61hpvjcqp702zi40roxk4tqbdc7upbcv1c.jpg" alt="24/7" loading="lazy">
+          <div class="stat-number">24/7</div>
+          <p class="stat-label">Proven Expertise</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container-narrow">
+      <h2>Get in Touch with Us</h2>
+      <p>Join Our Exclusive Community Today!</p>
+      <a href="contact.html">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- FOOTER (same style as index) -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-top">
+        <div class="footer-logo-section">
+          <img
+            src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/6310032a798a6b2dd025432c07b18a623e1b1bde/42155f28-add0-4004-8e15-68b36e31fa07.png"
+            alt="LUMA Heritage"
+            class="footer-logo"
+          />
+        </div>
+
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#collections">Our Signature Collections</a></li>
+            <li><a href="philosophy.html">Our Story & Philosophy</a></li>
+            <li><a href="elixir.html">Elixir – The Secret Of Dates</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contacts</h4>
+          <p><a href="tel:+33659053515">+33 (6) 590-535-15</a></p>
+          <p><a href="mailto:info@lumaheritage.com">info@lumaheritage.com</a></p>
+          <p class="address">Dubai Hills Estate, Business Park 1<br>Dubai, UAE</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 LUMA Heritage. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
