@@ -125,10 +125,160 @@
       background: linear-gradient(90deg, transparent, rgba(197,162,112,0.3), transparent);
     }
     .partner-cta-section {
-      background: linear-gradient(to right, #f5efe6 0%, #ede4d8 50%, #f5efe6 100%);
-      border-top: 1px solid rgba(197,162,112,0.25);
-      border-bottom: 1px solid rgba(197,162,112,0.25);
-      padding: 5rem 0;
+      background: linear-gradient(to right, #e8dfd1 0%, #ddd2bf 50%, #e8dfd1 100%);
+      border-top: 2px solid rgba(166,133,85,0.35);
+      border-bottom: 2px solid rgba(166,133,85,0.35);
+      padding: 5.5rem 0;
+      text-align: center;
+    }
+    
+    .cta-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 500;
+      color: #2a2318;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.02em;
+      line-height: 1.3;
+    }
+    
+    .cta-content p {
+      font-size: 1.2rem;
+      line-height: 1.85;
+      color: #3a3028;
+      margin-bottom: 2.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      padding: 1.1rem 3rem;
+      background: linear-gradient(135deg, #a68555 0%, #8d6e42 100%);
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: all 0.4s ease;
+      border: 2px solid #a68555;
+      box-shadow: 0 8px 20px rgba(166,133,85,0.25);
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(166,133,85,0.35);
+      background: linear-gradient(135deg, #8d6e42 0%, #73562e 100%);
+      border-color: #8d6e42;
+    }
+    
+    .contact-section {
+      background: #f7f2ea;
+      padding: 6rem 0;
+    }
+    
+    .contact-section .section-header-center h2 {
+      font-size: 3rem;
+      color: #2a2318;
+      font-weight: 500;
+    }
+    
+    .contact-section .section-subtitle {
+      font-size: 1.2rem;
+      color: #3a3028;
+    }
+    
+    .contact-form {
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.85);
+      padding: 3rem;
+      border-radius: 14px;
+      border: 1.5px solid rgba(166,133,85,0.3);
+      box-shadow: 0 12px 32px rgba(166,133,85,0.12);
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 1.1rem 1.5rem;
+      font-size: 1.05rem;
+      border: 1.5px solid rgba(166,133,85,0.35);
+      border-radius: 8px;
+      background: #ffffff;
+      color: #2a2318;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s ease;
+      margin-bottom: 1.25rem;
+    }
+    
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: #8a7a68;
+      font-weight: 400;
+    }
+    
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #a68555;
+      box-shadow: 0 0 0 3px rgba(166,133,85,0.15);
+    }
+    
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+    
+    .contact-form button {
+      width: 100%;
+      padding: 1.2rem 2rem;
+      background: linear-gradient(135deg, #a68555 0%, #8d6e42 100%);
+      color: #ffffff;
+      font-size: 1.15rem;
+      font-weight: 600;
+      border: 2px solid #a68555;
+      border-radius: 8px;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: all 0.4s ease;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 8px 20px rgba(166,133,85,0.25);
+    }
+    
+    .contact-form button:hover {
+      transform: translateY(-4px);
+      background: linear-gradient(135deg, #8d6e42 0%, #73562e 100%);
+      border-color: #8d6e42;
+      box-shadow: 0 14px 32px rgba(166,133,85,0.35);
+    }
+    
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    
+    @media (max-width: 768px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-form {
+        padding: 2rem;
+      }
+      
+      .cta-content h2 {
+        font-size: 2.2rem;
+      }
+      
+      .contact-section .section-header-center h2 {
+        font-size: 2.2rem;
+      }
     }
     .contact-section {
       background: #faf7f2;
@@ -849,6 +999,7 @@
           Join a prestigious network of luxury establishments worldwide. Let's craft exclusive skincare experiences
           for your guests and clients.
         </p>
+        <a href="contact.html" class="cta-button">Start Your Partnership</a>
       </div>
     </div>
   </section>
