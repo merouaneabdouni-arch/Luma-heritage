@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Our Story & Philosophy – LUMA Heritage</title>
-  <meta name="description" content="Discover the heritage behind LUMA: ancestral beauty rituals from the Arabian Peninsula, reimagined into luxury skincare." />
+  <title>Elixir – The Secret Of Dates – LUMA Heritage</title>
+  <meta name="description" content="Discover the timeless power of dates: a millennia-old Middle Eastern beauty secret, reimagined into modern luxury skincare rituals." />
 
   <!-- Fonts (same as index) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,7 @@
     }
     .page-hero p {
       text-align: center;
-      max-width: 900px;
+      max-width: 950px;
       margin: 0.75rem auto 0;
       color: #6b6358;
     }
@@ -45,19 +45,27 @@
       align-items: center;
     }
 
-    .story-images {
+    .double-images {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
     }
 
-    .story-images img {
+    .double-images img,
+    .single-image img {
       width: 100%;
-      aspect-ratio: 1/1;
-      object-fit: cover;
       border: 1px solid rgba(197, 162, 112, 0.18);
       box-shadow: 0 8px 28px rgba(0,0,0,0.05);
       background: #faf8f5;
+    }
+
+    .double-images img {
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+
+    .single-image img {
+      object-fit: cover;
     }
 
     .story-content h2 {
@@ -111,7 +119,7 @@
       border-color: #c5a270;
     }
     .block-card h2 {
-      font-size: 2.1rem;
+      font-size: 2.05rem;
       margin-bottom: 1.25rem;
     }
 
@@ -150,7 +158,7 @@
     }
     .stat-number {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
+      font-size: 1.55rem;
       color: #1a1614;
       margin-bottom: 0.4rem;
     }
@@ -205,7 +213,7 @@
     }
 
     @media (max-width: 600px) {
-      .story-images { grid-template-columns: 1fr; }
+      .double-images { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: 1fr; }
       .final-cta h2 { font-size: 2.2rem; }
     }
@@ -214,7 +222,7 @@
 
 <body>
 
-  <!-- HEADER (same structure as your index, but links to pages) -->
+  <!-- HEADER (links to pages) -->
   <header class="header">
     <div class="header-inner">
       <a href="index.html" class="logo-link">
@@ -238,92 +246,90 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container-narrow">
-      <h1>Our Story & Philosophy</h1>
+      <h1>Elixir – The Secret Of Dates</h1>
       <p>
-        A heritage of Middle Eastern beauty rituals — transformed into modern luxury skincare,
-        designed for the world’s finest hotels, spas, and concept stores.
+        A millennia-old beauty secret from the Middle East — revered for its resilience, vitality,
+        and the timeless glow it leaves on the skin.
       </p>
     </div>
   </section>
 
-  <!-- STORY INTRO + 2 IMAGES (exact WP images) -->
+  <!-- TOP: 2 SQUARE VISUALS + INTRO TEXT -->
   <section class="story-section">
     <div class="container">
       <div class="story-grid">
 
-        <div class="story-images">
-          <a href="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-29.png" aria-label="Our Story Image 1">
+        <div>
+          <h2>Dairy FROM OUR FAMILY FARMS</h2>
+          <div class="double-images" style="margin-top:2rem;">
+            <a href="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-31.png" aria-label="Elixir Image 1">
+              <img
+                src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-31.png"
+                alt="LUMA Heritage Elixir Visual 01"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+
             <img
-              src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-29.png"
-              alt="LUMA Heritage - Our Story"
+              src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-30.png"
+              alt="LUMA Heritage Elixir Visual 02"
               loading="lazy"
               decoding="async"
             />
-          </a>
-
-          <img
-            src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-33.png"
-            alt="LUMA Heritage - Philosophy"
-            loading="lazy"
-            decoding="async"
-          />
+          </div>
         </div>
 
         <div class="story-content">
-          <h2>An Ancestral Beauty Secret</h2>
+          <h2>The Legacy of Dates: A Millennia-Old Secret</h2>
           <p>
-            In the heart of the golden dunes of the Arabian Peninsula, where time seems to stand still,
-            a beauty ritual has been passed down from mother to daughter for centuries.
+            In the heart of the Middle East, where golden dunes stretch beyond the horizon, dates have long been revered
+            not only as a source of nourishment but as a pillar of timeless beauty. For centuries, women across the region
+            have infused their skincare rituals with the richness of dates, passing down ancestral wisdom from mother to daughter.
           </p>
           <p>
-            In the homes of Al Ain, in the United Arab Emirates, women carefully prepare skincare treatments
-            inspired by the generous nature of the desert. Sweet dates, purifying cloves, and regenerating aloe vera
-            are blended into precious formulas, applied with gestures that have been transmitted through generations.
+            More than a fruit, the date embodies resilience, vitality, and refinement. From the opulent hammams of ancient palaces
+            to intimate beauty ceremonies in desert homes, its essence has been cherished for its ability to preserve the skin’s youthfulness and radiance.
           </p>
-          <p>
-            These recipes, whispered during evening gatherings and perfected over time, are more than just skincare —
-            they are an invisible bond between the women of yesterday and those of today.
-          </p>
+          <p><strong>A tradition whispered through generations, an elixir of beauty untouched by time.</strong></p>
 
-          <a class="cta-inline" href="contact.html">Embrace Elegance</a>
+          <a class="cta-inline" href="contact.html">Enquire With Elegance</a>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- BIRTH OF LUMA -->
+  <!-- TIMELESS POWER: TEXT + VERTICAL IMAGE -->
   <section class="story-section" style="background:#faf8f5; border-top:1px solid rgba(197,162,112,0.15);">
     <div class="container">
       <div class="story-grid">
 
         <div class="story-content">
-          <h2>The Birth of LUMA</h2>
+          <h2>The Timeless Power of Dates</h2>
           <p>
-            The Emirates have always held a deep fascination for me. During my travels to Al Ain,
-            between lush oases and fragrant souks, I immersed myself in the beauty traditions that my grandmother
-            herself knew so well.
+            From the heart of Middle Eastern oases, dates have long been revered as a source of nourishment and beauty.
+            More than a fruit, they are a gift from nature, rich in elements that restore and protect the skin.
           </p>
           <p>
-            I remember her skilled hands preparing balms where the sweetness of dates blended with the strength of cloves
-            and the freshness of aloe vera. These memories became an undeniable truth: these ancestral rituals needed to be
-            revived and adapted to the needs of modern women.
+            Packed with essential vitamins A, B, and E, dates deeply hydrate, improve skin elasticity, and shield against environmental stressors.
+            Their natural antioxidants help fight the signs of aging, while minerals and amino acids promote a smooth, radiant complexion.
           </p>
           <p>
-            Thus, LUMA was born — a brand where every treatment carries the imprint of these traditions while offering a
-            luxurious and sensorial experience, faithful to the heritage it celebrates.
+            For generations, women have relied on the essence of dates to preserve their beauty, ensuring their skin remains luminous and replenished.
+            A ritual rooted in heritage, carrying with it the wisdom of time.
           </p>
 
-          <a class="cta-inline" href="contact.html">Embrace Elegance</a>
+          <a class="cta-inline" href="contact.html">Enquire With Elegance</a>
         </div>
 
-        <div class="story-images" style="grid-template-columns:1fr;">
+        <div class="single-image">
           <img
-            src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-34.png"
-            alt="The Birth of LUMA"
+            src="https://lumaheritage.com/wp-content/uploads/2025/02/vertical-shot-red-carpet-middle-lamps-stick-tripod-with-rock-distance-1-683x1024.jpg"
+            alt="Middle Eastern ambiance"
             loading="lazy"
             decoding="async"
-            style="aspect-ratio:1/1;"
+            style="max-height:900px; width:100%;"
           />
         </div>
 
@@ -331,113 +337,117 @@
     </div>
   </section>
 
-  <!-- RITUAL CARRIED FORWARD -->
+  <!-- RITUAL OF DATES: IMAGE + LONG TEXT -->
   <section class="story-section">
     <div class="container">
       <div class="story-grid">
 
-        <div class="story-images" style="grid-template-columns:1fr;">
+        <div class="single-image">
           <img
-            src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-35.png"
-            alt="A Ritual Carried Forward"
+            src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-30.png"
+            alt="The Ritual of Dates"
             loading="lazy"
             decoding="async"
-            style="aspect-ratio:1/1;"
+            style="aspect-ratio:1/1; object-fit:cover;"
           />
         </div>
 
         <div class="story-content">
-          <h2>A Ritual Carried Forward</h2>
+          <h2>The Ritual of Dates: A Celebration of Beauty and TRADITION</h2>
           <p>
-            Even today, these gestures and formulas remain a living testament to the ancestral expertise of the women of Al Ain.
-            Each application is an invitation to slow down, reconnect with oneself, and embrace a beauty legacy that transcends generations.
+            At sunset, in the courtyards of Middle Eastern homes, a time-honored ritual unfolds. Women gather, sharing stories,
+            laughter, and the sacred practice of self-care. Bowls of crushed dates and aromatic oils are prepared, their rich essence
+            massaged into the skin, restoring softness after long days under the desert sun.
           </p>
           <p>
-            LUMA does not simply create skincare products. It preserves a way of life where nature and tradition unite to reveal each woman’s unique radiance.
+            In these moments, beauty is not simply a practice — it is an art, a legacy, a connection between past and present.
+            The ritual of dates is a reminder that skincare is more than an act of nourishment; it is an embrace of heritage,
+            an ode to the elegance that transcends generations.
           </p>
           <p>
-            A secret to be shared, a tradition to be honored, a heritage to be continued.
+            Even today, this timeless tradition continues, offering a journey through the senses, a pause in time where beauty is not rushed but savored.
           </p>
+          <p><strong>A ritual of grace, a legacy of light.</strong></p>
 
-          <a class="cta-inline" href="contact.html">Embrace Elegance</a>
+          <a class="cta-inline" href="contact.html">Enquire With Elegance</a>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- 3 BLOCKS (exact headings + copy style GitHub) -->
+  <!-- 3 BLOCKS -->
   <section class="triple-blocks">
     <div class="container">
       <div class="section-header-center">
-        <h2>Experience LUMA Through Ritual</h2>
-        <p class="section-subtitle">Three expressions of heritage — crafted for luxury hospitality and refined self-care.</p>
+        <h2>Unveil the Experience</h2>
+        <p class="section-subtitle">A sensory journey — rooted in Al Ain traditions, refined for modern luxury rituals.</p>
       </div>
 
       <div class="blocks-grid">
 
         <div class="block-card">
-          <h2>Rituals of Ancestral Beauty</h2>
+          <h2>The Essence of Middle Eastern Beauty</h2>
           <p>
-            Indulge in luxurious skincare rituals inspired by centuries-old traditions. Each formula is crafted with the finest
-            natural ingredients, infused with the nourishing power of dates, aloe vera, and clove — preserving the essence of Middle Eastern beauty.
+            Rooted in the traditions of Al Ain, our treatments capture the richness of Arabian skincare rituals,
+            offering an indulgent experience that reconnects you with your skin.
           </p>
-          <a class="cta-inline" href="contact.html">Get In Touch</a>
+          <a class="cta-inline" href="contact.html">Unveil the Experience</a>
         </div>
 
         <div class="block-card">
-          <h2>Elegance in Every Stay</h2>
+          <h2>Pure & Powerful Ingredients</h2>
           <p>
-            Enhance your guests’ experience with skincare rituals rooted in tradition. Our exclusive hotel collections blend
-            modern luxury with ancestral wisdom, ensuring every stay feels serene, indulgent, and rejuvenating.
+            Harnessing the nourishing properties of dates, clove, and aloe vera, our formulas provide deep hydration,
+            renewal, and protection with every application.
           </p>
-          <a class="cta-inline" href="contact.html">Get In Touch</a>
+          <a class="cta-inline" href="contact.html">Unveil the Experience</a>
         </div>
 
         <div class="block-card">
-          <h2>The Art of Everyday Luxury</h2>
+          <h2>A Ritual, A Legacy</h2>
           <p>
-            Transform your daily routine with beauty rituals designed to nourish and protect your skin. Inspired by Middle Eastern
-            traditions, our products bring centuries of expertise into modern self-care.
+            LUMA is more than skincare — it’s a tradition of beauty, shared and perfected over generations,
+            inviting you to embrace a timeless self-care ritual.
           </p>
-          <a class="cta-inline" href="contact.html">Get In Touch</a>
+          <a class="cta-inline" href="contact.html">Unveil the Experience</a>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ICON STATS (exact 4 icons from your snippet) -->
+  <!-- ICON STATS (same 4 icons, but numbered 01-04 like your snippet) -->
   <section class="icon-stats">
     <div class="container">
       <div class="section-header-center">
-        <h2>Heritage Meets Modern Excellence</h2>
-        <p class="section-subtitle">A premium standard crafted for discerning hospitality partners.</p>
+        <h2>Crafted With Intention</h2>
+        <p class="section-subtitle">Four pillars guiding each LUMA formulation.</p>
       </div>
 
       <div class="stats-grid">
         <div class="stat-item">
-          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/Design-sans-titre-29-r1hn1p025gwx6xzv81iav1qad3gnoxv489yom6du00.png" alt="5 Stars" loading="lazy">
-          <div class="stat-number">5 Stars</div>
-          <p class="stat-label">Pure Ingredients</p>
+          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/Design-sans-titre-29-r1hn1p025gwx6xzv81iav1qad3gnoxv489yom6du00.png" alt="01." loading="lazy">
+          <div class="stat-number">01.</div>
+          <p class="stat-label">Natural Ingredients</p>
         </div>
 
         <div class="stat-item">
-          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/gettyimages-1401671537-612x612-3-r1edw8t9o3jkss2s60xscb1m0uqh30vqdu78xjn02o.jpg" alt="100%" loading="lazy">
-          <div class="stat-number">100%</div>
-          <p class="stat-label">Luxury Experience</p>
+          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/gettyimages-1401671537-612x612-3-r1edw8t9o3jkss2s60xscb1m0uqh30vqdu78xjn02o.jpg" alt="02." loading="lazy">
+          <div class="stat-number">02.</div>
+          <p class="stat-label">Local Craftsmanship</p>
         </div>
 
         <div class="stat-item">
-          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/Design-sans-titre-34-r1i2tcp7ijzup7fvhwy96aupb7jp8gff9xa3aypmao.png" alt="3 Years" loading="lazy">
-          <div class="stat-number">3 Years</div>
-          <p class="stat-label">Always Available</p>
+          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/Design-sans-titre-34-r1i2tcp7ijzup7fvhwy96aupb7jp8gff9xa3aypmao.png" alt="03." loading="lazy">
+          <div class="stat-number">03.</div>
+          <p class="stat-label">Sustainable Practices</p>
         </div>
 
         <div class="stat-item">
-          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/gettyimages-1401473272-612x612-1-r1edhlht61hpvjcqp702zi40roxk4tqbdc7upbcv1c.jpg" alt="24/7" loading="lazy">
-          <div class="stat-number">24/7</div>
-          <p class="stat-label">Proven Expertise</p>
+          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/gettyimages-1401473272-612x612-1-r1edhlht61hpvjcqp702zi40roxk4tqbdc7upbcv1c.jpg" alt="04." loading="lazy">
+          <div class="stat-number">04.</div>
+          <p class="stat-label">Premium Quality</p>
         </div>
       </div>
     </div>
@@ -452,7 +462,7 @@
     </div>
   </section>
 
-  <!-- FOOTER (same style as index) -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-top">
