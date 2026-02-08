@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>LUMA Heritage – Luxury Date-Infused Skincare</title>
-  <meta name="description" content="Luxury date-infused skincare designed for hotels, spas and premium hospitality partners." />
+  <title>Our Story & Philosophy – LUMA Heritage</title>
+  <meta name="description" content="Discover the heritage behind LUMA: ancestral beauty rituals from the Arabian Peninsula, reimagined into luxury skincare." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* Sections styling */
+    /* Sections styling - EXACT same as index */
     .section-divider { 
       position: relative; 
       padding: 5rem 0;
@@ -28,663 +28,148 @@
       background: linear-gradient(90deg, transparent, rgba(197,162,112,0.4), transparent);
     }
     
-    /* WHO WE ARE Section */
-    .who-we-are-section {
+    /* Page Hero */
+    .page-hero {
       background: linear-gradient(to bottom, #f5efe6 0%, #ede4d8 100%);
-      padding: 6rem 0;
+      padding: 6.5rem 0 4rem;
+      border-bottom: 2px solid rgba(166,133,85,0.25);
     }
     
-    .intro-content {
-      max-width: 750px;
-      margin: 0 auto 4rem;
+    .page-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 500;
       text-align: center;
+      margin-bottom: 1.5rem;
+      color: #2a2318;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .page-hero p {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+      color: #4a4037;
+      font-size: 1.2rem;
+      line-height: 1.85;
       padding: 0 2rem;
     }
+
+    /* Story Sections */
+    .story-section {
+      padding: 6rem 0;
+      background: #faf7f2;
+    }
     
-    .intro-content h2 {
+    .story-section.alt {
+      background: linear-gradient(135deg, #f2ebe0 0%, #e8dfd1 100%);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .story-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .story-images img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border: 1.5px solid rgba(166,133,85,0.25);
+      box-shadow: 0 10px 30px rgba(166,133,85,0.15);
+      border-radius: 10px;
+      background: #ffffff;
+      transition: all 0.4s ease;
+    }
+    
+    .story-images img:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(166,133,85,0.22);
+    }
+    
+    .single-image img {
+      width: 100%;
+      border: 1.5px solid rgba(166,133,85,0.25);
+      box-shadow: 0 10px 30px rgba(166,133,85,0.15);
+      border-radius: 10px;
+      transition: all 0.4s ease;
+    }
+    
+    .single-image img:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(166,133,85,0.22);
+    }
+
+    .story-content h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.75rem;
-      font-weight: 400;
-      color: #2a2318;
+      font-size: 2.5rem;
+      font-weight: 500;
       margin-bottom: 1.75rem;
-      letter-spacing: 0.02em;
-      line-height: 1.25;
+      color: #2a2318;
     }
     
-    .intro-content .subtitle {
-      font-size: 0.95rem;
-      color: #a68555;
-      font-weight: 600;
-      margin-bottom: 2rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-    
-    .intro-content p {
-      font-size: 1.15rem;
+    .story-content p {
+      font-size: 1.1rem;
       line-height: 1.9;
       color: #4a4037;
       margin-bottom: 1.5rem;
     }
     
-    .intro-content p:last-child {
-      margin-bottom: 0;
-    }
-    
-    /* Certifications Section */
-    .certifications-section {
-      background: #ffffff;
-      padding: 3rem 0;
-      border-top: 1px solid rgba(166,133,85,0.15);
-      border-bottom: 1px solid rgba(166,133,85,0.15);
-    }
-    
-    .certifications-grid {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 4rem;
-      flex-wrap: wrap;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    
-    .cert-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.75rem;
-      opacity: 0.75;
-      transition: opacity 0.3s ease;
-    }
-    
-    .cert-item:hover {
-      opacity: 1;
-    }
-    
-    .cert-item svg {
-      width: 48px;
-      height: 48px;
-    }
-    
-    .cert-item p {
-      font-size: 0.8rem;
-      color: #6b6358;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      text-align: center;
-      margin: 0;
-    }
-    
-    /* Why Choose LUMA Section */
-    .why-choose-section {
-      background: linear-gradient(135deg, #f2ebe0 0%, #e8dfd1 100%);
-      padding: 6rem 0;
-    }
-    
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2.5rem;
-      margin-top: 3.5rem;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .why-item {
-      text-align: center;
-      padding: 2.5rem 1.75rem;
-      background: rgba(255,255,255,0.85);
-      border: 1.5px solid rgba(166,133,85,0.35);
-      border-radius: 12px;
-      transition: all 0.4s ease;
-    }
-    
-    .why-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 48px rgba(166,133,85,0.25);
-      border-color: rgba(166,133,85,0.55);
-      background: rgba(255,255,255,0.98);
-    }
-    
-    .why-item svg {
-      margin-bottom: 1.5rem;
-      stroke: #a68555;
-      stroke-width: 1.5;
-      transition: all 0.3s ease;
-    }
-    
-    .why-item:hover svg {
-      transform: scale(1.15);
-      stroke: #8d6e42;
-    }
-    
-    .why-item h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      font-weight: 500;
+    .story-content p strong {
       color: #2a2318;
-      margin-bottom: 0.75rem;
+      font-weight: 600;
     }
-    
-    .why-item p {
-      font-size: 1rem;
-      color: #4a4037;
-      line-height: 1.7;
-      margin: 0;
-    }
-    
-    /* Key Numbers Section */
-    .numbers-section {
-      background: linear-gradient(to bottom, #2a2318 0%, #3a3028 100%);
-      padding: 5rem 0;
-      color: #ffffff;
-    }
-    
-    .numbers-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 4rem;
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    
-    .number-item h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 4rem;
-      font-weight: 400;
-      color: #c5a270;
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.02em;
-    }
-    
-    .number-item p {
-      font-size: 1.1rem;
-      color: #e8dfd1;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      margin: 0;
-      font-weight: 500;
-    }
-    
-    /* Commitments Section */
-    .commitments-section {
-      background: linear-gradient(to bottom, #f7f2ea 0%, #ede4d8 100%);
-      padding: 6rem 0;
-    }
-    
-    .commitments-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2.5rem;
-      margin-top: 3.5rem;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .commitment-item {
-      text-align: center;
-      padding: 2.5rem 1.5rem;
-      background: rgba(255,255,255,0.7);
-      border: 1.5px solid rgba(166,133,85,0.3);
-      border-radius: 12px;
-      transition: all 0.4s ease;
-    }
-    
-    .commitment-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 16px 40px rgba(166,133,85,0.2);
-      border-color: rgba(166,133,85,0.5);
-      background: rgba(255,255,255,0.95);
-    }
-    
-    .commitment-item svg {
-      margin-bottom: 1.5rem;
-      stroke: #a68555;
-      stroke-width: 1.5;
-      transition: all 0.3s ease;
-    }
-    
-    .commitment-item:hover svg {
-      transform: scale(1.15);
-      stroke: #8d6e42;
-    }
-    
-    .commitment-item h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
-      font-weight: 500;
-      color: #2a2318;
-      margin-bottom: 0.75rem;
-    }
-    
-    .commitment-item p {
-      font-size: 0.98rem;
-      color: #4a4037;
-      line-height: 1.7;
-      margin: 0;
-    }
-    
-    /* FAQ Section */
-    .faq-section {
-      background: #faf7f2;
-      padding: 6rem 0;
-    }
-    
-    .faq-container {
-      max-width: 800px;
-      margin: 3.5rem auto 0;
-    }
-    
-    .faq-item {
-      background: rgba(255,255,255,0.8);
-      border: 1.5px solid rgba(166,133,85,0.25);
-      border-radius: 10px;
-      padding: 2rem 2.5rem;
-      margin-bottom: 1.5rem;
-      transition: all 0.3s ease;
-    }
-    
-    .faq-item:hover {
-      border-color: rgba(166,133,85,0.45);
-      box-shadow: 0 8px 20px rgba(166,133,85,0.12);
-    }
-    
-    .faq-item h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      font-weight: 500;
-      color: #2a2318;
-      margin-bottom: 1rem;
-    }
-    
-    .faq-item p {
-      font-size: 1.05rem;
-      color: #4a4037;
-      line-height: 1.8;
-      margin: 0;
-    }
-    
-    .beauty-excellence { 
-      background: linear-gradient(135deg, #f2ebe0 0%, #e8dfd1 100%);
-      position: relative;
-      padding: 6rem 0;
-    }
-    .beauty-excellence::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(197,162,112,0.3), transparent);
-    }
-    .elixir-section { 
-      background: #faf7f2;
-      box-shadow: inset 0 1px 0 rgba(197,162,112,0.15);
-      padding: 6rem 0;
-    }
-    .collections-section { 
-      background: linear-gradient(to bottom, #ede4d8 0%, #e3d8c9 100%);
-      position: relative;
-      padding: 6rem 0;
-    }
-    .collections-section::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 100px;
-      background: linear-gradient(to bottom, rgba(237,228,216,0) 0%, rgba(237,228,216,1) 100%);
-      pointer-events: none;
-    }
-    .partners-section { 
-      background: linear-gradient(to bottom, #f7f2ea 0%, #ede4d8 100%);
-      padding: 5.5rem 0;
-    }
-    .testimonials-section { 
-      background: linear-gradient(135deg, #f0e7db 0%, #e6dcc8 100%);
-      position: relative;
-      padding: 5.5rem 0;
-    }
-    .testimonials-section::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(197,162,112,0.3), transparent);
-    }
-    .partner-cta-section {
-      background: linear-gradient(to right, #e8dfd1 0%, #ddd2bf 50%, #e8dfd1 100%);
-      border-top: 2px solid rgba(166,133,85,0.35);
-      border-bottom: 2px solid rgba(166,133,85,0.35);
-      padding: 5.5rem 0;
-      text-align: center;
-    }
-    
-    .cta-content h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3rem;
-      font-weight: 500;
-      color: #2a2318;
-      margin-bottom: 1.5rem;
-      letter-spacing: 0.02em;
-      line-height: 1.3;
-    }
-    
-    .cta-content p {
-      font-size: 1.2rem;
-      line-height: 1.85;
-      color: #3a3028;
-      margin-bottom: 2.5rem;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    
-    .cta-button {
+
+    .cta-inline {
       display: inline-block;
+      margin-top: 1.5rem;
       padding: 1.1rem 3rem;
       background: linear-gradient(135deg, #a68555 0%, #8d6e42 100%);
       color: #ffffff;
-      font-size: 1.1rem;
+      border: 2px solid #a68555;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
       font-weight: 600;
+      border-radius: 8px;
+      transition: all 0.4s ease;
       text-decoration: none;
-      border-radius: 8px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      transition: all 0.4s ease;
-      border: 2px solid #a68555;
       box-shadow: 0 8px 20px rgba(166,133,85,0.25);
     }
-    
-    .cta-button:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 32px rgba(166,133,85,0.35);
+    .cta-inline:hover {
       background: linear-gradient(135deg, #8d6e42 0%, #73562e 100%);
       border-color: #8d6e42;
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(166,133,85,0.35);
     }
-    
-    .contact-section {
-      background: #f7f2ea;
+
+    /* Triple Blocks */
+    .triple-blocks {
       padding: 6rem 0;
-    }
-    
-    .contact-section .section-header-center h2 {
-      font-size: 3rem;
-      color: #2a2318;
-      font-weight: 500;
-    }
-    
-    .contact-section .section-subtitle {
-      font-size: 1.2rem;
-      color: #3a3028;
-    }
-    
-    .contact-form {
-      max-width: 700px;
-      margin: 0 auto;
-      background: rgba(255,255,255,0.85);
-      padding: 3rem;
-      border-radius: 14px;
-      border: 1.5px solid rgba(166,133,85,0.3);
-      box-shadow: 0 12px 32px rgba(166,133,85,0.12);
-    }
-    
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 1.1rem 1.5rem;
-      font-size: 1.05rem;
-      border: 1.5px solid rgba(166,133,85,0.35);
-      border-radius: 8px;
-      background: #ffffff;
-      color: #2a2318;
-      font-family: 'Inter', sans-serif;
-      transition: all 0.3s ease;
-      margin-bottom: 1.25rem;
-    }
-    
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder {
-      color: #8a7a68;
-      font-weight: 400;
-    }
-    
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      outline: none;
-      border-color: #a68555;
-      box-shadow: 0 0 0 3px rgba(166,133,85,0.15);
-    }
-    
-    .contact-form textarea {
-      resize: vertical;
-      min-height: 150px;
-    }
-    
-    .contact-form button {
-      width: 100%;
-      padding: 1.2rem 2rem;
-      background: linear-gradient(135deg, #a68555 0%, #8d6e42 100%);
-      color: #ffffff;
-      font-size: 1.15rem;
-      font-weight: 600;
-      border: 2px solid #a68555;
-      border-radius: 8px;
-      cursor: pointer;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      transition: all 0.4s ease;
-      font-family: 'Inter', sans-serif;
-      box-shadow: 0 8px 20px rgba(166,133,85,0.25);
-    }
-    
-    .contact-form button:hover {
-      transform: translateY(-4px);
-      background: linear-gradient(135deg, #8d6e42 0%, #73562e 100%);
-      border-color: #8d6e42;
-      box-shadow: 0 14px 32px rgba(166,133,85,0.35);
-    }
-    
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-    }
-    
-    .image-divider {
-      background: #e8dfd1;
-      padding: 0;
-      margin: 4rem 0;
-    }
-    .image-divider img {
-      width: 100%;
-      height: auto;
-      display: block;
-      max-height: 500px;
-      object-fit: cover;
+      background: linear-gradient(to bottom, #ede4d8 0%, #e3d8c9 100%);
+      border-top: 2px solid rgba(166,133,85,0.25);
+      border-bottom: 2px solid rgba(166,133,85,0.25);
     }
 
-    /* Collections - Larger photos and text */
-    .collection-meta{
-      text-align:center;
-      padding: 2rem 1.5rem 1rem;
-    }
-    .collection-title{
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 500;
-      font-size: 1.65rem;
-      letter-spacing: 0.02em;
-      margin-bottom: 1rem;
-      color: #2a2318;
-      text-transform: none;
-    }
-    .collection-desc{
-      margin: 0;
-      color: #4a4037;
-      font-size: 1.15rem;
-      line-height: 1.8;
-      max-width: 420px;
-      margin-left:auto;
-      margin-right:auto;
-      font-weight: 400;
-    }
-    
-    .collections-gallery {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3.5rem;
-      margin-top: 3.5rem;
-    }
-    
-    .collection-item {
-      background: rgba(255,255,255,0.85);
-      border-radius: 14px;
-      overflow: hidden;
-      transition: all 0.4s ease;
-      border: 1px solid rgba(166,133,85,0.25);
-    }
-    
-    .collection-item:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 24px 48px rgba(166,133,85,0.22);
-      border-color: rgba(166,133,85,0.4);
-    }
-    
-    .collection-image {
-      padding: 3rem 2.5rem 2rem;
-      background: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 380px;
-    }
-    
-    .collection-image img {
-      max-width: 100%;
-      height: auto;
-      max-height: 340px;
-      object-fit: contain;
-      filter: drop-shadow(0 10px 24px rgba(0,0,0,0.1));
-    }
-
-    /* Services cards */
-    .service-image{
-      padding: 2rem 1.5rem;
-      min-height: 340px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255,255,255,0.6);
-      border-radius: 10px;
-      margin-bottom: 1.5rem;
-    }
-    .service-image img{
-      max-height: 280px;
-      max-width: 100%;
-      width: auto;
-      object-fit: contain;
-      filter: drop-shadow(0 12px 28px rgba(0,0,0,0.08));
-    }
-    
-    .service-card {
-      background: rgba(255,255,255,0.75);
-      padding: 2rem;
-      border-radius: 14px;
-      transition: all 0.4s ease;
-      border: 1px solid rgba(166,133,85,0.22);
-    }
-    
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 42px rgba(166,133,85,0.18);
-      background: rgba(255,255,255,0.95);
-    }
-    
-    .service-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      color: #2a2318;
-      font-weight: 500;
-    }
-    
-    .service-card p {
-      color: #4a4037;
-      line-height: 1.8;
-      font-size: 1.05rem;
-    }
-
-    /* Statistics Grid */
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2.5rem;
-      padding: 0;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .stat-item {
-      text-align: center;
-      padding: 2.75rem 2rem;
-      background: rgba(255,255,255,0.85);
-      border: 1.5px solid rgba(166,133,85,0.35);
-      border-radius: 12px;
-      transition: all 0.4s ease;
-    }
-
-    .stat-item:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 20px 48px rgba(166,133,85,0.25);
-      border-color: rgba(166,133,85,0.55);
-      background: rgba(255,255,255,0.98);
-    }
-
-    .stat-item svg {
-      margin-bottom: 1.75rem;
-      transition: all 0.3s ease;
-      stroke: #a68555;
-      stroke-width: 1.5;
-    }
-
-    .stat-item:hover svg {
-      transform: scale(1.18);
-      stroke: #8d6e42;
-    }
-
-    .stat-item h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.5rem;
-      font-weight: 500;
-      color: #a68555;
-      margin-bottom: 1rem;
-      letter-spacing: 0.02em;
-    }
-
-    .stat-item p {
-      font-size: 1.05rem;
-      color: #3a3028;
-      line-height: 1.7;
-      margin: 0;
-      font-weight: 500;
-    }
-    
-    /* Section Headers */
     .section-header-center {
       text-align: center;
       margin-bottom: 3.5rem;
       max-width: 800px;
       margin-left: auto;
       margin-right: auto;
+      padding: 0 2rem;
     }
     
     .section-header-center h2 {
@@ -702,169 +187,185 @@
       line-height: 1.7;
     }
 
-    /* Hero banner */
-    .hero img {
-      object-fit: cover;
-      object-position: center 35%;
-      min-height: 560px;
-      width: 100%;
-      display: block;
-    }
-    
-    .hero {
-      padding: 0;
-      margin-bottom: 0;
-    }
-
-    /* Partners - Single row */
-    .partners-logos-row {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 4rem;
+    .blocks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
       margin-top: 3.5rem;
-      flex-wrap: wrap;
-      max-width: 1100px;
+      max-width: 1200px;
       margin-left: auto;
       margin-right: auto;
+      padding: 0 2rem;
     }
 
-    .partner-logo {
-      width: 200px;
-      height: 180px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255,255,255,0.9);
-      border: 1.5px solid rgba(166,133,85,0.4);
+    .block-card {
+      background: rgba(255,255,255,0.85);
+      border: 1.5px solid rgba(166,133,85,0.35);
       border-radius: 12px;
-      padding: 2.25rem;
-      transition: all 0.4s ease;
+      padding: 3rem 2.5rem;
+      transition: all 0.45s ease;
     }
-
-    .partner-logo:hover {
+    .block-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 16px 40px rgba(166,133,85,0.22);
-      border-color: rgba(166,133,85,0.6);
-      background: rgba(255,255,255,1);
+      box-shadow: 0 20px 48px rgba(166,133,85,0.25);
+      border-color: rgba(166,133,85,0.55);
+      background: rgba(255,255,255,0.98);
     }
-
-    .partner-logo svg {
-      transition: all 0.3s ease;
-      stroke: #a68555;
-      stroke-width: 1.5;
-    }
-
-    .partner-logo:hover svg {
-      stroke: #8d6e42;
-      transform: scale(1.15);
+    .block-card h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+      color: #2a2318;
     }
     
-    .partner-logo p {
-      color: #3a3028;
+    .block-card p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #4a4037;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Icon Stats */
+    .icon-stats {
+      padding: 6rem 0;
+      background: #faf7f2;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
+      margin-top: 3.5rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 2rem;
+    }
+
+    .stat-item {
+      background: rgba(255,255,255,0.85);
+      border: 1.5px solid rgba(166,133,85,0.35);
+      border-radius: 12px;
+      padding: 2.5rem 1.75rem;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+    .stat-item:hover {
+      background: rgba(255,255,255,0.98);
+      border-color: rgba(166,133,85,0.55);
+      box-shadow: 0 16px 40px rgba(166,133,85,0.22);
+      transform: translateY(-8px);
+    }
+    .stat-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto 1.25rem;
+      border: 2px solid rgba(166,133,85,0.3);
+    }
+    .stat-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      color: #a68555;
+      margin-bottom: 0.5rem;
+    }
+    .stat-label {
+      color: #4a4037;
+      font-size: 1rem;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    /* Final CTA */
+    .final-cta {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, #2a2318 0%, #3a3028 100%);
+      text-align: center;
+      color: #ffffff;
+    }
+    .final-cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+      font-size: 3rem;
+      font-weight: 500;
+    }
+    .final-cta p {
+      color: rgba(255,255,255,0.9);
+      max-width: 850px;
+      margin: 0 auto 2.5rem;
+      font-size: 1.2rem;
+      line-height: 1.85;
+      padding: 0 2rem;
+    }
+    .final-cta a {
+      display: inline-block;
+      padding: 1.2rem 3.5rem;
+      background: linear-gradient(135deg, #a68555 0%, #8d6e42 100%);
+      color: #ffffff;
+      border: 2px solid #a68555;
+      border-radius: 8px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
       font-weight: 600;
+      transition: all 0.4s ease;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(166,133,85,0.3);
+    }
+    .final-cta a:hover {
+      background: linear-gradient(135deg, #8d6e42 0%, #73562e 100%);
+      border-color: #8d6e42;
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(166,133,85,0.4);
     }
 
     @media (max-width: 968px) {
-      .stats-grid,
-      .why-grid,
-      .commitments-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+      .story-grid { 
+        grid-template-columns: 1fr; 
+        gap: 3rem; 
       }
-      
-      .numbers-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
+      .blocks-grid { 
+        grid-template-columns: 1fr; 
       }
-      
-      .collections-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2.5rem;
+      .stats-grid { 
+        grid-template-columns: repeat(2, 1fr); 
       }
-      
+      .page-hero h1 { 
+        font-size: 2.8rem; 
+      }
+      .story-content h2 {
+        font-size: 2rem;
+      }
       .section-divider {
         padding: 4rem 0;
       }
-      
-      .who-we-are-section,
-      .beauty-excellence,
-      .elixir-section,
-      .collections-section,
-      .why-choose-section,
-      .commitments-section {
+      .story-section, .triple-blocks, .icon-stats, .final-cta {
         padding: 4rem 0;
-      }
-      
-      .partners-logos-row {
-        gap: 2.5rem;
-      }
-      
-      .form-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .contact-form {
-        padding: 2rem;
-      }
-      
-      .cta-content h2,
-      .contact-section .section-header-center h2 {
-        font-size: 2.2rem;
       }
     }
 
-    @media (max-width: 576px) {
-      .stats-grid,
-      .why-grid,
-      .commitments-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    @media (max-width: 600px) {
+      .story-images { 
+        grid-template-columns: 1fr; 
       }
-      
-      .collections-gallery {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+      .stats-grid { 
+        grid-template-columns: 1fr; 
       }
-      
-      .intro-content h2,
-      .section-header-center h2 {
+      .final-cta h2 { 
+        font-size: 2.2rem; 
+      }
+      .page-hero h1 {
         font-size: 2rem;
       }
-      
+      .page-hero {
+        padding: 4rem 0 2.5rem;
+      }
       .section-divider {
         padding: 3rem 0;
-      }
-      
-      .hero img {
-        min-height: 400px;
-      }
-      
-      .collection-title {
-        font-size: 1.4rem;
-      }
-      
-      .collection-desc {
-        font-size: 1.05rem;
-      }
-      
-      .partners-logos-row {
-        flex-direction: column;
-        gap: 2rem;
-      }
-      
-      .partner-logo {
-        width: 180px;
-        height: 160px;
-      }
-      
-      .number-item h3 {
-        font-size: 3rem;
-      }
-      
-      .certifications-grid {
-        gap: 2rem;
       }
     }
   </style>
@@ -893,524 +394,212 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section id="home" class="hero section-divider">
-    <img
-      src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/banniere"
-      alt="LUMA Heritage luxury banner"
-    />
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Our Story & Philosophy</h1>
+      <p>
+        A heritage of Middle Eastern beauty rituals — transformed into modern luxury skincare,
+        designed for the world's finest hotels, spas, and concept stores.
+      </p>
+    </div>
   </section>
 
-  <!-- WHO WE ARE + STATS -->
-  <section class="who-we-are-section section-divider">
-    <div class="container">
-      <div class="intro-content">
-        <p class="subtitle">Who We Are</p>
-        <h2>Luxury Date-Infused Skincare for Premium Hospitality</h2>
-        <p>
-          LUMA Heritage is a premium B2B skincare brand dedicated to luxury hotels, spas, and concept stores across the UAE. 
-          Inspired by ancestral Middle Eastern beauty rituals, we craft exclusive amenities and wellness products 
-          infused with the nourishing power of dates.
-        </p>
-        <p>
-          Each formula combines local, natural ingredients with expert formulation, delivering an unparalleled 
-          sensory experience that elevates your guest journey and enhances your brand's prestige.
-        </p>
+  <!-- STORY INTRO -->
+  <section class="story-section section-divider">
+    <div class="story-grid">
+
+      <div class="story-images">
+        <img
+          src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-29.png"
+          alt="LUMA Heritage - Our Story"
+          loading="lazy"
+          decoding="async"
+        />
+
+        <img
+          src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-33.png"
+          alt="LUMA Heritage - Philosophy"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
-      
+
+      <div class="story-content">
+        <h2>An Ancestral Beauty Secret</h2>
+        <p>
+          In the heart of the golden dunes of the Arabian Peninsula, where time seems to stand still,
+          a beauty ritual has been passed down from mother to daughter for centuries.
+        </p>
+        <p>
+          In the homes of Al Ain, in the United Arab Emirates, women carefully prepare skincare treatments
+          inspired by the generous nature of the desert. Sweet dates, purifying cloves, and regenerating aloe vera
+          are blended into precious formulas, applied with gestures that have been transmitted through generations.
+        </p>
+        <p>
+          <strong>These recipes, whispered during evening gatherings and perfected over time, are more than just skincare —
+          they are an invisible bond between the women of yesterday and those of today.</strong>
+        </p>
+
+        <a class="cta-inline" href="contact.html">Embrace Elegance</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BIRTH OF LUMA -->
+  <section class="story-section alt section-divider">
+    <div class="story-grid">
+
+      <div class="story-content">
+        <h2>The Birth of LUMA</h2>
+        <p>
+          The Emirates have always held a deep fascination for me. During my travels to Al Ain,
+          between lush oases and fragrant souks, I immersed myself in the beauty traditions that my grandmother
+          herself knew so well.
+        </p>
+        <p>
+          I remember her skilled hands preparing balms where the sweetness of dates blended with the strength of cloves
+          and the freshness of aloe vera. These memories became an undeniable truth: these ancestral rituals needed to be
+          revived and adapted to the needs of modern women.
+        </p>
+        <p>
+          <strong>Thus, LUMA was born — a brand where every treatment carries the imprint of these traditions while offering a
+          luxurious and sensorial experience, faithful to the heritage it celebrates.</strong>
+        </p>
+
+        <a class="cta-inline" href="contact.html">Embrace Elegance</a>
+      </div>
+
+      <div class="single-image">
+        <img
+          src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-34.png"
+          alt="The Birth of LUMA"
+          loading="lazy"
+          decoding="async"
+          style="aspect-ratio:1/1; object-fit:cover;"
+        />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RITUAL CARRIED FORWARD -->
+  <section class="story-section section-divider">
+    <div class="story-grid">
+
+      <div class="single-image">
+        <img
+          src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-35.png"
+          alt="A Ritual Carried Forward"
+          loading="lazy"
+          decoding="async"
+          style="aspect-ratio:1/1; object-fit:cover;"
+        />
+      </div>
+
+      <div class="story-content">
+        <h2>A Ritual Carried Forward</h2>
+        <p>
+          Even today, these gestures and formulas remain a living testament to the ancestral expertise of the women of Al Ain.
+          Each application is an invitation to slow down, reconnect with oneself, and embrace a beauty legacy that transcends generations.
+        </p>
+        <p>
+          LUMA does not simply create skincare products. It preserves a way of life where nature and tradition unite to reveal each woman's unique radiance.
+        </p>
+        <p>
+          <strong>A secret to be shared, a tradition to be honored, a heritage to be continued.</strong>
+        </p>
+
+        <a class="cta-inline" href="contact.html">Embrace Elegance</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3 BLOCKS -->
+  <section class="triple-blocks">
+    <div class="container">
+      <div class="section-header-center">
+        <h2>Experience LUMA Through Ritual</h2>
+        <p class="section-subtitle">Three expressions of heritage — crafted for luxury hospitality and refined self-care.</p>
+      </div>
+
+      <div class="blocks-grid">
+
+        <div class="block-card">
+          <h2>Rituals of Ancestral Beauty</h2>
+          <p>
+            Indulge in luxurious skincare rituals inspired by centuries-old traditions. Each formula is crafted with the finest
+            natural ingredients, infused with the nourishing power of dates, aloe vera, and clove — preserving the essence of Middle Eastern beauty.
+          </p>
+          <a class="cta-inline" href="contact.html">Get In Touch</a>
+        </div>
+
+        <div class="block-card">
+          <h2>Elegance in Every Stay</h2>
+          <p>
+            Enhance your guests' experience with skincare rituals rooted in tradition. Our exclusive hotel collections blend
+            modern luxury with ancestral wisdom, ensuring every stay feels serene, indulgent, and rejuvenating.
+          </p>
+          <a class="cta-inline" href="contact.html">Get In Touch</a>
+        </div>
+
+        <div class="block-card">
+          <h2>The Art of Everyday Luxury</h2>
+          <p>
+            Transform your daily routine with beauty rituals designed to nourish and protect your skin. Inspired by Middle Eastern
+            traditions, our products bring centuries of expertise into modern self-care.
+          </p>
+          <a class="cta-inline" href="contact.html">Get In Touch</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ICON STATS -->
+  <section class="icon-stats section-divider">
+    <div class="container">
+      <div class="section-header-center">
+        <h2>Heritage Meets Modern Excellence</h2>
+        <p class="section-subtitle">A premium standard crafted for discerning hospitality partners.</p>
+      </div>
+
       <div class="stats-grid">
         <div class="stat-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c5a270" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-          </svg>
-          <h3>100%</h3>
-          <p>Natural & Local<br>Ingredients</p>
+          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/Design-sans-titre-29-r1hn1p025gwx6xzv81iav1qad3gnoxv489yom6du00.png" alt="5 Stars" loading="lazy">
+          <div class="stat-number">5 Stars</div>
+          <p class="stat-label">Pure Ingredients</p>
         </div>
 
         <div class="stat-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c5a270" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-          <h3>Expert</h3>
-          <p>Formulation<br>Mastery</p>
+          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/gettyimages-1401671537-612x612-3-r1edw8t9o3jkss2s60xscb1m0uqh30vqdu78xjn02o.jpg" alt="100%" loading="lazy">
+          <div class="stat-number">100%</div>
+          <p class="stat-label">Luxury Experience</p>
         </div>
 
         <div class="stat-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c5a270" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-          </svg>
-          <h3>Made in UAE</h3>
-          <p>Local Crafted<br>Excellence</p>
+          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/Design-sans-titre-34-r1i2tcp7ijzup7fvhwy96aupb7jp8gff9xa3aypmao.png" alt="3 Years" loading="lazy">
+          <div class="stat-number">3 Years</div>
+          <p class="stat-label">Always Available</p>
         </div>
 
         <div class="stat-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c5a270" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-          </svg>
-          <h3>Heritage</h3>
-          <p>Ancestral Date<br>Rituals</p>
+          <img src="https://lumaheritage.com/wp-content/uploads/elementor/thumbs/gettyimages-1401473272-612x612-1-r1edhlht61hpvjcqp702zi40roxk4tqbdc7upbcv1c.jpg" alt="24/7" loading="lazy">
+          <div class="stat-number">24/7</div>
+          <p class="stat-label">Proven Expertise</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CERTIFICATIONS -->
-  <section class="certifications-section">
+  <!-- FINAL CTA -->
+  <section class="final-cta">
     <div class="container">
-      <div class="certifications-grid">
-        <div class="cert-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a68555" stroke-width="1.5">
-            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"></path>
-            <path d="m9 12 2 2 4-4"></path>
-          </svg>
-          <p>Halal<br>Certified</p>
-        </div>
-        
-        <div class="cert-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a68555" stroke-width="1.5">
-            <circle cx="12" cy="12" r="3"></circle>
-            <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83"></path>
-          </svg>
-          <p>Cruelty<br>Free</p>
-        </div>
-        
-        <div class="cert-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a68555" stroke-width="1.5">
-            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-            <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
-            <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
-            <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
-            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-            <line x1="12" y1="22.08" x2="12" y2="12"></line>
-          </svg>
-          <p>UAE<br>Quality Mark</p>
-        </div>
-        
-        <div class="cert-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a68555" stroke-width="1.5">
-            <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
-            <line x1="16" y1="8" x2="2" y2="22"></line>
-            <line x1="17.5" y1="15" x2="9" y2="15"></line>
-          </svg>
-          <p>Eco-Friendly<br>Packaging</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SIGNATURE COLLECTIONS -->
-  <section id="collections" class="collections-section section-divider">
-    <div class="container">
-      <div class="section-header-center">
-        <h2>Our Signature Collections</h2>
-        <p class="section-subtitle">Three rituals, one heritage — hydration, restoration, and nourishment.</p>
-      </div>
-
-      <div class="collections-gallery">
-        <div class="collection-item">
-          <div class="collection-image">
-            <img
-              src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/hydrarting.png"
-              alt="Hydrating Date Cream"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="collection-meta">
-            <h4 class="collection-title">Hydrating Date Cream</h4>
-            <p class="collection-desc">Daily hydration & softness — ideal for refined in-room rituals.</p>
-          </div>
-        </div>
-
-        <div class="collection-item">
-          <div class="collection-image">
-            <img
-              src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/de9fe30858ad90c76fadca676dd22d977a6d4e55/gemini-3-pro-image-preview_a_Ultra-realistic_luxu%20(1).png"
-              alt="Restorative Date Balm"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="collection-meta">
-            <h4 class="collection-title">Restorative Date Balm</h4>
-            <p class="collection-desc">Deep repair ritual — comfort, glow, and a spa-grade finish.</p>
-          </div>
-        </div>
-
-        <div class="collection-item">
-          <div class="collection-image">
-            <img
-              src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/nourishing.png"
-              alt="Nourishing Date Oil"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="collection-meta">
-            <h4 class="collection-title">Nourishing Date Oil</h4>
-            <p class="collection-desc">Luxury nourishment — a sensory signature for premium partners.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE LUMA -->
-  <section class="why-choose-section section-divider">
-    <div class="container">
-      <div class="section-header-center">
-        <h2>Why Choose LUMA Heritage</h2>
-        <p class="section-subtitle">Four pillars that set us apart in the luxury hospitality market.</p>
-      </div>
-
-      <div class="why-grid">
-        <div class="why-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none">
-            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-            <circle cx="8.5" cy="7" r="4"></circle>
-            <line x1="20" y1="8" x2="20" y2="14"></line>
-            <line x1="23" y1="11" x2="17" y2="11"></line>
-          </svg>
-          <h3>Dedicated Support</h3>
-          <p>Personalized account management and responsive customer service for all your hospitality needs.</p>
-        </div>
-
-        <div class="why-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none">
-            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-          </svg>
-          <h3>Premium Quality</h3>
-          <p>Rigorously tested formulas with the finest natural ingredients for guaranteed excellence.</p>
-        </div>
-
-        <div class="why-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-          <h3>Fast Delivery</h3>
-          <p>Guaranteed delivery timelines across the UAE with flexible logistics solutions.</p>
-        </div>
-
-        <div class="why-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-          </svg>
-          <h3>Certified Excellence</h3>
-          <p>Halal certified, cruelty-free, and compliant with UAE quality standards.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHERE BEAUTY MEETS EXCELLENCE -->
-  <section class="beauty-excellence section-divider">
-    <div class="container">
-      <div class="section-header-center">
-        <h2>Where Beauty Meets Excellence</h2>
-        <p class="section-subtitle">Skincare traditions designed for the world's finest hotels, spas, and concept stores.</p>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-image">
-            <img
-              src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-38.png"
-              alt="Hotel Prestige Amenities"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <h3>Hotel Prestige Amenities</h3>
-          <p>
-            Refined skincare rituals designed for luxury hotels. Elevate your in-room experience with exclusive,
-            premium amenities tailored to sophisticated travelers.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-image">
-            <img
-              src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-37.png"
-              alt="SPA & Wellness Rituals"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <h3>SPA & Wellness Rituals</h3>
-          <p>
-            Indulge in exquisite skincare experiences with our exclusive spa collection. Designed to enhance wellness rituals,
-            our treatments combine tradition and innovation for an unparalleled moment of relaxation.
-          </p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-image">
-            <img
-              src="https://lumaheritage.com/wp-content/uploads/2025/02/Design-sans-titre-39.png"
-              alt="Concept Store Exclusives"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <h3>Concept Store Exclusives</h3>
-          <p>
-            Curated collections developed for concept stores seeking authenticity and refinement.
-            Each product embodies the essence of luxury and Middle Eastern heritage.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- KEY NUMBERS -->
-  <section class="numbers-section section-divider">
-    <div class="container">
-      <div class="numbers-grid">
-        <div class="number-item">
-          <h3>10+</h3>
-          <p>Luxury Hotels</p>
-        </div>
-        <div class="number-item">
-          <h3>32</h3>
-          <p>Premium Spas</p>
-        </div>
-        <div class="number-item">
-          <h3>26</h3>
-          <p>Concept Stores</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ELIXIR TEASER -->
-  <section class="elixir-section section-divider">
-    <div class="container">
-      <div class="elixir-grid">
-        <div class="elixir-image">
-          <img
-            src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/08bba8fee153ed1b5e1a4a953a6e989d2ae3b1c8/histoire%20.png"
-            alt="The Secret of Dates"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-
-        <div class="elixir-content">
-          <h2>Elixir – The Secret of Dates</h2>
-          <p>
-            For centuries, dates have been treasured across the Middle East for their restorative and nourishing properties.
-            Rich in vitamins, minerals, and antioxidants, this ancestral ingredient is the heart of LUMA Heritage.
-          </p>
-          <p>
-            We reinterpret this ancient wisdom through modern luxury formulations, creating an elixir that transforms skincare
-            into a ritual of beauty and well-being.
-          </p>
-          <a class="hero-button" style="display:inline-block; margin-top:1rem;" href="elixir.html">Explore Elixir</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OUR COMMITMENTS -->
-  <section class="commitments-section section-divider">
-    <div class="container">
-      <div class="section-header-center">
-        <h2>Our Commitments</h2>
-        <p class="section-subtitle">Values that define our approach to luxury skincare.</p>
-      </div>
-
-      <div class="commitments-grid">
-        <div class="commitment-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none">
-            <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
-            <line x1="16" y1="8" x2="2" y2="22"></line>
-            <line x1="17.5" y1="15" x2="9" y2="15"></line>
-          </svg>
-          <h3>Sustainability</h3>
-          <p>Eco-friendly packaging and responsible sourcing of all ingredients.</p>
-        </div>
-
-        <div class="commitment-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-            <polyline points="9 12 11 14 15 10"></polyline>
-          </svg>
-          <h3>Ethics & Traceability</h3>
-          <p>Full transparency from sourcing to production with certified processes.</p>
-        </div>
-
-        <div class="commitment-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-            <line x1="9" y1="9" x2="9.01" y2="9"></line>
-            <line x1="15" y1="9" x2="15.01" y2="9"></line>
-          </svg>
-          <h3>Continuous Innovation</h3>
-          <p>Constant research to perfect our formulas and develop new products.</p>
-        </div>
-
-        <div class="commitment-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-            <circle cx="12" cy="10" r="3"></circle>
-          </svg>
-          <h3>Local Economy</h3>
-          <p>Proudly supporting UAE's economy with local production and sourcing.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PARTNERS -->
-  <section class="partners-section section-divider">
-    <div class="container">
-      <div class="section-header-center">
-        <h2>Our Distribution Partners in the UAE</h2>
-        <p class="section-subtitle">Specialized luxury hospitality distributors across the Emirates.</p>
-      </div>
-
-      <div class="partners-logos-row">
-        <div class="partner-logo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#a68555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-            <line x1="12" y1="22.08" x2="12" y2="12"></line>
-          </svg>
-          <p style="margin-top:1rem; color:#3a3028; font-size:0.85rem; font-weight:600; letter-spacing:0.05em;">LUXURY HOTELS</p>
-        </div>
-        <div class="partner-logo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#a68555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
-            <path d="M19 11v4a7 7 0 0 1-14 0v-4"></path>
-            <path d="M12 19v3"></path>
-          </svg>
-          <p style="margin-top:1rem; color:#3a3028; font-size:0.85rem; font-weight:600; letter-spacing:0.05em;">SPA & WELLNESS</p>
-        </div>
-        <div class="partner-logo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#a68555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-            <line x1="9" y1="3" x2="9" y2="21"></line>
-          </svg>
-          <p style="margin-top:1rem; color:#3a3028; font-size:0.85rem; font-weight:600; letter-spacing:0.05em;">RETAIL</p>
-        </div>
-        <div class="partner-logo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#a68555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 3h18v18H3z"></path>
-            <path d="M3 9h18"></path>
-            <path d="M9 21V9"></path>
-          </svg>
-          <p style="margin-top:1rem; color:#3a3028; font-size:0.85rem; font-weight:600; letter-spacing:0.05em;">CONCEPT STORES</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- IMAGE DIVIDER -->
-  <section class="image-divider section-divider">
-    <img
-      src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/20f1fa0e535d8b0bc40ceb7d6c6db141c3fc290f/Bol%20dattes.jpg"
-      alt="Natural dates ingredient"
-      loading="lazy"
-      decoding="async"
-    />
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="testimonials-section section-divider">
-    <div class="container">
-      <div class="section-header-center">
-        <span class="section-eyebrow">Testimonials</span>
-        <h2>Partner Stories</h2>
-      </div>
-
-      <div class="testimonial-card">
-        <blockquote>
-          "Each formula I've created is a promise—one of radiant, transformed skin through the art of excellence.
-          Inspired by the most refined beauty rituals, every drop is a perfect alchemy of science and nature,
-          where the finest ingredients unveil their power."
-        </blockquote>
-        <cite>— Adnan ADADA, Master Formulator</cite>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="faq-section section-divider">
-    <div class="container">
-      <div class="section-header-center">
-        <h2>Frequently Asked Questions</h2>
-        <p class="section-subtitle">Common questions from our hospitality partners.</p>
-      </div>
-
-      <div class="faq-container">
-        <div class="faq-item">
-          <h3>What is the minimum order quantity?</h3>
-          <p>Our MOQ varies depending on the product line and customization requirements. For standard collections, the minimum order is 50 units per SKU. Contact our team for tailored solutions for your establishment.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Do you provide product samples?</h3>
-          <p>Yes, we offer complimentary sample sets for qualified hospitality partners. Request your samples through our contact form or speak directly with our sales team to arrange delivery.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>What are your production and delivery timelines?</h3>
-          <p>Standard orders are fulfilled within 2-3 weeks from confirmation. For customized or large-volume orders, lead time is typically 4-6 weeks. We ensure timely delivery across all Emirates.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Can you customize products with our hotel branding?</h3>
-          <p>While we focus on our LUMA Heritage brand identity, we offer elegant packaging solutions that can complement your establishment's aesthetic. Our products are designed to elevate any luxury hospitality environment.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="partner-cta-section section-divider">
-    <div class="container-narrow">
-      <div class="cta-content">
-        <h2>Experience Excellence – Partner With LUMA</h2>
-        <p>
-          Join a prestigious network of luxury establishments across the UAE. Let's craft exclusive skincare experiences
-          for your guests and clients.
-        </p>
-        <a href="contact.html" class="cta-button">Start Your Partnership</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT (teaser) -->
-  <section class="contact-section section-divider">
-    <div class="container">
-      <div class="section-header-center">
-        <h2>Contact Us</h2>
-        <p class="section-subtitle">For hotels, spas, and premium retail partners — we respond with discretion and care.</p>
-      </div>
-
-      <div class="contact-wrapper">
-        <form class="contact-form" action="#" method="post">
-          <div class="form-grid">
-            <input type="text" name="name" placeholder="Name" required />
-            <input type="email" name="email" placeholder="Business Email" required />
-          </div>
-          <div class="form-grid">
-            <input type="tel" name="phone" placeholder="Phone" />
-            <input type="text" name="company" placeholder="Company or Brand Name" />
-          </div>
-          <textarea name="message" placeholder="Message" rows="6" required></textarea>
-          <button type="submit">Send Message</button>
-
-          <p style="text-align:center; margin-top:1.25rem; color:#6b6358;">
-            Prefer a dedicated page? Visit our <a href="contact.html" style="text-decoration:underline;">Contact</a> page.
-          </p>
-        </form>
-      </div>
+      <h2>Get in Touch with Us</h2>
+      <p>Join Our Exclusive Community Today!</p>
+      <a href="contact.html">Get In Touch</a>
     </div>
   </section>
 
