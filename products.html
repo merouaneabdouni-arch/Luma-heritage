@@ -10,7 +10,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
 
@@ -352,34 +352,10 @@
       </nav>
     </div>
   </header>
+  <div class="whatsapp-float"><a href="https://wa.me/33659053515" class="whatsapp-button" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.737 5.607 2.137 8.048L0 32l7.933-2.127C10.353 31.243 13.106 32 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.467c-2.482 0-4.908-.646-7.07-1.87l-.507-.292-5.265 1.41 1.415-5.261-.292-.508C3.053 20.779 2.4 18.347 2.4 15.867c0-7.575 6.158-13.733 13.733-13.733S29.866 8.292 29.866 15.867c0 7.575-6.158 13.6-13.866 13.6zm7.533-10.8c-.41-.205-2.42-1.195-2.797-1.332-.377-.137-.651-.205-.925.205s-1.063 1.332-1.302 1.607c-.239.274-.478.308-.888.103s-1.73-.636-3.295-2.033c-1.218-1.086-2.041-2.428-2.28-2.838s-.026-.632.18-.836c.184-.184.41-.478.615-.717s.274-.41.41-.684c.137-.274.068-.513-.034-.717s-.925-2.23-1.268-3.053c-.336-.801-.677-.692-.925-.705-.239-.012-.513-.015-.787-.015s-.717.103-1.093.513c-.377.41-1.435 1.4-1.435 3.415s1.468 3.962 1.673 4.237c.205.274 2.899 4.426 7.024 6.206.981.423 1.748.676 2.345.865.989.308 1.887.264 2.598.16.792-.118 2.42-.989 2.761-1.945s.342-1.775.239-1.945c-.103-.171-.377-.274-.787-.479z"/></svg></a><div class="whatsapp-tooltip">Chat with us</div></div>
 
-  <script>
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const menu = document.getElementById('menu');
-    
-    if (menuToggle && menu) {
-      menuToggle.addEventListener('click', function() {
-        this.classList.toggle('active');
-        menu.classList.toggle('active');
-      });
-      
-      const menuLinks = menu.querySelectorAll('a');
-      menuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          menuToggle.classList.remove('active');
-          menu.classList.remove('active');
-        });
-      });
-      
-      document.addEventListener('click', function(event) {
-        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-          menuToggle.classList.remove('active');
-          menu.classList.remove('active');
-        }
-      });
-    }
-  </script>
+
+  
 
   <!-- PAGE HERO -->
   <section class="page-hero">
@@ -720,6 +696,7 @@
             alt="LUMA Heritage"
             class="footer-logo"
           />
+          <p class="footer-tagline">Luxury date-infused skincare for premium hospitality partners across the UAE.</p>
         </div>
 
         <div class="footer-links">
@@ -743,9 +720,11 @@
 
       <div class="footer-bottom">
         <p>© 2025 LUMA Heritage. All rights reserved.</p>
+        <nav class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="legal.html">Legal Notice</a></nav>
       </div>
     </div>
   </footer>
 
+<script src="luma.js"></script>
 </body>
 </html>
