@@ -1486,3 +1486,221 @@ input[type="range"] {
   .hero__title   { opacity: 0; animation: fadeUp 1s 0.75s var(--ease) forwards; }
   .hero__cta     { opacity: 0; animation: fadeUp 1s 1s var(--ease) forwards; }
 }
+
+
+/* ══════════════════════════════════════════
+   ANIMATIONS AVANCÉES
+   ══════════════════════════════════════════ */
+
+/* Stagger reveal sur les grilles */
+.products-grid .prod-card:nth-child(1) { transition-delay: 0s; }
+.products-grid .prod-card:nth-child(2) { transition-delay: 0.15s; }
+.products-grid .prod-card:nth-child(3) { transition-delay: 0.3s; }
+.numbers__grid .num-item:nth-child(1)  { transition-delay: 0s; }
+.numbers__grid .num-item:nth-child(2)  { transition-delay: 0.18s; }
+.numbers__grid .num-item:nth-child(3)  { transition-delay: 0.36s; }
+
+/* Hover ligne dorée sous les sections */
+.prod-card {
+  transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease);
+}
+.prod-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* Parallax léger sur le texte hero */
+@media (min-width: 768px) {
+  .hero__content { will-change: transform; }
+}
+
+/* Num items — scale au hover */
+.num-item {
+  transition: background 0.4s var(--ease), transform 0.4s var(--ease);
+  cursor: default;
+}
+.num-item:hover {
+  background: var(--white);
+  transform: translateY(-4px);
+}
+.num-item__val { transition: color 0.4s; }
+.num-item:hover .num-item__val { color: var(--gold); }
+
+/* Partner cells — bordure or au hover */
+.partner-cell {
+  transition: background 0.35s, color 0.35s, transform 0.35s;
+}
+.partner-cell:hover { transform: translateY(-4px); }
+
+/* Links soulignés avec animation */
+.text-link {
+  background-image: linear-gradient(var(--gold), var(--gold));
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  border-bottom: none;
+  transition: background-size 0.4s var(--ease), color 0.3s;
+  padding-bottom: 2px;
+}
+.text-link:hover { background-size: 100% 1px; color: var(--gold); }
+
+/* Boutons — shimmer au hover */
+.btn--dark {
+  position: relative;
+  overflow: hidden;
+}
+.btn--dark::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+  transition: left 0.5s var(--ease);
+}
+.btn--dark:hover::after { left: 100%; }
+
+/* Section headers — ligne or animée */
+.section-hd .section-title::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  margin-top: 1.25rem;
+  transition: width 1s var(--ease);
+  opacity: 0.4;
+}
+.section-hd.in .section-title::after { width: 60px; }
+
+/* Trust badges — slide-in */
+.trust-badge-item {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+}
+.trust-badge-item.in {
+  opacity: 1;
+  transform: none;
+}
+.trust-badge-item:nth-child(1) { transition-delay: 0s; }
+.trust-badge-item:nth-child(2) { transition-delay: 0.1s; }
+.trust-badge-item:nth-child(3) { transition-delay: 0.2s; }
+.trust-badge-item:nth-child(4) { transition-delay: 0.3s; }
+
+/* Quote — fade in lent */
+.quote-band blockquote {
+  transition: opacity 1.2s var(--ease), transform 1.2s var(--ease);
+}
+
+/* Page transition douce */
+body { animation: pageIn 0.5s var(--ease) both; }
+@keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* Catalogue download button */
+.catalogue-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: background 0.35s, color 0.35s;
+  min-height: 48px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.catalogue-btn:hover { background: var(--gold); color: var(--white); }
+.catalogue-btn svg { transition: transform 0.3s; }
+.catalogue-btn:hover svg { transform: translateY(2px); }
+
+/* Catalogue section */
+.catalogue-section {
+  background: var(--ink);
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.catalogue-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 100%, rgba(184,154,106,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+.catalogue-section .eyebrow { color: var(--gold); }
+.catalogue-section h2 { color: var(--white); margin-bottom: 1.25rem; }
+.catalogue-section p { color: rgba(255,255,255,0.5); max-width: 48ch; margin: 0 auto 2.5rem; }
+
+/* Catalogue modal */
+.catalogue-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(10,8,5,0.85);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+  padding: 5vw;
+}
+.catalogue-modal.open { display: flex; }
+.catalogue-modal__box {
+  background: var(--white);
+  max-width: 480px;
+  width: 100%;
+  padding: clamp(2rem, 5vw, 3rem);
+  position: relative;
+  animation: fadeUp 0.4s var(--ease) both;
+}
+.catalogue-modal__close {
+  position: absolute;
+  top: 1.25rem; right: 1.25rem;
+  background: none; border: none;
+  font-size: 1.2rem; cursor: pointer;
+  color: var(--ink-60); transition: color 0.3s;
+  min-width: 44px; min-height: 44px;
+  display: flex; align-items: center; justify-content: center;
+}
+.catalogue-modal__close:hover { color: var(--ink); }
+.catalogue-modal h3 {
+  font-family: var(--serif); font-weight: 300;
+  font-size: 1.6rem; color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+.catalogue-modal p {
+  font-size: 0.92rem; color: var(--ink-60);
+  line-height: 1.75; margin-bottom: 1.5rem;
+}
+.catalogue-modal input {
+  width: 100%; padding: 0.9rem 1.1rem;
+  border: 1px solid var(--ink-10);
+  background: var(--off); color: var(--ink);
+  font-family: var(--sans); font-size: 0.95rem;
+  margin-bottom: 1rem; min-height: 48px;
+  transition: border-color 0.3s;
+}
+.catalogue-modal input:focus { outline: none; border-color: var(--gold); }
+.catalogue-modal input::placeholder { color: var(--ink-30); }
+.catalogue-modal__submit {
+  width: 100%; min-height: 50px;
+  background: var(--ink); color: var(--white);
+  border: none; cursor: pointer;
+  font-family: var(--sans); font-size: 0.68rem;
+  font-weight: 400; letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transition: background 0.35s;
+}
+.catalogue-modal__submit:hover { background: var(--gold); }
+.catalogue-success {
+  display: none; text-align: center;
+  padding: 1.5rem 0;
+  font-family: var(--serif); font-style: italic;
+  font-size: 1.15rem; color: var(--gold);
+}
