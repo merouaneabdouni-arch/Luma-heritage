@@ -165,6 +165,20 @@
   </div>
 </section>
 
+
+<!-- CATALOGUE -->
+<section class="catalogue-section">
+  <div class="wrap">
+    <span class="eyebrow sr">Professional Catalogue</span>
+    <h2 class="section-title sr sr-d1">Discover our full<br>product range</h2>
+    <p class="sr sr-d2">Download our B2B catalogue with full product specifications, formats, MOQ details and pricing guidelines.</p>
+    <a href="#" class="catalogue-btn sr sr-d3" data-catalogue>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Catalogue
+    </a>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="footer__grid">
     <div><img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/6310032a798a6b2dd025432c07b18a623e1b1bde/42155f28-add0-4004-8e15-68b36e31fa07.png" alt="LUMA Heritage" class="footer__logo"/><p class="footer__tagline">Luxury date-infused skincare for premium hospitality partners across the UAE.</p></div>
@@ -175,5 +189,25 @@
 </footer>
 
 <a href="https://wa.me/33659053515?text=Hello%20LUMA%20Heritage" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.737 5.607 2.137 8.048L0 32l7.933-2.127C10.353 31.243 13.106 32 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.467c-2.482 0-4.908-.646-7.07-1.87l-.507-.292-5.265 1.41 1.415-5.261-.292-.508C3.053 20.779 2.4 18.347 2.4 15.867c0-7.575 6.158-13.733 13.733-13.733S29.866 8.292 29.866 15.867c0 7.575-6.158 13.6-13.866 13.6zm7.533-10.8c-.41-.205-2.42-1.195-2.797-1.332-.377-.137-.651-.205-.925.205s-1.063 1.332-1.302 1.607c-.239.274-.478.308-.888.103s-1.73-.636-3.295-2.033c-1.218-1.086-2.041-2.428-2.28-2.838s-.026-.632.18-.836c.184-.184.41-.478.615-.717s.274-.41.41-.684c.137-.274.068-.513-.034-.717s-.925-2.23-1.268-3.053c-.336-.801-.677-.692-.925-.705-.239-.012-.513-.015-.787-.015s-.717.103-1.093.513c-.377.41-1.435 1.4-1.435 3.415s1.468 3.962 1.673 4.237c.205.274 2.899 4.426 7.024 6.206.981.423 1.748.676 2.345.865.989.308 1.887.264 2.598.16.792-.118 2.42-.989 2.761-1.945s.342-1.775.239-1.945c-.103-.171-.377-.274-.787-.479z"/></svg></a>
+
+<!-- CATALOGUE MODAL -->
+<div class="catalogue-modal" id="catalogueModal" role="dialog" aria-modal="true" aria-label="Download catalogue">
+  <div class="catalogue-modal__box">
+    <button class="catalogue-modal__close" id="modalClose" aria-label="Close">&#x2715;</button>
+    <span class="eyebrow" style="margin-bottom:0.75rem;">Professional Catalogue</span>
+    <h3>LUMA Heritage<br>B2B Catalogue 2025</h3>
+    <p>Leave your email and we will send you our full product catalogue with specifications, formats and pricing.</p>
+    <form id="catalogueForm" novalidate>
+      <input type="text" name="name" placeholder="Your Name" required/>
+      <input type="email" name="email" placeholder="Business Email" required/>
+      <input type="text" name="company" placeholder="Hotel / Spa / Establishment"/>
+      <button type="submit" class="catalogue-modal__submit">Send me the Catalogue &rarr;</button>
+      <div class="catalogue-success" id="catSuccess">
+        <p>&#10003; Catalogue sent &mdash; check your inbox within 24h.</p>
+      </div>
+    </form>
+  </div>
+</div>
+
 <script src="luma.js"></script>
 </body></html>
