@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LUMA Heritage – Luxury Date-Infused Skincare</title>
-  <meta name="description" content="Premium date-infused skincare for 5-star hotels & luxury spas across the UAE. B2B excellence rooted in Middle Eastern heritage." />
-  <meta property="og:title" content="LUMA Heritage" />
-  <meta property="og:description" content="Luxury date-infused skincare for 5-star hotels & spas. Made in UAE." />
-  <meta property="og:type" content="website" />
-  <link rel="canonical" href="https://lumaheritage.com/" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LUMA Heritage – Luxury Date-Infused Skincare for Hotels &amp; Spas</title>
+  <meta name="description" content="Premium date-infused skincare for 5-star hotels &amp; luxury spas across the UAE. B2B excellence rooted in Middle Eastern heritage."/>
+  <meta property="og:title" content="LUMA Heritage"/>
+  <meta property="og:description" content="Luxury date-infused skincare for 5-star hotels &amp; spas. Made in UAE."/>
+  <meta property="og:type" content="website"/>
+  <link rel="canonical" href="https://lumaheritage.com/"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/banniere">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
 <header class="site-header" id="header">
   <a href="index.html" aria-label="LUMA Heritage">
-    <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/6310032a798a6b2dd025432c07b18a623e1b1bde/42155f28-add0-4004-8e15-68b36e31fa07.png" alt="LUMA Heritage" class="logo-img" />
+    <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/6310032a798a6b2dd025432c07b18a623e1b1bde/42155f28-add0-4004-8e15-68b36e31fa07.png"
+         alt="LUMA Heritage" class="logo-img"/>
   </a>
-  <nav aria-label="Main">
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="philosophy.html">Our Story</a></li>
-      <li><a href="elixir.html">Elixir</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <nav aria-label="Main navigation"><ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="philosophy.html">Our Story</a></li>
+    <li><a href="elixir.html">Elixir</a></li>
+    <li><a href="devis.html">Get a Quote</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul></nav>
   <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 </header>
 
-<div class="nav-drawer" id="drawer" aria-hidden="true" role="dialog" aria-label="Navigation">
+<div class="nav-drawer" id="drawer" aria-hidden="true">
   <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
   <a href="index.html">Home</a>
   <a href="products.html">Products</a>
   <a href="philosophy.html">Our Story</a>
   <a href="elixir.html">Elixir</a>
+  <a href="devis.html">Get a Quote</a>
   <a href="contact.html">Contact</a>
 </div>
 
+<!-- HERO — plein écran, image cadré correctement -->
 <section class="hero" aria-label="LUMA Heritage">
-  <img class="hero__img" src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/banniere" alt="" aria-hidden="true" fetchpriority="high" />
+  <img class="hero__img"
+       src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/banniere"
+       alt="" aria-hidden="true" fetchpriority="high"/>
   <div class="hero__overlay">
     <div class="hero__content">
-      <span class="hero__eyebrow">Luxury B2B Skincare · UAE</span>
+      <span class="hero__eyebrow">Luxury B2B Skincare &middot; UAE</span>
       <h1 class="hero__title">Where<br>Heritage<br><em>meets</em><br>Excellence</h1>
       <a href="philosophy.html" class="hero__cta">Discover Our Story</a>
     </div>
@@ -59,43 +63,80 @@
   </div>
 </section>
 
+<!-- CERTIFICATIONS STRIP — autorité immédiate -->
+<div class="certs-strip">
+  <div class="wrap">
+    <div class="certs-strip__inner">
+      <div class="cert-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        <span>Dermatologically Tested</span>
+      </div>
+      <div class="cert-divider"></div>
+      <div class="cert-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83"/></svg>
+        <span>Cruelty Free</span>
+      </div>
+      <div class="cert-divider"></div>
+      <div class="cert-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" y1="8" x2="2" y2="22"/></svg>
+        <span>Eco-Friendly Packaging</span>
+      </div>
+      <div class="cert-divider"></div>
+      <div class="cert-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        <span>100% Natural Ingredients</span>
+      </div>
+      <div class="cert-divider"></div>
+      <div class="cert-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Made in UAE</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHO WE ARE -->
 <section class="story">
   <div class="wrap">
-    <div class="story__inner">
+    <div class="story__grid">
       <div class="story__text sr">
         <span class="eyebrow">Who We Are</span>
-        <h2 class="story__heading">Rooted in tradition,<br>crafted for <em>prestige</em></h2>
-        <p class="body-text">LUMA Heritage was born from a deep respect for ancestral Middle Eastern beauty rituals. We craft premium date-infused skincare exclusively for 5-star hotels, luxury spas, and curated concept stores across the UAE.</p>
-        <p class="body-text">Each formula is a precise balance of local natural ingredients and expert formulation — delivering an unparalleled sensory experience that elevates your guest journey.</p>
-        <a href="philosophy.html" class="text-link">Read our story →</a>
+        <h2 class="section-title">Rooted in tradition,<br>crafted for <em>prestige</em></h2>
+        <p class="body-text">LUMA Heritage crafts premium date-infused skincare exclusively for 5-star hotels, luxury spas, and curated concept stores across the UAE. Each formula is born from ancestral Middle Eastern beauty rituals, reimagined through modern expertise.</p>
+        <p class="body-text">We partner with establishments that demand the exceptional — delivering a sensory experience your guests will remember.</p>
+        <a href="philosophy.html" class="text-link">Read our story &rarr;</a>
       </div>
-      <div class="story__visual sr sr-d2">
-        <img class="story__img" src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/08bba8fee153ed1b5e1a4a953a6e989d2ae3b1c8/histoire%20.png" alt="LUMA Heritage story" loading="lazy" />
+      <div class="story__img-wrap sr sr-d2">
+        <img class="story__img"
+             src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/08bba8fee153ed1b5e1a4a953a6e989d2ae3b1c8/histoire%20.png"
+             alt="LUMA Heritage heritage" loading="lazy" width="600" height="800"/>
         <div class="story__frame" aria-hidden="true"></div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="numbers-bar">
+<!-- NUMBERS — chiffres crédibles -->
+<div class="numbers">
   <div class="wrap">
-    <div class="numbers-bar__grid">
+    <div class="numbers__grid">
       <div class="num-item sr">
-        <span class="num-item__val" data-count="10" data-suffix="+">10+</span>
-        <span class="num-item__label">Luxury Hotels</span>
+        <span class="num-item__val" data-count="5" data-suffix="+">5+</span>
+        <span class="num-item__label">5-Star Hotels</span>
       </div>
       <div class="num-item sr sr-d1">
-        <span class="num-item__val" data-count="32">32</span>
-        <span class="num-item__label">Premium Spas</span>
+        <span class="num-item__val" data-count="22">22</span>
+        <span class="num-item__label">Luxury Spas</span>
       </div>
       <div class="num-item sr sr-d2">
-        <span class="num-item__val" data-count="26">26</span>
-        <span class="num-item__label">Concept Stores</span>
+        <span class="num-item__val" data-count="3">3</span>
+        <span class="num-item__label">Signature Formulas</span>
       </div>
     </div>
   </div>
 </div>
 
+<!-- COLLECTIONS -->
 <section class="collections">
   <div class="wrap">
     <header class="section-hd sr">
@@ -105,55 +146,60 @@
     <div class="products-grid">
       <a href="products.html" class="prod-card sr">
         <div class="prod-card__img-box">
-          <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/hydrarting.png" alt="Hydrating Date Cream" loading="lazy" />
+          <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/hydrarting.png"
+               alt="Hydrating Date Cream" loading="lazy" width="400" height="400"/>
         </div>
         <div class="prod-card__body">
           <h3 class="prod-card__name">Hydrating Date Cream</h3>
           <p class="prod-card__desc">Daily hydration &amp; softness for refined in-room rituals.</p>
-          <span class="prod-card__cta">Discover <span aria-hidden="true">→</span></span>
+          <span class="prod-card__cta">Discover &rarr;</span>
         </div>
       </a>
       <a href="products.html" class="prod-card sr sr-d1">
         <div class="prod-card__img-box">
-          <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/de9fe30858ad90c76fadca676dd22d977a6d4e55/gemini-3-pro-image-preview_a_Ultra-realistic_luxu%20(1).png" alt="Restorative Date Balm" loading="lazy" />
+          <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/de9fe30858ad90c76fadca676dd22d977a6d4e55/gemini-3-pro-image-preview_a_Ultra-realistic_luxu%20(1).png"
+               alt="Restorative Date Balm" loading="lazy" width="400" height="400"/>
         </div>
         <div class="prod-card__body">
           <h3 class="prod-card__name">Restorative Date Balm</h3>
-          <p class="prod-card__desc">Deep repair ritual — comfort, glow, spa-grade finish.</p>
-          <span class="prod-card__cta">Discover <span aria-hidden="true">→</span></span>
+          <p class="prod-card__desc">Deep repair ritual &mdash; comfort, glow, spa-grade finish.</p>
+          <span class="prod-card__cta">Discover &rarr;</span>
         </div>
       </a>
       <a href="products.html" class="prod-card sr sr-d2">
         <div class="prod-card__img-box">
-          <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/nourishing.png" alt="Nourishing Date Oil" loading="lazy" />
+          <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/nourishing.png"
+               alt="Nourishing Date Oil" loading="lazy" width="400" height="400"/>
         </div>
         <div class="prod-card__body">
           <h3 class="prod-card__name">Nourishing Date Oil</h3>
-          <p class="prod-card__desc">Luxury nourishment — a sensory signature for premium partners.</p>
-          <span class="prod-card__cta">Discover <span aria-hidden="true">→</span></span>
+          <p class="prod-card__desc">Luxury nourishment &mdash; a sensory signature for premium partners.</p>
+          <span class="prod-card__cta">Discover &rarr;</span>
         </div>
       </a>
     </div>
   </div>
 </section>
 
+<!-- ELIXIR BAND -->
 <section class="elixir-band">
   <div class="wrap">
-    <div class="elixir-band__inner">
-      <div class="elixir-band__img sr">
-        <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/20f1fa0e535d8b0bc40ceb7d6c6db141c3fc290f/Bol%20dattes.jpg" alt="Dates — the key ingredient" loading="lazy" />
-      </div>
+    <div class="elixir-band__grid">
+      <img class="elixir-band__img sr"
+           src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/20f1fa0e535d8b0bc40ceb7d6c6db141c3fc290f/Bol%20dattes.jpg"
+           alt="Dates — the key ingredient" loading="lazy" width="800" height="600"/>
       <div class="elixir-band__text sr sr-d2">
         <span class="eyebrow">The Elixir</span>
         <h2 class="section-title">Centuries of wisdom,<br>distilled into every drop</h2>
-        <p class="body-text">For millennia, dates have been revered across the Middle East for their restorative properties. Rich in vitamins, minerals and antioxidants — this ancestral ingredient is the heart of every LUMA formula.</p>
-        <p class="body-text">We reinterpret this ancient wisdom through rigorous modern formulation, creating an elixir that transforms skincare into a ritual of beauty.</p>
-        <a href="elixir.html" class="text-link">Explore the elixir →</a>
+        <p class="body-text">For millennia, dates have been revered across the Middle East for their restorative properties. Rich in vitamins, minerals and antioxidants &mdash; this ancestral ingredient is the heart of every LUMA formula.</p>
+        <p class="body-text">We reinterpret this ancient wisdom through rigorous modern formulation, creating skincare that transforms a guest experience into a ritual of beauty.</p>
+        <a href="elixir.html" class="text-link">Explore the elixir &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- PARTNERS -->
 <section class="partners">
   <div class="wrap">
     <header class="section-hd sr">
@@ -163,15 +209,15 @@
     <div class="partners__grid">
       <div class="partner-cell sr">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        <span>Luxury Hotels</span>
+        <span>5-Star Hotels</span>
       </div>
       <div class="partner-cell sr sr-d1">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 11v4a7 7 0 0 1-14 0v-4"/><path d="M12 19v3"/></svg>
-        <span>Spa &amp; Wellness</span>
+        <span>Luxury Spas</span>
       </div>
       <div class="partner-cell sr sr-d2">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
-        <span>Retail</span>
+        <span>Retail &amp; Retail</span>
       </div>
       <div class="partner-cell sr sr-d3">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
@@ -181,62 +227,65 @@
   </div>
 </section>
 
+<!-- QUOTE -->
 <section class="quote-band">
-  <div class="wrap wrap--narrow">
+  <div class="wrap wrap--slim">
     <div class="gold-rule sr"></div>
-    <blockquote class="sr sr-d1">"Each formula is a promise — radiant, transformed skin through the art of excellence."</blockquote>
-    <cite class="sr sr-d2">— Adnan ADADA, Master Formulator</cite>
+    <blockquote class="sr sr-d1">"Each formula is a promise &mdash; radiant, transformed skin through the art of excellence."</blockquote>
+    <cite class="sr sr-d2">&mdash; Adnan ADADA, Master Formulator</cite>
     <div class="gold-rule sr sr-d3"></div>
   </div>
 </section>
 
+<!-- CTA -->
 <section class="cta-band">
-  <div class="wrap wrap--narrow">
+  <div class="wrap wrap--slim">
     <h2 class="cta-band__title sr">Partner with LUMA Heritage</h2>
-    <p class="cta-band__body sr sr-d1">Join a curated network of luxury establishments across the UAE. Let us craft an exclusive skincare experience for your guests.</p>
+    <p class="cta-band__body sr sr-d1">Join a curated network of luxury establishments across the UAE. Request a quote tailored to your property.</p>
     <div class="cta-band__btns sr sr-d2">
-      <a href="contact.html" class="btn btn--dark">Start a Partnership</a>
+      <a href="devis.html" class="btn btn--dark">Request a Quote</a>
       <a href="products.html" class="btn btn--ghost">View Collections</a>
     </div>
   </div>
 </section>
 
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="footer__top">
-      <div class="footer__brand">
-        <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/6310032a798a6b2dd025432c07b18a623e1b1bde/42155f28-add0-4004-8e15-68b36e31fa07.png" alt="LUMA Heritage" class="footer__logo" />
-        <p class="footer__tagline">Luxury date-infused skincare for premium hospitality partners across the UAE.</p>
-      </div>
-      <nav class="footer__nav" aria-label="Footer navigation">
-        <span class="footer__nav-title">Explore</span>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="philosophy.html">Our Story</a></li>
-          <li><a href="elixir.html">Elixir</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="footer__contact">
-        <span class="footer__nav-title">Contact</span>
-        <p><a href="tel:+33659053515">+33 6 59 05 35 15</a></p>
-        <p><a href="mailto:info@lumaheritage.com">info@lumaheritage.com</a></p>
-        <p>Dubai Hills Estate<br>Business Park 1, Dubai UAE</p>
-      </div>
+  <div class="footer__grid">
+    <div>
+      <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/6310032a798a6b2dd025432c07b18a623e1b1bde/42155f28-add0-4004-8e15-68b36e31fa07.png"
+           alt="LUMA Heritage" class="footer__logo"/>
+      <p class="footer__tagline">Luxury date-infused skincare for premium hospitality partners across the UAE.</p>
     </div>
-    <div class="footer__bottom">
-      <p>© 2025 LUMA Heritage. All rights reserved.</p>
-      <nav class="footer__legal" aria-label="Legal">
-        <a href="privacy.html">Privacy</a>
-        <a href="legal.html">Legal</a>
-        <a href="partnerships.html">Partnerships</a>
-      </nav>
+    <nav>
+      <span class="footer__heading">Explore</span>
+      <ul class="footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="philosophy.html">Our Story</a></li>
+        <li><a href="elixir.html">Elixir</a></li>
+        <li><a href="devis.html">Get a Quote</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="footer__contact">
+      <span class="footer__heading">Contact</span>
+      <p><a href="tel:+33659053515">+33 6 59 05 35 15</a></p>
+      <p><a href="mailto:info@lumaheritage.com">info@lumaheritage.com</a></p>
+      <p>Dubai Hills Estate, Business Park 1<br>Dubai, UAE</p>
     </div>
+  </div>
+  <div class="footer__bottom">
+    <p class="footer__copy">&copy; 2025 LUMA Heritage. All rights reserved.</p>
+    <nav class="footer__legal">
+      <a href="privacy.html">Privacy</a>
+      <a href="legal.html">Legal</a>
+      <a href="partnerships.html">Partnerships</a>
+    </nav>
   </div>
 </footer>
 
-<a href="https://wa.me/33659053515?text=Hello%20LUMA%20Heritage" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/33659053515?text=Hello%20LUMA%20Heritage" class="wa-float"
+   target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.737 5.607 2.137 8.048L0 32l7.933-2.127C10.353 31.243 13.106 32 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.467c-2.482 0-4.908-.646-7.07-1.87l-.507-.292-5.265 1.41 1.415-5.261-.292-.508C3.053 20.779 2.4 18.347 2.4 15.867c0-7.575 6.158-13.733 13.733-13.733S29.866 8.292 29.866 15.867c0 7.575-6.158 13.6-13.866 13.6zm7.533-10.8c-.41-.205-2.42-1.195-2.797-1.332-.377-.137-.651-.205-.925.205s-1.063 1.332-1.302 1.607c-.239.274-.478.308-.888.103s-1.73-.636-3.295-2.033c-1.218-1.086-2.041-2.428-2.28-2.838s-.026-.632.18-.836c.184-.184.41-.478.615-.717s.274-.41.41-.684c.137-.274.068-.513-.034-.717s-.925-2.23-1.268-3.053c-.336-.801-.677-.692-.925-.705-.239-.012-.513-.015-.787-.015s-.717.103-1.093.513c-.377.41-1.435 1.4-1.435 3.415s1.468 3.962 1.673 4.237c.205.274 2.899 4.426 7.024 6.206.981.423 1.748.676 2.345.865.989.308 1.887.264 2.598.16.792-.118 2.42-.989 2.761-1.945s.342-1.775.239-1.945c-.103-.171-.377-.274-.787-.479z"/>
   </svg>
