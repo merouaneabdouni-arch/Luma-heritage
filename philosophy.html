@@ -7,6 +7,33 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    @media (max-width: 860px) {
+      [style*="grid-template-columns:1fr 1fr"],
+      [style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+      }
+      [style*="grid-template-columns:repeat(3,1fr)"],
+      [style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: 1fr !important;
+      }
+      [style*="grid-template-columns:repeat(2,1fr)"],
+      [style*="grid-template-columns: repeat(2, 1fr)"] {
+        grid-template-columns: 1fr !important;
+      }
+      [style*="font-size:0.58rem"],
+      [style*="font-size: 0.58rem"] { font-size: 0.65rem !important; }
+      [style*="font-size:0.55rem"],
+      [style*="font-size: 0.55rem"] { font-size: 0.65rem !important; }
+    }
+    @media (max-width: 600px) {
+      [style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
 </head><body>
 <header class="site-header" id="header">
   <a href="index.html"><img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/6310032a798a6b2dd025432c07b18a623e1b1bde/42155f28-add0-4004-8e15-68b36e31fa07.png" alt="LUMA Heritage" class="logo-img" /></a>
