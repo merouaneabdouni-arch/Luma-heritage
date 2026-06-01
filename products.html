@@ -8,6 +8,41 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .prod-article {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: start;
+      margin-bottom: clamp(4rem, 8vw, 7rem);
+      padding-bottom: clamp(4rem, 8vw, 7rem);
+      border-bottom: 1px solid var(--ink-10);
+    }
+    .prod-article:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .prod-img-sticky {
+      position: sticky;
+      top: 6rem;
+      background: var(--stone);
+      padding: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 420px;
+    }
+    .prod-img-sticky img { max-height: 360px; object-fit: contain; filter: drop-shadow(0 12px 30px rgba(0,0,0,0.1)); width: 100%; }
+    .format-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+    .format-tag { font-size: 0.72rem; padding: 0.6rem 1rem; border: 1px solid var(--ink-10); color: var(--ink-60); min-height: 44px; display: flex; align-items: center; }
+    @media (max-width: 860px) {
+      .prod-article { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+      .prod-img-sticky { position: relative !important; top: auto !important; min-height: 300px !important; padding: 2rem !important; }
+      .prod-img-sticky img { max-height: 260px !important; }
+    }
+    @media (max-width: 480px) {
+      .prod-img-sticky { min-height: 240px !important; padding: 1.5rem !important; }
+      .prod-img-sticky img { max-height: 200px !important; }
+    }
+  </style>
 </head>
 <body>
 <header class="site-header" id="header">
@@ -36,8 +71,8 @@
 <section style="padding:clamp(4rem,8vw,7rem) 0; background:var(--white);">
   <div class="wrap">
 
-    <article style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,7rem);align-items:start;margin-bottom:clamp(4rem,8vw,7rem);padding-bottom:clamp(4rem,8vw,7rem);border-bottom:1px solid var(--ink-10);" class="sr">
-      <div style="position:sticky;top:6rem;background:var(--stone);padding:3rem;display:flex;align-items:center;justify-content:center;min-height:460px;">
+    <article class="prod-article" class="sr">
+      <div class="prod-img-sticky">
         <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/hydrarting.png" alt="Hydrating Date Cream" style="max-height:380px;object-fit:contain;filter:drop-shadow(0 12px 30px rgba(0,0,0,0.1));" loading="lazy" />
       </div>
       <div>
@@ -48,18 +83,18 @@
           <p style="font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:1rem;">Key Ingredients</p>
           <p class="body-text" style="margin:0;">Date Extract 25% · Hyaluronic Acid · Aloe Vera · Shea Butter</p>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;">
-          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">30ml – Hotel</span>
-          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">50ml – Standard</span>
-          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">100ml – Retail</span>
-          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">200ml – Spa</span>
+        <div class="format-tags">
+          <span class="format-tag">30ml – Hotel</span>
+          <span class="format-tag">50ml – Standard</span>
+          <span class="format-tag">100ml – Retail</span>
+          <span class="format-tag">200ml – Spa</span>
         </div>
-        <a href="contact.html" class="btn btn--dark">Request Sample</a>
+        <a href="contact.html" class="btn btn--dark" style="min-height:48px;display:inline-flex;align-items:center;">Request Sample</a>
       </div>
     </article>
 
-    <article style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,7rem);align-items:start;margin-bottom:clamp(4rem,8vw,7rem);padding-bottom:clamp(4rem,8vw,7rem);border-bottom:1px solid var(--ink-10);" class="sr">
-      <div style="position:sticky;top:6rem;background:var(--stone);padding:3rem;display:flex;align-items:center;justify-content:center;min-height:460px;">
+    <article class="prod-article" class="sr">
+      <div class="prod-img-sticky">
         <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/de9fe30858ad90c76fadca676dd22d977a6d4e55/gemini-3-pro-image-preview_a_Ultra-realistic_luxu%20(1).png" alt="Restorative Date Balm" style="max-height:380px;object-fit:contain;filter:drop-shadow(0 12px 30px rgba(0,0,0,0.1));" loading="lazy" />
       </div>
       <div>
@@ -70,18 +105,18 @@
           <p style="font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:1rem;">Key Ingredients</p>
           <p class="body-text" style="margin:0;">Date Concentrate 35% · Clove Oil · Argan Oil · Vitamin E</p>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;">
-          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">50ml – Travel</span>
-          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">75ml – Standard</span>
-          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">150ml – Spa</span>
-          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">250ml – Refill</span>
+        <div class="format-tags">
+          <span class="format-tag">50ml – Travel</span>
+          <span class="format-tag">75ml – Standard</span>
+          <span class="format-tag">150ml – Spa</span>
+          <span class="format-tag">250ml – Refill</span>
         </div>
-        <a href="contact.html" class="btn btn--dark">Request Sample</a>
+        <a href="contact.html" class="btn btn--dark" style="min-height:48px;display:inline-flex;align-items:center;">Request Sample</a>
       </div>
     </article>
 
-    <article style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,7rem);align-items:start;" class="sr">
-      <div style="position:sticky;top:6rem;background:var(--stone);padding:3rem;display:flex;align-items:center;justify-content:center;min-height:460px;">
+    <article class="prod-article" class="sr">
+      <div class="prod-img-sticky">
         <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/nourishing.png" alt="Nourishing Date Oil" style="max-height:380px;object-fit:contain;filter:drop-shadow(0 12px 30px rgba(0,0,0,0.1));" loading="lazy" />
       </div>
       <div>
@@ -92,13 +127,13 @@
           <p style="font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:1rem;">Key Ingredients</p>
           <p class="body-text" style="margin:0;">Date Seed Oil 40% · Jojoba Oil · Rosehip Oil · Frankincense</p>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;">
-          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">30ml – Sample</span>
-          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">50ml – Standard</span>
-          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">100ml – Premium</span>
-          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">200ml – Dispenser</span>
+        <div class="format-tags">
+          <span class="format-tag">30ml – Sample</span>
+          <span class="format-tag">50ml – Standard</span>
+          <span class="format-tag">100ml – Premium</span>
+          <span class="format-tag">200ml – Dispenser</span>
         </div>
-        <a href="contact.html" class="btn btn--dark">Request Sample</a>
+        <a href="contact.html" class="btn btn--dark" style="min-height:48px;display:inline-flex;align-items:center;">Request Sample</a>
       </div>
     </article>
 
