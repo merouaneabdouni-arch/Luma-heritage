@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Request a Quote – LUMA Heritage</title>
+  <meta name="description" content="Request a tailored quote for your hotel, spa or retail establishment. LUMA Heritage luxury date-infused skincare, UAE."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <a href="index.html"><img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/6310032a798a6b2dd025432c07b18a623e1b1bde/42155f28-add0-4004-8e15-68b36e31fa07.png" alt="LUMA Heritage" class="logo-img"/></a>
+  <nav aria-label="Main"><ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="philosophy.html">Our Story</a></li>
+    <li><a href="elixir.html">Elixir</a></li>
+    <li><a href="devis.html" class="active">Get a Quote</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul></nav>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+<div class="nav-drawer" id="drawer" aria-hidden="true">
+  <button class="drawer-close" id="drawerClose" aria-label="Close">✕</button>
+  <a href="index.html">Home</a><a href="products.html">Products</a>
+  <a href="philosophy.html">Our Story</a><a href="elixir.html">Elixir</a>
+  <a href="devis.html">Get a Quote</a><a href="contact.html">Contact</a>
+</div>
+
+<div class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">B2B Partnership</span>
+    <h1 class="page-hero__title">Request a Quote</h1>
+    <p class="page-hero__sub">Tell us about your establishment and we will send you a tailored proposal within 24 hours.</p>
+  </div>
+</div>
+
+<section class="devis-page">
+  <div class="wrap">
+    <div class="devis-form-wrap">
+
+      <form id="devisForm" novalidate>
+
+        <!-- SECTION 1 : Votre établissement -->
+        <div class="devis-section sr">
+          <h2 class="devis-section-title">Your Establishment</h2>
+          <div class="devis-grid">
+            <div class="devis-field">
+              <label class="devis-label" for="company">Establishment Name *</label>
+              <input class="devis-input" id="company" name="company" type="text" placeholder="e.g. The Palm Hotel Dubai" required/>
+            </div>
+            <div class="devis-field">
+              <label class="devis-label" for="type">Type of Establishment *</label>
+              <select class="devis-input" id="type" name="type" required>
+                <option value="" disabled selected>Select…</option>
+                <option value="hotel-5">5-Star Hotel</option>
+                <option value="hotel-boutique">Boutique Hotel</option>
+                <option value="spa">Luxury Spa</option>
+                <option value="wellness">Wellness Center</option>
+                <option value="resort">Resort</option>
+                <option value="retail">Concept Store / Retail</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="devis-field">
+              <label class="devis-label" for="city">City / Emirate *</label>
+              <input class="devis-input" id="city" name="city" type="text" placeholder="e.g. Dubai, Abu Dhabi, Sharjah…" required/>
+            </div>
+            <div class="devis-field">
+              <label class="devis-label" for="rooms">Number of Rooms / Treatment Rooms</label>
+              <input class="devis-input" id="rooms" name="rooms" type="number" min="1" placeholder="e.g. 120"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2 : Produits souhaités -->
+        <div class="devis-section sr sr-d1">
+          <h2 class="devis-section-title">Products of Interest</h2>
+          <div class="devis-products" id="productCards">
+            <label class="devis-product-card" id="card-cream">
+              <input type="checkbox" name="products" value="hydrating-cream"/>
+              <span class="devis-product-card__name">Hydrating Date Cream</span>
+              <span class="devis-product-card__sub">Daily Ritual</span>
+            </label>
+            <label class="devis-product-card" id="card-balm">
+              <input type="checkbox" name="products" value="restorative-balm"/>
+              <span class="devis-product-card__name">Restorative Date Balm</span>
+              <span class="devis-product-card__sub">Intensive Care</span>
+            </label>
+            <label class="devis-product-card" id="card-oil">
+              <input type="checkbox" name="products" value="nourishing-oil"/>
+              <span class="devis-product-card__name">Nourishing Date Oil</span>
+              <span class="devis-product-card__sub">Signature Treatment</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- SECTION 3 : Volume et format -->
+        <div class="devis-section sr sr-d1">
+          <h2 class="devis-section-title">Volume &amp; Format</h2>
+          <div class="devis-grid">
+            <div class="devis-field">
+              <label class="devis-label" for="quantity">Estimated Monthly Quantity</label>
+              <select class="devis-input" id="quantity" name="quantity">
+                <option value="" disabled selected>Select a range…</option>
+                <option value="50-100">50 – 100 units</option>
+                <option value="100-300">100 – 300 units</option>
+                <option value="300-500">300 – 500 units</option>
+                <option value="500-1000">500 – 1,000 units</option>
+                <option value="1000+">1,000+ units</option>
+              </select>
+            </div>
+            <div class="devis-field">
+              <label class="devis-label" for="format">Preferred Format</label>
+              <select class="devis-input" id="format" name="format">
+                <option value="" disabled selected>Select…</option>
+                <option value="miniature">Hotel Miniature (30ml)</option>
+                <option value="standard">Standard (50–100ml)</option>
+                <option value="spa">Spa Professional (150–200ml)</option>
+                <option value="mixed">Mixed Formats</option>
+              </select>
+            </div>
+          </div>
+          <div class="devis-field" style="margin-top:1rem;">
+            <label class="devis-label" for="notes">Additional Requirements</label>
+            <textarea class="devis-input devis-input--textarea" id="notes" name="notes"
+              placeholder="Delivery schedule, special packaging, any specific needs…"></textarea>
+          </div>
+        </div>
+
+        <!-- SECTION 4 : Vos coordonnées -->
+        <div class="devis-section sr sr-d2">
+          <h2 class="devis-section-title">Your Contact Details</h2>
+          <div class="devis-grid">
+            <div class="devis-field">
+              <label class="devis-label" for="fname">First Name *</label>
+              <input class="devis-input" id="fname" name="fname" type="text" placeholder="First name" required autocomplete="given-name"/>
+            </div>
+            <div class="devis-field">
+              <label class="devis-label" for="lname">Last Name *</label>
+              <input class="devis-input" id="lname" name="lname" type="text" placeholder="Last name" required autocomplete="family-name"/>
+            </div>
+            <div class="devis-field">
+              <label class="devis-label" for="email">Business Email *</label>
+              <input class="devis-input" id="email" name="email" type="email" placeholder="your@hotel.com" required autocomplete="email"/>
+            </div>
+            <div class="devis-field">
+              <label class="devis-label" for="phone">Phone</label>
+              <input class="devis-input" id="phone" name="phone" type="tel" placeholder="+971 …" autocomplete="tel"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="devis-submit-row sr sr-d3">
+          <button type="submit" class="btn btn--dark" style="min-width:220px;">Send My Request</button>
+          <p class="devis-note">We respond within 24 business hours. Your information is kept strictly confidential.</p>
+        </div>
+
+        <div class="form-success" id="devisSuccess">
+          <p style="font-family:'Playfair Display',serif;font-size:1.4rem;font-style:italic;color:#b89a6a;margin-bottom:0.75rem;">Thank you for your request.</p>
+          <p style="font-size:0.95rem;color:var(--ink-60);">Our team will contact you within 24 hours with a tailored proposal.</p>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- WHY LUMA STRIP -->
+<section style="background:var(--off);padding:clamp(3.5rem,7vw,6rem) 0;border-top:1px solid var(--ink-10);">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border:1px solid var(--ink-10);" class="why-grid-devis">
+      <div style="padding:2rem 1.5rem;background:var(--white);text-align:center;" class="sr">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b89a6a" stroke-width="1.2" style="margin:0 auto 1rem;" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        <p style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:300;color:var(--ink);margin-bottom:0.35rem;">Certified Quality</p>
+        <p style="font-size:0.78rem;color:var(--ink-60);margin:0;line-height:1.6;">Dermatologically tested &amp; cruelty-free</p>
+      </div>
+      <div style="padding:2rem 1.5rem;background:var(--white);text-align:center;border-left:1px solid var(--ink-10);" class="sr sr-d1">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b89a6a" stroke-width="1.2" style="margin:0 auto 1rem;" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <p style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:300;color:var(--ink);margin-bottom:0.35rem;">Fast Delivery</p>
+        <p style="font-size:0.78rem;color:var(--ink-60);margin:0;line-height:1.6;">2–3 weeks for standard orders across UAE</p>
+      </div>
+      <div style="padding:2rem 1.5rem;background:var(--white);text-align:center;border-left:1px solid var(--ink-10);" class="sr sr-d2">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b89a6a" stroke-width="1.2" style="margin:0 auto 1rem;" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <p style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:300;color:var(--ink);margin-bottom:0.35rem;">Dedicated Account</p>
+        <p style="font-size:0.78rem;color:var(--ink-60);margin:0;line-height:1.6;">A personal contact for every partner</p>
+      </div>
+      <div style="padding:2rem 1.5rem;background:var(--white);text-align:center;border-left:1px solid var(--ink-10);" class="sr sr-d3">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b89a6a" stroke-width="1.2" style="margin:0 auto 1rem;" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <p style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:300;color:var(--ink);margin-bottom:0.35rem;">Made in UAE</p>
+        <p style="font-size:0.78rem;color:var(--ink-60);margin:0;line-height:1.6;">Local sourcing &amp; production excellence</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer__grid">
+    <div>
+      <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/6310032a798a6b2dd025432c07b18a623e1b1bde/42155f28-add0-4004-8e15-68b36e31fa07.png" alt="LUMA Heritage" class="footer__logo"/>
+      <p class="footer__tagline">Luxury date-infused skincare for premium hospitality partners across the UAE.</p>
+    </div>
+    <nav><span class="footer__heading">Explore</span>
+      <ul class="footer__links">
+        <li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li>
+        <li><a href="philosophy.html">Our Story</a></li><li><a href="elixir.html">Elixir</a></li>
+        <li><a href="devis.html">Get a Quote</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="footer__contact"><span class="footer__heading">Contact</span>
+      <p><a href="tel:+33659053515">+33 6 59 05 35 15</a></p>
+      <p><a href="mailto:info@lumaheritage.com">info@lumaheritage.com</a></p>
+      <p>Dubai Hills Estate, Dubai UAE</p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p class="footer__copy">&copy; 2025 LUMA Heritage. All rights reserved.</p>
+    <nav class="footer__legal"><a href="privacy.html">Privacy</a><a href="legal.html">Legal</a></nav>
+  </div>
+</footer>
+
+<a href="https://wa.me/33659053515" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.737 5.607 2.137 8.048L0 32l7.933-2.127C10.353 31.243 13.106 32 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.467c-2.482 0-4.908-.646-7.07-1.87l-.507-.292-5.265 1.41 1.415-5.261-.292-.508C3.053 20.779 2.4 18.347 2.4 15.867c0-7.575 6.158-13.733 13.733-13.733S29.866 8.292 29.866 15.867c0 7.575-6.158 13.6-13.866 13.6zm7.533-10.8c-.41-.205-2.42-1.195-2.797-1.332-.377-.137-.651-.205-.925.205s-1.063 1.332-1.302 1.607c-.239.274-.478.308-.888.103s-1.73-.636-3.295-2.033c-1.218-1.086-2.041-2.428-2.28-2.838s-.026-.632.18-.836c.184-.184.41-.478.615-.717s.274-.41.41-.684c.137-.274.068-.513-.034-.717s-.925-2.23-1.268-3.053c-.336-.801-.677-.692-.925-.705-.239-.012-.513-.015-.787-.015s-.717.103-1.093.513c-.377.41-1.435 1.4-1.435 3.415s1.468 3.962 1.673 4.237c.205.274 2.899 4.426 7.024 6.206.981.423 1.748.676 2.345.865.989.308 1.887.264 2.598.16.792-.118 2.42-.989 2.761-1.945s.342-1.775.239-1.945c-.103-.171-.377-.274-.787-.479z"/></svg>
+</a>
+
+<script src="luma.js"></script>
+<script>
+// Product card toggle
+document.querySelectorAll('.devis-product-card').forEach(card => {
+  const cb = card.querySelector('input[type="checkbox"]');
+  cb.addEventListener('change', () => card.classList.toggle('selected', cb.checked));
+});
+// Grid responsive devis
+const wgd = document.querySelector('.why-grid-devis');
+if(wgd && window.innerWidth < 700){
+  wgd.style.gridTemplateColumns = '1fr 1fr';
+  Array.from(wgd.children).forEach((c,i) => {
+    if(i >= 2) c.style.borderTop = '1px solid var(--ink-10)';
+    if(i % 2 === 0) c.style.borderLeft = 'none';
+  });
+}
+</script>
+</body>
+</html>
