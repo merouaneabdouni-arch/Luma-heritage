@@ -190,102 +190,142 @@ a   { color: inherit; text-decoration: none; }
 }
 .nav-drawer a:hover { color: var(--gold); }
 
-/* ── HERO ── */
+
+/* ══════════════════════════════════════════════
+   HERO — BANNIÈRE 43:24 COMPLÈTE DESKTOP+MOBILE
+   ══════════════════════════════════════════════ */
+
+/* ── Structure commune ── */
 .hero {
   position: relative;
-  height: 100svh;
-  min-height: 580px;
+  width: 100%;
   overflow: hidden;
-  background: var(--ink);
+  background: #1e1710;
 }
-.hero__img {
-  position: absolute;
-  inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  opacity: 0.5;
-  transform: scale(1.07);
-  animation: heroZoom 14s var(--ease) forwards;
-}
-@keyframes heroZoom { to { transform: scale(1); } }
 
-.hero__overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: flex-end;
-  padding: 0 5vw max(5rem, 8vh);
+/* ── DESKTOP (≥ 768px) : plein écran avec image en fond ── */
+@media (min-width: 768px) {
+  .hero {
+    height: 100svh;
+    min-height: 600px;
+    max-height: 1000px;
+  }
+  .hero__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 0.88;
+    transform: scale(1.05);
+    animation: heroZoom 14s var(--ease) forwards;
+  }
+  .hero__overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 6vw clamp(4rem, 8vh, 7rem);
+    background: linear-gradient(
+      to top,
+      rgba(20,15,8,0.72) 0%,
+      rgba(20,15,8,0.25) 45%,
+      transparent 100%
+    );
+    z-index: 2;
+  }
+  .hero__content { max-width: 640px; }
+  .hero__eyebrow {
+    opacity: 0;
+    animation: fadeUp 1s 0.5s var(--ease) forwards;
+  }
+  .hero__title {
+    opacity: 0;
+    animation: fadeUp 1s 0.75s var(--ease) forwards;
+  }
+  .hero__cta {
+    opacity: 0;
+    animation: fadeUp 1s 1s var(--ease) forwards;
+  }
+  .hero__scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 5vw;
+    z-index: 3;
+    opacity: 0;
+    animation: fadeIn 1s 1.8s forwards;
+  }
 }
-.hero__content { max-width: 600px; }
-.hero__eyebrow {
-  display: block;
-  font-family: var(--sans);
-  font-size: 0.62rem;
-  font-weight: 400;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1.5rem;
-  opacity: 0;
-  animation: fadeUp 1s 0.5s var(--ease) forwards;
-}
-.hero__title {
-  font-family: var(--serif);
-  font-weight: 300;
-  font-size: clamp(2.8rem, 8vw, 6rem);
-  line-height: 1.05;
-  color: var(--white);
-  margin-bottom: 2.5rem;
-  opacity: 0;
-  animation: fadeUp 1s 0.75s var(--ease) forwards;
-}
-.hero__title em { font-style: italic; color: rgba(255,255,255,0.6); }
-.hero__cta {
-  display: inline-block;
-  padding: 0.9rem 2.25rem;
-  border: 1px solid rgba(255,255,255,0.45);
-  color: var(--white);
-  font-family: var(--sans);
-  font-size: 0.67rem;
-  font-weight: 400;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  transition: background var(--dur), color var(--dur), border-color var(--dur);
-  opacity: 0;
-  animation: fadeUp 1s 1s var(--ease) forwards;
-}
-.hero__cta:hover { background: var(--white); color: var(--ink); border-color: var(--white); }
 
-/* Scroll indicator */
-.hero__scroll {
-  position: absolute;
-  bottom: 2.5rem; right: 5vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
-  opacity: 0;
-  animation: fadeIn 1s 1.8s forwards;
+/* ── MOBILE (< 768px) : image entière visible, ratio respecté ── */
+@media (max-width: 767px) {
+  .hero {
+    height: auto;
+    min-height: unset;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Image affichée dans son ratio exact 43:24 ≈ 16:9 */
+  .hero__img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* ratio exact de la bannière LUMA : 1376/768 */
+    aspect-ratio: 1376 / 768;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+    transform: none;
+    animation: none;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  /* Overlay sous l'image, fond sombre */
+  .hero__overlay {
+    position: relative;
+    inset: auto;
+    background: linear-gradient(135deg, #1a1410 0%, #231c14 100%);
+    padding: 2rem 7vw 2.75rem;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .hero__content { width: 100%; }
+
+  .hero__eyebrow {
+    opacity: 1;
+    animation: none;
+    font-size: 0.65rem;
+    color: var(--gold);
+    margin-bottom: 0.85rem;
+  }
+
+  .hero__title {
+    opacity: 1;
+    animation: none;
+    font-size: clamp(2rem, 9vw, 2.8rem);
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__cta {
+    opacity: 1;
+    animation: none;
+    border-color: rgba(255,255,255,0.35);
+    color: var(--white);
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.65rem;
+  }
+
+  .hero__scroll { display: none; }
 }
-.hero__scroll span {
-  font-size: 0.55rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-  writing-mode: vertical-rl;
-}
-.hero__line {
-  width: 1px; height: 48px;
-  background: rgba(255,255,255,0.2);
-  position: relative; overflow: hidden;
-}
-.hero__line::after {
-  content: '';
-  position: absolute; top: -100%; left: 0;
-  width: 100%; height: 100%;
-  background: var(--gold);
-  animation: lineSlide 2s 2.2s infinite;
-}
+
 
 /* ── STORY ── */
 .story { padding: clamp(5rem, 10vw, 9rem) 0; background: var(--white); }
@@ -1287,9 +1327,6 @@ input[type="range"] {
 }
 
 
-/* ══════════════════════════════════════
-   HERO MOBILE — IMAGE ENTIÈRE VISIBLE
-   ══════════════════════════════════════ */
 
 /* Desktop : hero plein écran comme avant */
 .hero {
