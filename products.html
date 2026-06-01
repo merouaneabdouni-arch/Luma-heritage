@@ -3,728 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Our Products – LUMA Heritage</title>
-  <meta name="description" content="Explore our luxury date-infused skincare collections: Hydrating Cream, Restorative Balm, and Nourishing Oil for hotels, spas, and concept stores." />
-
-  <!-- Fonts -->
+  <title>Products – LUMA Heritage</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    /* Page Hero */
-    .page-hero {
-      background: linear-gradient(to bottom, #f5efe6 0%, #ede4d8 100%);
-      padding: 6.5rem 0 4rem;
-      border-bottom: 2px solid rgba(166,133,85,0.25);
-    }
-    
-    .page-hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.5rem;
-      font-weight: 500;
-      text-align: center;
-      margin-bottom: 1.5rem;
-      color: #2a2318;
-    }
-    
-    .page-hero p {
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto;
-      color: #4a4037;
-      font-size: 1.2rem;
-      line-height: 1.85;
-      padding: 0 2rem;
-    }
-
-    /* Products Section */
-    .products-section {
-      padding: 6rem 0;
-      background: #faf7f2;
-    }
-
-    .product-detail {
-      max-width: 1200px;
-      margin: 0 auto 6rem;
-      padding: 0 2rem;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-      background: rgba(255,255,255,0.9);
-      border: 1.5px solid rgba(166,133,85,0.25);
-      border-radius: 16px;
-      padding: 4rem;
-      box-shadow: 0 12px 40px rgba(166,133,85,0.12);
-    }
-
-    .product-image-wrapper {
-      position: sticky;
-      top: 2rem;
-    }
-
-    .product-image {
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 500px;
-      border: 1px solid rgba(166,133,85,0.15);
-    }
-
-    .product-image img {
-      max-width: 100%;
-      max-height: 450px;
-      object-fit: contain;
-      filter: drop-shadow(0 10px 30px rgba(0,0,0,0.1));
-    }
-
-    .product-info h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.5rem;
-      font-weight: 500;
-      color: #2a2318;
-      margin-bottom: 1rem;
-    }
-
-    .product-category {
-      display: inline-block;
-      background: linear-gradient(135deg, #a68555 0%, #8d6e42 100%);
-      color: #ffffff;
-      padding: 0.5rem 1.25rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 2rem;
-    }
-
-    .product-description {
-      font-size: 1.15rem;
-      line-height: 1.9;
-      color: #4a4037;
-      margin-bottom: 2.5rem;
-    }
-
-    .product-section {
-      margin-bottom: 2.5rem;
-    }
-
-    .product-section h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.75rem;
-      font-weight: 500;
-      color: #2a2318;
-      margin-bottom: 1.25rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .product-section h3 svg {
-      stroke: #a68555;
-      width: 24px;
-      height: 24px;
-    }
-
-    .product-section ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .product-section li {
-      padding: 0.75rem 0;
-      padding-left: 2rem;
-      position: relative;
-      color: #4a4037;
-      font-size: 1.05rem;
-      line-height: 1.7;
-    }
-
-    .product-section li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: #a68555;
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-
-    .key-benefits {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .benefit-card {
-      background: rgba(166,133,85,0.08);
-      border: 1px solid rgba(166,133,85,0.2);
-      border-radius: 10px;
-      padding: 1.5rem;
-      transition: all 0.3s ease;
-    }
-
-    .benefit-card:hover {
-      background: rgba(166,133,85,0.12);
-      border-color: rgba(166,133,85,0.35);
-      transform: translateY(-4px);
-    }
-
-    .benefit-card h4 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      color: #2a2318;
-      margin-bottom: 0.5rem;
-    }
-
-    .benefit-card p {
-      font-size: 0.95rem;
-      color: #4a4037;
-      margin: 0;
-      line-height: 1.6;
-    }
-
-    .formats-sizes {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1rem;
-    }
-
-    .format-badge {
-      background: rgba(255,255,255,0.9);
-      border: 1.5px solid rgba(166,133,85,0.3);
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 500;
-      color: #2a2318;
-      transition: all 0.3s ease;
-    }
-
-    .format-badge:hover {
-      border-color: #a68555;
-      background: rgba(166,133,85,0.1);
-    }
-
-    .product-cta {
-      margin-top: 3rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid rgba(166,133,85,0.2);
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      display: inline-block;
-      padding: 1.2rem 3rem;
-      background: linear-gradient(135deg, #a68555 0%, #8d6e42 100%);
-      color: #ffffff;
-      font-size: 1.05rem;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 8px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      transition: all 0.4s ease;
-      border: 2px solid #a68555;
-      box-shadow: 0 8px 20px rgba(166,133,85,0.25);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 32px rgba(166,133,85,0.35);
-      background: linear-gradient(135deg, #8d6e42 0%, #73562e 100%);
-    }
-
-    .btn-secondary {
-      display: inline-block;
-      padding: 1.2rem 3rem;
-      background: rgba(255,255,255,0.9);
-      color: #2a2318;
-      font-size: 1.05rem;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 8px;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      transition: all 0.4s ease;
-      border: 2px solid rgba(166,133,85,0.4);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(166,133,85,0.1);
-      border-color: #a68555;
-      transform: translateY(-4px);
-    }
-
-    @media (max-width: 968px) {
-      .product-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        padding: 3rem 2rem;
-      }
-
-      .product-image-wrapper {
-        position: relative;
-        top: 0;
-      }
-
-      .key-benefits {
-        grid-template-columns: 1fr;
-      }
-
-      .page-hero h1 {
-        font-size: 2.8rem;
-      }
-
-      .product-info h2 {
-        font-size: 2rem;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .page-hero h1 {
-        font-size: 2rem;
-      }
-
-      .page-hero {
-        padding: 4rem 0 2.5rem;
-      }
-
-      .products-section {
-        padding: 4rem 0;
-      }
-
-      .cta-buttons {
-        flex-direction: column;
-      }
-
-      .btn-primary,
-      .btn-secondary {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
 </head>
-
 <body>
+<header class="site-header" id="header">
+  <a href="index.html"><img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/6310032a798a6b2dd025432c07b18a623e1b1bde/42155f28-add0-4004-8e15-68b36e31fa07.png" alt="LUMA Heritage" class="logo-img" /></a>
+  <nav aria-label="Main"><ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="philosophy.html">Our Story</a></li>
+    <li><a href="elixir.html">Elixir</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul></nav>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+<div class="nav-drawer" id="drawer" aria-hidden="true">
+  <button class="drawer-close" id="drawerClose" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a><a href="products.html">Products</a><a href="philosophy.html">Our Story</a><a href="elixir.html">Elixir</a><a href="contact.html">Contact</a>
+</div>
+<div class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow page-hero__eyebrow">Collections</span>
+    <h1 class="page-hero__title">Our Signature<br>Collections</h1>
+    <p class="page-hero__sub">Three luxury formulas crafted with ancestral date rituals — designed for premium hospitality partners across the UAE.</p>
+  </div>
+</div>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="header-inner">
-      <a href="index.html" class="logo-link">
-        <img
-          src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/6310032a798a6b2dd025432c07b18a623e1b1bde/42155f28-add0-4004-8e15-68b36e31fa07.png"
-          alt="LUMA Heritage"
-          class="logo"
-        />
-      </a>
+<section style="padding:clamp(4rem,8vw,7rem) 0; background:var(--white);">
+  <div class="wrap">
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <article style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,7rem);align-items:start;margin-bottom:clamp(4rem,8vw,7rem);padding-bottom:clamp(4rem,8vw,7rem);border-bottom:1px solid var(--ink-10);" class="sr">
+      <div style="position:sticky;top:6rem;background:var(--stone);padding:3rem;display:flex;align-items:center;justify-content:center;min-height:460px;">
+        <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/hydrarting.png" alt="Hydrating Date Cream" style="max-height:380px;object-fit:contain;filter:drop-shadow(0 12px 30px rgba(0,0,0,0.1));" loading="lazy" />
+      </div>
+      <div>
+        <span class="eyebrow">Daily Ritual</span>
+        <h2 style="font-family:var(--serif);font-weight:300;font-size:clamp(1.6rem,3vw,2.25rem);color:var(--ink);margin-bottom:1.25rem;">Hydrating Date Cream</h2>
+        <p class="body-text">Our signature hydrating cream combines the nourishing power of UAE dates with hyaluronic acid and aloe vera. A lightweight formula that delivers 24-hour moisture — ideal for refined in-room amenities.</p>
+        <div style="margin:2rem 0;padding:1.75rem;border:1px solid var(--ink-10);background:var(--off);">
+          <p style="font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:1rem;">Key Ingredients</p>
+          <p class="body-text" style="margin:0;">Date Extract 25% · Hyaluronic Acid · Aloe Vera · Shea Butter</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;">
+          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">30ml – Hotel</span>
+          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">50ml – Standard</span>
+          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">100ml – Retail</span>
+          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">200ml – Spa</span>
+        </div>
+        <a href="contact.html" class="btn btn--dark">Request Sample</a>
+      </div>
+    </article>
 
-      <nav class="menu" id="menu">
-        <a href="index.html#home">Home</a>
-        <a href="products.html">Our Products</a>
-        <a href="philosophy.html">Our Story & Philosophy</a>
-        <a href="elixir.html">Elixir – The Secret Of Dates</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <article style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,7rem);align-items:start;margin-bottom:clamp(4rem,8vw,7rem);padding-bottom:clamp(4rem,8vw,7rem);border-bottom:1px solid var(--ink-10);" class="sr">
+      <div style="position:sticky;top:6rem;background:var(--stone);padding:3rem;display:flex;align-items:center;justify-content:center;min-height:460px;">
+        <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/de9fe30858ad90c76fadca676dd22d977a6d4e55/gemini-3-pro-image-preview_a_Ultra-realistic_luxu%20(1).png" alt="Restorative Date Balm" style="max-height:380px;object-fit:contain;filter:drop-shadow(0 12px 30px rgba(0,0,0,0.1));" loading="lazy" />
+      </div>
+      <div>
+        <span class="eyebrow">Intensive Care</span>
+        <h2 style="font-family:var(--serif);font-weight:300;font-size:clamp(1.6rem,3vw,2.25rem);color:var(--ink);margin-bottom:1.25rem;">Restorative Date Balm</h2>
+        <p class="body-text">A rich, transformative balm that deeply repairs and rejuvenates skin. Infused with concentrated date extract and clove oil — spa-grade comfort with visible results.</p>
+        <div style="margin:2rem 0;padding:1.75rem;border:1px solid var(--ink-10);background:var(--off);">
+          <p style="font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:1rem;">Key Ingredients</p>
+          <p class="body-text" style="margin:0;">Date Concentrate 35% · Clove Oil · Argan Oil · Vitamin E</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;">
+          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">50ml – Travel</span>
+          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">75ml – Standard</span>
+          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">150ml – Spa</span>
+          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">250ml – Refill</span>
+        </div>
+        <a href="contact.html" class="btn btn--dark">Request Sample</a>
+      </div>
+    </article>
+
+    <article style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,7rem);align-items:start;" class="sr">
+      <div style="position:sticky;top:6rem;background:var(--stone);padding:3rem;display:flex;align-items:center;justify-content:center;min-height:460px;">
+        <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/nourishing.png" alt="Nourishing Date Oil" style="max-height:380px;object-fit:contain;filter:drop-shadow(0 12px 30px rgba(0,0,0,0.1));" loading="lazy" />
+      </div>
+      <div>
+        <span class="eyebrow">Signature Treatment</span>
+        <h2 style="font-family:var(--serif);font-weight:300;font-size:clamp(1.6rem,3vw,2.25rem);color:var(--ink);margin-bottom:1.25rem;">Nourishing Date Oil</h2>
+        <p class="body-text">An exceptional dry oil capturing the essence of Middle Eastern beauty. Rare date seed oil blended with precious botanical extracts — a truly sensorial experience.</p>
+        <div style="margin:2rem 0;padding:1.75rem;border:1px solid var(--ink-10);background:var(--off);">
+          <p style="font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:1rem;">Key Ingredients</p>
+          <p class="body-text" style="margin:0;">Date Seed Oil 40% · Jojoba Oil · Rosehip Oil · Frankincense</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;">
+          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">30ml – Sample</span>
+          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">50ml – Standard</span>
+          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">100ml – Premium</span>
+          <span style="font-size:0.72rem;padding:0.5rem 1rem;border:1px solid var(--ink-10);color:var(--ink-60);">200ml – Dispenser</span>
+        </div>
+        <a href="contact.html" class="btn btn--dark">Request Sample</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <img src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/6310032a798a6b2dd025432c07b18a623e1b1bde/42155f28-add0-4004-8e15-68b36e31fa07.png" alt="LUMA Heritage" class="footer__logo" />
+      <p class="footer__tagline">Luxury date-infused skincare for premium hospitality partners across the UAE.</p>
     </div>
-  </header>
-  <div class="whatsapp-float"><a href="https://wa.me/33659053515" class="whatsapp-button" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.737 5.607 2.137 8.048L0 32l7.933-2.127C10.353 31.243 13.106 32 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.467c-2.482 0-4.908-.646-7.07-1.87l-.507-.292-5.265 1.41 1.415-5.261-.292-.508C3.053 20.779 2.4 18.347 2.4 15.867c0-7.575 6.158-13.733 13.733-13.733S29.866 8.292 29.866 15.867c0 7.575-6.158 13.6-13.866 13.6zm7.533-10.8c-.41-.205-2.42-1.195-2.797-1.332-.377-.137-.651-.205-.925.205s-1.063 1.332-1.302 1.607c-.239.274-.478.308-.888.103s-1.73-.636-3.295-2.033c-1.218-1.086-2.041-2.428-2.28-2.838s-.026-.632.18-.836c.184-.184.41-.478.615-.717s.274-.41.41-.684c.137-.274.068-.513-.034-.717s-.925-2.23-1.268-3.053c-.336-.801-.677-.692-.925-.705-.239-.012-.513-.015-.787-.015s-.717.103-1.093.513c-.377.41-1.435 1.4-1.435 3.415s1.468 3.962 1.673 4.237c.205.274 2.899 4.426 7.024 6.206.981.423 1.748.676 2.345.865.989.308 1.887.264 2.598.16.792-.118 2.42-.989 2.761-1.945s.342-1.775.239-1.945c-.103-.171-.377-.274-.787-.479z"/></svg></a><div class="whatsapp-tooltip">Chat with us</div></div>
-
-
-  
-
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <h1>Our Signature Collections</h1>
-      <p>
-        Three luxury formulas crafted with ancestral date-infused rituals — designed for premium hospitality partners across the UAE.
-      </p>
+    <nav class="footer__nav"><span class="footer__nav-title">Explore</span><ul>
+      <li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li>
+      <li><a href="philosophy.html">Our Story</a></li><li><a href="elixir.html">Elixir</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></nav>
+    <div class="footer__contact"><span class="footer__nav-title">Contact</span>
+      <p><a href="tel:+33659053515">+33 6 59 05 35 15</a></p>
+      <p><a href="mailto:info@lumaheritage.com">info@lumaheritage.com</a></p>
+      <p>Dubai Hills Estate, Dubai UAE</p>
     </div>
-  </section>
-
-  <!-- PRODUCTS SECTION -->
-  <section class="products-section">
-    <div class="container">
-
-      <!-- PRODUCT 1: Hydrating Date Cream -->
-      <div class="product-detail">
-        <div class="product-grid">
-          <div class="product-image-wrapper">
-            <div class="product-image">
-              <img
-                src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/hydrarting.png"
-                alt="Hydrating Date Cream"
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          <div class="product-info">
-            <span class="product-category">Daily Ritual</span>
-            <h2>Hydrating Date Cream</h2>
-            <p class="product-description">
-              Our signature hydrating cream combines the nourishing power of UAE dates with hyaluronic acid and aloe vera. 
-              Perfect for in-room amenities, this lightweight formula absorbs quickly while delivering 24-hour moisture.
-            </p>
-
-            <div class="product-section">
-              <h3>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M12 6v6l4 2"></path>
-                </svg>
-                Key Ingredients
-              </h3>
-              <ul>
-                <li><strong>Date Extract (25%)</strong> – Rich in vitamins A, B, E for deep nourishment</li>
-                <li><strong>Hyaluronic Acid</strong> – Intense hydration and plumping effect</li>
-                <li><strong>Aloe Vera</strong> – Soothing and regenerating properties</li>
-                <li><strong>Shea Butter</strong> – Long-lasting softness and protection</li>
-              </ul>
-            </div>
-
-            <div class="product-section">
-              <h3>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                </svg>
-                Benefits
-              </h3>
-              <div class="key-benefits">
-                <div class="benefit-card">
-                  <h4>24h Hydration</h4>
-                  <p>Locks in moisture for all-day comfort</p>
-                </div>
-                <div class="benefit-card">
-                  <h4>Lightweight</h4>
-                  <p>Fast-absorbing, non-greasy texture</p>
-                </div>
-                <div class="benefit-card">
-                  <h4>Anti-Aging</h4>
-                  <p>Reduces fine lines and improves elasticity</p>
-                </div>
-                <div class="benefit-card">
-                  <h4>Radiant Glow</h4>
-                  <p>Enhances natural luminosity</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="product-section">
-              <h3>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                </svg>
-                Available Formats
-              </h3>
-              <div class="formats-sizes">
-                <div class="format-badge">30ml – Hotel Miniature</div>
-                <div class="format-badge">50ml – Standard Size</div>
-                <div class="format-badge">100ml – Retail Format</div>
-                <div class="format-badge">200ml – Spa Professional</div>
-              </div>
-            </div>
-
-            <div class="product-section">
-              <h3>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                </svg>
-                Recommended For
-              </h3>
-              <ul>
-                <li>5-star hotel in-room amenities</li>
-                <li>Boutique hotel welcome kits</li>
-                <li>Concept store retail</li>
-                <li>Corporate gifting programs</li>
-              </ul>
-            </div>
-
-            <div class="product-cta">
-              <div class="cta-buttons">
-                <a href="contact.html" class="btn-primary">Request Sample</a>
-                <a href="contact.html" class="btn-secondary">Get Pricing</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- PRODUCT 2: Restorative Date Balm -->
-      <div class="product-detail">
-        <div class="product-grid">
-          <div class="product-image-wrapper">
-            <div class="product-image">
-              <img
-                src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/de9fe30858ad90c76fadca676dd22d977a6d4e55/gemini-3-pro-image-preview_a_Ultra-realistic_luxu%20(1).png"
-                alt="Restorative Date Balm"
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          <div class="product-info">
-            <span class="product-category">Intensive Care</span>
-            <h2>Restorative Date Balm</h2>
-            <p class="product-description">
-              A rich, transformative balm that deeply repairs and rejuvenates skin. Infused with concentrated date extract and clove oil, 
-              this spa-grade formula delivers instant comfort and visible results.
-            </p>
-
-            <div class="product-section">
-              <h3>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M12 6v6l4 2"></path>
-                </svg>
-                Key Ingredients
-              </h3>
-              <ul>
-                <li><strong>Date Concentrate (35%)</strong> – Maximum antioxidant power</li>
-                <li><strong>Clove Oil</strong> – Purifying and regenerating properties</li>
-                <li><strong>Argan Oil</strong> – Deep nourishment and repair</li>
-                <li><strong>Vitamin E</strong> – Skin barrier protection</li>
-              </ul>
-            </div>
-
-            <div class="product-section">
-              <h3>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                </svg>
-                Benefits
-              </h3>
-              <div class="key-benefits">
-                <div class="benefit-card">
-                  <h4>Deep Repair</h4>
-                  <p>Restores damaged or stressed skin</p>
-                </div>
-                <div class="benefit-card">
-                  <h4>Instant Comfort</h4>
-                  <p>Soothes irritation and redness</p>
-                </div>
-                <div class="benefit-card">
-                  <h4>Spa-Grade</h4>
-                  <p>Professional treatment quality</p>
-                </div>
-                <div class="benefit-card">
-                  <h4>Luxury Texture</h4>
-                  <p>Rich, enveloping balm sensation</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="product-section">
-              <h3>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                </svg>
-                Available Formats
-              </h3>
-              <div class="formats-sizes">
-                <div class="format-badge">50ml – Travel Size</div>
-                <div class="format-badge">75ml – Standard Format</div>
-                <div class="format-badge">150ml – Spa Treatment</div>
-                <div class="format-badge">250ml – Professional Refill</div>
-              </div>
-            </div>
-
-            <div class="product-section">
-              <h3>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                </svg>
-                Recommended For
-              </h3>
-              <ul>
-                <li>Luxury spa signature treatments</li>
-                <li>Wellness center facial protocols</li>
-                <li>High-end concept stores</li>
-                <li>VIP amenity packages</li>
-              </ul>
-            </div>
-
-            <div class="product-cta">
-              <div class="cta-buttons">
-                <a href="contact.html" class="btn-primary">Request Sample</a>
-                <a href="contact.html" class="btn-secondary">Get Pricing</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- PRODUCT 3: Nourishing Date Oil -->
-      <div class="product-detail">
-        <div class="product-grid">
-          <div class="product-image-wrapper">
-            <div class="product-image">
-              <img
-                src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/main/nourishing.png"
-                alt="Nourishing Date Oil"
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          <div class="product-info">
-            <span class="product-category">Signature Treatment</span>
-            <h2>Nourishing Date Oil</h2>
-            <p class="product-description">
-              An exceptional dry oil that captures the essence of Middle Eastern beauty rituals. This multi-purpose elixir 
-              blends rare date seed oil with precious botanical extracts for a truly sensorial experience.
-            </p>
-
-            <div class="product-section">
-              <h3>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M12 6v6l4 2"></path>
-                </svg>
-                Key Ingredients
-              </h3>
-              <ul>
-                <li><strong>Date Seed Oil (40%)</strong> – Rare omega-rich oil extraction</li>
-                <li><strong>Jojoba Oil</strong> – Balancing and protective</li>
-                <li><strong>Rosehip Oil</strong> – Cell regeneration and radiance</li>
-                <li><strong>Frankincense</strong> – Anti-aging and aromatherapy</li>
-              </ul>
-            </div>
-
-            <div class="product-section">
-              <h3>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                </svg>
-                Benefits
-              </h3>
-              <div class="key-benefits">
-                <div class="benefit-card">
-                  <h4>Multi-Purpose</h4>
-                  <p>Face, body, and hair nourishment</p>
-                </div>
-                <div class="benefit-card">
-                  <h4>Dry Oil Texture</h4>
-                  <p>Fast absorption, no greasy residue</p>
-                </div>
-                <div class="benefit-card">
-                  <h4>Sensory Ritual</h4>
-                  <p>Subtle oriental fragrance</p>
-                </div>
-                <div class="benefit-card">
-                  <h4>Premium Gift</h4>
-                  <p>Signature amenity experience</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="product-section">
-              <h3>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                </svg>
-                Available Formats
-              </h3>
-              <div class="formats-sizes">
-                <div class="format-badge">30ml – Deluxe Sample</div>
-                <div class="format-badge">50ml – Standard Bottle</div>
-                <div class="format-badge">100ml – Premium Format</div>
-                <div class="format-badge">200ml – Spa Dispenser</div>
-              </div>
-            </div>
-
-            <div class="product-section">
-              <h3>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                </svg>
-                Recommended For
-              </h3>
-              <ul>
-                <li>Luxury resort spa menus</li>
-                <li>Premium concept store exclusives</li>
-                <li>Executive suite amenities</li>
-                <li>High-value corporate gifts</li>
-              </ul>
-            </div>
-
-            <div class="product-cta">
-              <div class="cta-buttons">
-                <a href="contact.html" class="btn-primary">Request Sample</a>
-                <a href="contact.html" class="btn-secondary">Get Pricing</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-top">
-        <div class="footer-logo-section">
-          <img
-            src="https://raw.githubusercontent.com/merouaneabdouni-arch/Luma-heritage/6310032a798a6b2dd025432c07b18a623e1b1bde/42155f28-add0-4004-8e15-68b36e31fa07.png"
-            alt="LUMA Heritage"
-            class="footer-logo"
-          />
-          <p class="footer-tagline">Luxury date-infused skincare for premium hospitality partners across the UAE.</p>
-        </div>
-
-        <div class="footer-links">
-          <h4>Explore</h4>
-          <ul>
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="products.html">Our Products</a></li>
-            <li><a href="philosophy.html">Our Story & Philosophy</a></li>
-            <li><a href="elixir.html">Elixir – The Secret Of Dates</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-contact">
-          <h4>Contacts</h4>
-          <p><a href="tel:+33659053515">+33 (6) 590-535-15</a></p>
-          <p><a href="mailto:info@lumaheritage.com">info@lumaheritage.com</a></p>
-          <p class="address">Dubai Hills Estate, Business Park 1<br>Dubai, UAE</p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2025 LUMA Heritage. All rights reserved.</p>
-        <nav class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="legal.html">Legal Notice</a></nav>
-      </div>
-    </div>
-  </footer>
-
+  </div>
+  <div class="footer__bottom">
+    <p>© 2025 LUMA Heritage. All rights reserved.</p>
+    <nav class="footer__legal"><a href="privacy.html">Privacy</a><a href="legal.html">Legal</a></nav>
+  </div>
+</footer>
+<a href="https://wa.me/33659053515" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.737 5.607 2.137 8.048L0 32l7.933-2.127C10.353 31.243 13.106 32 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.467c-2.482 0-4.908-.646-7.07-1.87l-.507-.292-5.265 1.41 1.415-5.261-.292-.508C3.053 20.779 2.4 18.347 2.4 15.867c0-7.575 6.158-13.733 13.733-13.733S29.866 8.292 29.866 15.867c0 7.575-6.158 13.6-13.866 13.6zm7.533-10.8c-.41-.205-2.42-1.195-2.797-1.332-.377-.137-.651-.205-.925.205s-1.063 1.332-1.302 1.607c-.239.274-.478.308-.888.103s-1.73-.636-3.295-2.033c-1.218-1.086-2.041-2.428-2.28-2.838s-.026-.632.18-.836c.184-.184.41-.478.615-.717s.274-.41.41-.684c.137-.274.068-.513-.034-.717s-.925-2.23-1.268-3.053c-.336-.801-.677-.692-.925-.705-.239-.012-.513-.015-.787-.015s-.717.103-1.093.513c-.377.41-1.435 1.4-1.435 3.415s1.468 3.962 1.673 4.237c.205.274 2.899 4.426 7.024 6.206.981.423 1.748.676 2.345.865.989.308 1.887.264 2.598.16.792-.118 2.42-.989 2.761-1.945s.342-1.775.239-1.945c-.103-.171-.377-.274-.787-.479z"/></svg></a>
 <script src="luma.js"></script>
-</body>
-</html>
+</body></html>
