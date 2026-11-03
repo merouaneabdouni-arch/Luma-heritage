@@ -25,7 +25,7 @@
     <li><a href="devis.html" class="nav-cta">Get a Quote</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul></nav>
-  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="drawer" aria-expanded="false"><span></span><span></span><span></span></button>
 </header>
 
 <div class="nav-drawer" id="drawer" aria-hidden="true">
@@ -44,7 +44,7 @@
     <div class="hero__content">
       <span class="hero__eyebrow">Luxury B2B Skincare &middot; UAE</span>
       <h1 class="hero__title">Where<br>Heritage<br><em>meets</em><br>Excellence</h1>
-      <a href="philosophy.html" class="hero__cta">Discover Our Story</a>
+      <div class="hero__actions"><a href="devis.html" class="hero__cta">Request a Partnership</a><a href="products.html" class="hero__secondary">Explore Our Collection <span aria-hidden="true">↗</span></a></div>
     </div>
   </div>
   <div class="hero__scroll" aria-hidden="true"><div class="hero__line"></div><span>Scroll</span></div>
@@ -171,10 +171,10 @@
   <div class="wrap">
     <span class="eyebrow sr">Professional Catalogue</span>
     <h2 class="section-title sr sr-d1">Discover our full<br>product range</h2>
-    <p class="sr sr-d2">Download our B2B catalogue with full product specifications, formats, MOQ details and pricing guidelines.</p>
+    <p class="sr sr-d2">Request details of our professional collection, formats and partnership options for your property.</p>
     <a href="#" class="catalogue-btn sr sr-d3" data-catalogue>
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Download Catalogue
+      Request Catalogue
     </a>
   </div>
 </section>
@@ -185,7 +185,7 @@
     <nav><span class="footer__heading">Explore</span><ul class="footer__links"><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="philosophy.html">Our Story</a></li><li><a href="elixir.html">Elixir</a></li><li><a href="devis.html">Get a Quote</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
     <div class="footer__contact"><span class="footer__heading">Contact</span><p><a href="tel:+33659053515">+33 6 59 05 35 15</a></p><p><a href="mailto:info@lumaheritage.com">info@lumaheritage.com</a></p><p>Dubai Hills Estate, Business Park 1, Dubai UAE</p></div>
   </div>
-  <div class="footer__bottom"><p class="footer__copy">&copy; 2025 LUMA Heritage. All rights reserved.</p><nav class="footer__legal"><a href="privacy.html">Privacy</a><a href="legal.html">Legal</a><a href="partnerships.html">Partnerships</a></nav></div>
+  <div class="footer__bottom"><p class="footer__copy">&copy; 2026 LUMA Heritage. All rights reserved.</p><nav class="footer__legal"><a href="privacy.html">Privacy</a><a href="legal.html">Legal</a><a href="partnerships.html">Partnerships</a></nav></div>
 </footer>
 
 <a href="https://wa.me/33659053515?text=Hello%20LUMA%20Heritage" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.737 5.607 2.137 8.048L0 32l7.933-2.127C10.353 31.243 13.106 32 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.467c-2.482 0-4.908-.646-7.07-1.87l-.507-.292-5.265 1.41 1.415-5.261-.292-.508C3.053 20.779 2.4 18.347 2.4 15.867c0-7.575 6.158-13.733 13.733-13.733S29.866 8.292 29.866 15.867c0 7.575-6.158 13.6-13.866 13.6zm7.533-10.8c-.41-.205-2.42-1.195-2.797-1.332-.377-.137-.651-.205-.925.205s-1.063 1.332-1.302 1.607c-.239.274-.478.308-.888.103s-1.73-.636-3.295-2.033c-1.218-1.086-2.041-2.428-2.28-2.838s-.026-.632.18-.836c.184-.184.41-.478.615-.717s.274-.41.41-.684c.137-.274.068-.513-.034-.717s-.925-2.23-1.268-3.053c-.336-.801-.677-.692-.925-.705-.239-.012-.513-.015-.787-.015s-.717.103-1.093.513c-.377.41-1.435 1.4-1.435 3.415s1.468 3.962 1.673 4.237c.205.274 2.899 4.426 7.024 6.206.981.423 1.748.676 2.345.865.989.308 1.887.264 2.598.16.792-.118 2.42-.989 2.761-1.945s.342-1.775.239-1.945c-.103-.171-.377-.274-.787-.479z"/></svg></a>
@@ -195,16 +195,14 @@
   <div class="catalogue-modal__box">
     <button class="catalogue-modal__close" id="modalClose" aria-label="Close">&#x2715;</button>
     <span class="eyebrow" style="margin-bottom:0.75rem;">Professional Catalogue</span>
-    <h3>LUMA Heritage<br>B2B Catalogue 2025</h3>
-    <p>Leave your email and we will send you our full product catalogue with specifications, formats and pricing.</p>
-    <form id="catalogueForm" novalidate>
+    <h3>LUMA Heritage<br>Professional Catalogue</h3>
+    <p>Tell us about your business. Your email app will open with your request, ready for you to send to our team.</p>
+    <form id="catalogueForm">
       <input type="text" name="name" placeholder="Your Name" required/>
       <input type="email" name="email" placeholder="Business Email" required/>
       <input type="text" name="company" placeholder="Hotel / Spa / Establishment"/>
-      <button type="submit" class="catalogue-modal__submit">Send me the Catalogue &rarr;</button>
-      <div class="catalogue-success" id="catSuccess">
-        <p>&#10003; Catalogue sent &mdash; check your inbox within 24h.</p>
-      </div>
+      <button type="submit" class="catalogue-modal__submit">Prepare Catalogue Request &rarr;</button>
+      <p class="email-handoff-note" data-email-notice hidden>Your email app has been requested. Please review and send the email there; nothing has been sent automatically.</p>
     </form>
   </div>
 </div>

@@ -1704,3 +1704,41 @@ body { animation: pageIn 0.5s var(--ease) both; }
   font-family: var(--serif); font-style: italic;
   font-size: 1.15rem; color: var(--gold);
 }
+
+/* November 2026 — clear partnership conversion path */
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem 1.5rem;
+}
+.hero__secondary {
+  color: #fff;
+  font: 400 0.7rem/1.5 var(--sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  transition: color 0.25s ease;
+}
+.hero__secondary:hover,
+.hero__secondary:focus-visible { color: #d8bc83; }
+.hero__cta:focus-visible,
+.hero__secondary:focus-visible,
+.catalogue-modal button:focus-visible {
+  outline: 2px solid #d8bc83;
+  outline-offset: 4px;
+}
+.email-handoff-note[hidden] { display: none; }
+.catalogue-modal .email-handoff-note {
+  margin: 1rem 0 0;
+  color: #66513a;
+  font-size: 0.85rem;
+}
+@media (max-width: 767px) {
+  .hero__actions { align-items: flex-start; flex-direction: column; }
+  .hero__secondary { min-height: 44px; display: inline-flex; align-items: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__actions *, .ticker__track { animation: none !important; transition: none !important; }
+}
