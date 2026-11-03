@@ -117,34 +117,33 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
   }
 
+  /* ── EMAIL HANDOFF: no backend is configured on this static site. ── */
+  const inbox = 'info@lumaheritage.com';
+  function requestByEmail(form, subject) {
+    if (!form.reportValidity()) return;
+    const lines = [...new FormData(form).entries()]
+      .filter(([, value]) => String(value).trim())
+      .map(([key, value]) => key.replace(/[-_]/g, ' ') + ': ' + value);
+    const body = lines.join('\\n');
+    const url = 'mailto:' + inbox + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+    window.location.href = url;
+    const notice = form.querySelector('[data-email-notice]');
+    if (notice) notice.hidden = false;
+  }
+
   if (catForm) {
-    catForm.addEventListener('submit', async e => {
+    catForm.addEventListener('submit', e => {
       e.preventDefault();
-      const btn = catForm.querySelector('button');
-      btn.textContent = 'Sending…'; btn.disabled = true;
-      await new Promise(r => setTimeout(r, 1200));
-      catForm.style.display = 'none';
-      document.getElementById('catSuccess').style.display = 'block';
-      // Auto-close after 3s
-      setTimeout(closeModal, 3000);
+      requestByEmail(catForm, 'LUMA Heritage — B2B catalogue request');
     });
   }
 
   /* ── CONTACT FORMS ── */
   document.querySelectorAll('form:not(#catalogueForm):not(#devisForm)').forEach(form => {
-    form.addEventListener('submit', async e => {
+    form.addEventListener('submit', e => {
       e.preventDefault();
-      const btn = form.querySelector('[type="submit"]');
-      if (btn) { btn.textContent = 'Sending…'; btn.disabled = true; }
-      await new Promise(r => setTimeout(r, 1000));
-      const success = form.querySelector('.form-success');
-      if (success) {
-        form.querySelectorAll('input,textarea,select,.form-row,.btn').forEach(el => el.style.display = 'none');
-        success.style.display = 'block';
-      } else if (btn) {
-        btn.textContent = '✓ Message sent';
-        btn.style.background = '#2d6a4f';
-      }
+      requestByEmail(form, 'LUMA Heritage — website enquiry');
     });
   });
 
@@ -176,14 +175,9 @@
     window.updateCheck = updateCheck;
     window.updateVol = updateVol;
     devisForm.querySelectorAll('select').forEach(s => s.addEventListener('change', updateSummary));
-    devisForm.addEventListener('submit', async e => {
+    devisForm.addEventListener('submit', e => {
       e.preventDefault();
-      const btn = devisForm.querySelector('.devis-submit');
-      btn.textContent = 'Sending…'; btn.disabled = true;
-      await new Promise(r => setTimeout(r, 1200));
-      devisForm.querySelectorAll('.devis-block,.devis-summary,.devis-submit').forEach(el => el.style.display = 'none');
-      const success = document.getElementById('devisSuccess');
-      if (success) success.style.display = 'block';
+      requestByEmail(devisForm, 'LUMA Heritage — partnership quotation');
     });
   }
 
