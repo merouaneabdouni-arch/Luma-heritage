@@ -37,8 +37,8 @@
   const btn = document.getElementById('hamburger');
   const drw = document.getElementById('drawer');
   const cls = document.getElementById('drawerClose');
-  function openDrawer() { btn.classList.add('open'); drw.classList.add('open'); drw.setAttribute('aria-hidden','false'); document.body.style.overflow = 'hidden'; }
-  function closeDrawer() { btn.classList.remove('open'); drw.classList.remove('open'); drw.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; }
+  function openDrawer() { btn.classList.add('open'); btn.setAttribute('aria-expanded','true'); drw.classList.add('open'); drw.setAttribute('aria-hidden','false'); document.body.style.overflow = 'hidden'; drw.querySelector('a')?.focus(); }
+  function closeDrawer() { btn.classList.remove('open'); btn.setAttribute('aria-expanded','false'); drw.classList.remove('open'); drw.setAttribute('aria-hidden','true'); document.body.style.overflow = ''; }
   if (btn && drw) {
     btn.addEventListener('click', () => drw.classList.contains('open') ? closeDrawer() : openDrawer());
     if (cls) cls.addEventListener('click', closeDrawer);
